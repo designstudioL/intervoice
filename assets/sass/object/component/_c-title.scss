@@ -1,0 +1,189 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+title
+-----------------------------------------------------*/
+
+
+.c-title-pageTitle {
+    @include inc.sizingRem(font-size, lap, 70px, sp, 42px);
+    @include inc.sizing(margin-bottom, lap, 146px, sp, 54px);
+    line-height: 1.6;
+    margin-top: -2rem;
+    font-weight: 600;
+    span {
+        display: block;
+        @include inc.sizingRem(font-size, lap, 16px, sp, 16px);
+        font-weight: 600;
+        position: relative;
+        padding-left: 18px;
+        &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            display: block;
+            background: inc.$base-color;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0%, -50%);
+        }
+    }
+    &.-cta {
+        @include inc.sizingRem(font-size, lap, 80px, sp, 50px);
+        color: inc.$base-color;
+        span {
+            color: inc.$base-color;
+            margin-top: -.8rem;
+        }
+    }
+}
+
+
+// 34 30 26 22
+// 24 22 18 16
+.c-title-ex-large {
+    @include inc.sizingRem(font-size, lap, 34px, sp, 24px);
+    @include inc.sizing(margin-bottom, lap, 60px, sp, 50px);
+    font-weight: 600;
+    line-height: 2;
+    &.-cta {
+        @include inc.sizingRem(font-size, lap, 80px, sp, 50px);
+        color: inc.$base-color;
+        line-height: 1.2;
+        span {
+            display: block;
+            @include inc.sizingRem(font-size, lap, 16px, sp, 16px);
+            font-weight: 600;
+            position: relative;
+            padding-left: 18px;
+            &::before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                display: block;
+                background: inc.$base-color;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(0%, -50%);
+            }
+        }
+    }
+}
+.c-title-large {
+    @include inc.sizingRem(font-size, lap, 30px, sp, 22px);
+    @include inc.sizing(margin-bottom, lap, 48px, sp, 32px);
+    font-weight: 600;
+    line-height: 2;
+}
+.c-title-medium {
+    @include inc.sizingRem(font-size, lap, 26px, sp, 18px);
+    font-weight: 600;
+    margin-bottom: 32px;
+    line-height: 1.6;
+    span {
+        display: block;
+        line-height: 0;
+        &.-en {
+            margin-bottom: 1rem;
+        }
+    }
+    .title_sub {
+        display: inline-block;
+        @include inc.sizingRem(font-size, lap, 16px, sp, 16px);
+        font-weight: 600;
+        position: relative;
+        padding-left: 18px;
+        &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            display: block;
+            background: inc.$base-color;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0%, -50%);
+        }
+    }
+}
+.c-title-small {
+    @include inc.sizingRem(font-size, lap, 22px, sp, 16px);
+    @include inc.sizing(margin-bottom, lap, 54px, sp, 40px);
+    font-weight: 600;
+    @include inc.mq(tab) {
+        margin-bottom: 36px;
+    }
+    line-height: 1.6;
+}
+
+.c-title-en-medium {
+    @include inc.sizingRem(font-size, lap, 72px, sp, 42px);
+    @include inc.sizing(margin-bottom, lap, 40px, sp, 40px);
+    @include inc.sizing(margin-top, lap, -32px, sp, -18px);
+    line-height: 1.2;
+    //margin-top: -2rem;
+    span {
+        display: block;
+        line-height: 0;
+    }
+    .title_sub {
+        display: inline-block;
+        @include inc.sizingRem(font-size, lap, 16px, sp, 16px);
+        font-weight: 600;
+        position: relative;
+        padding-left: 18px;
+        &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            display: block;
+            background: inc.$base-color;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0%, -50%);
+        }
+    }
+    &.-home {
+        margin-bottom: 64px;
+    }
+}
+
+.c-title-en-small {
+    @include inc.sizingRem(font-size, lap, 34px, sp, 32px);
+    @include inc.sizing(margin-bottom, lap, 64px, sp, 24px);
+    @include inc.sizing(margin-top, lap, -22px, sp, -18px);
+    line-height: 1.6;
+    line-height: 2;
+    //margin-top: -1.35rem;
+    span {
+        display: block;
+        line-height: 0;
+    }
+    .title_sub {
+        display: inline-block;
+        @include inc.sizingRem(font-size, lap, 16px, sp, 16px);
+        font-weight: 600;
+        position: relative;
+        padding-left: 18px;
+        &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            display: block;
+            background: inc.$base-color;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0%, -50%);
+        }
+    }
+}
+

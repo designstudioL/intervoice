@@ -1,0 +1,173 @@
+@charset 'UTF-8';
+//@use '../global' as *;
+@use "../inc/" as inc;
+
+/*
+  Base
+-----------------------------------------------------*/
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  line-height: 2;
+  font-family: inc.$font-set-primary, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  text-rendering: optimizeLegibility; //アンチエイリアス処理、組み込みのフォントヒンティングの片方あるいは両方を行う
+  -webkit-font-feature-settings: 'palt';
+  font-feature-settings: 'palt';
+  // font-family: inc.$font-set-primary, sans-serif;
+  // font-optical-sizing: auto;
+  // font-display: swap;
+  // font-weight: 300;
+  // font-style: normal;
+  // line-height: 1.75; //設定
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  letter-spacing: .05em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+}
+
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:active,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+}
+p + p {
+  margin-top: 2rem;
+}
+
+img {
+  border: 0;
+  line-height: 0;
+  vertical-align: bottom;
+}
+img {
+  width: 100%;
+  max-width: 100%;              /* 1 */
+  height: auto;                 /* 1 */
+  vertical-align: middle;       /* 2 */
+  font-style: italic;           /* 3 */
+  background-repeat: no-repeat; /* 4 */
+  background-size: cover;       /* 4 */
+  shape-margin: 0.75rem;        /* 5 */
+  display: block;
+}
+
+svg {
+  vertical-align: bottom;
+}
+
+hr {
+  display: none;
+}
+
+table {
+  margin: 0;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+  margin: 0;
+}
+
+td {
+  margin: 0;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  margin: 0;
+  padding: 0;
+}
+
+input.btn {
+  margin: 0 0.5em;
+  padding: 0 1em;
+}
+
+button {
+  border: none;
+  font: inherit;
+  line-height: inherit;
+  background: none;
+  margin: 0;
+}
+
+/* キーボード操作"以外"でフォーカスされた際はoutlineを消す */
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: 0;
+}

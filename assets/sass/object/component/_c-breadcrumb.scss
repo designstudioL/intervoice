@@ -1,0 +1,44 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+breadcrumb
+-----------------------------------------------------*/
+// .pan {
+//   width: 100%;
+//   position: absolute;
+//   right: 0;
+//   z-index: 1;
+//   color: inc.$base-color;
+// }
+.c-breadcrumb {
+    @include inc.sizing(padding-bottom, tab, 32px, sp, 32px);
+    ul {
+        line-height: 1.6;
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0 32px;
+        @include inc.sizingRem(font-size, tab, 12px, sp, 12px);
+        li {
+            position: relative;
+            // a {
+            //     text-decoration: underline!important;
+            //     text-underline-offset: 0.3em;
+            // }
+        }
+        li + li::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            display: block;
+            vertical-align: middle;
+            border-radius: 50%;
+            background: inc.$theme-color-black;
+            position: absolute;
+            top: 50%;
+            left: -19px;
+            transform: translate(0%, -50%);
+        }
+    }
+}

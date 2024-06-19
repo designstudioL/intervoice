@@ -1,0 +1,184 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "i-setting" as setting;
+
+/* ------------------------- 使い方 ----------------------------------------------------------
+   
+    @include sizing(width, wide, 365px, sp, 276px);
+    ==> width: clamp(276px, 7.46vw + 248px, 365px);
+    （ビューポートがwide(1568px)のとき365px, sp(375px)のとき276pxになる自動補完値を上限下限をつけて設定）
+
+    @include sizing(width, wide, 365px, sp, 276px, noClamp);
+    ==> width: calc(7.46vw + 248px);
+    （ビューポートがwide(1568px)のとき365px, sp(375px)のとき276pxになる自動補完値を設定）
+
+    @include sizingRem(font-size, wide, 14px, sp, 12px);
+    ==> font-size: clamp(0.75rem, 0.17vw + 0.70625rem, 0.875rem;
+    （ビューポートがwide(1568px)のとき14px, sp(375px)のとき12pxになる自動補完値をremに変換して設定）
+　　
+    ※使いたいsassファイル上で@useしてください。
+    ※scssファイル上での読みやすさ重視のため、mixinの引数に単位[px]が必要な仕様にしてあります。
+
+// ---------------------------------------------------------------------------------------- */
+
+// 更新履歴
+
+//2022/06/22 百瀬
+// -- remバージョン追加
+
+//2023/07/07 百瀬
+// -- 与えたいプロパティの変化率が負の傾きを取るとき、clampの設定が間違っていた問題を修正しました。
+//    ...@include inc.sizing(width, wide, -100px, sp, 100px); （←SPのときのほうが大きい） のような指定が正しく動くようになりました。
+// -- 第5引数に「noClamp」という文字列を指定するとclampしていない値を吐き出すよう設定しました。
+//    @include sizing(width, wide, 365px, sp, 276px, noClamp);
+//    ==> width: calc(7.46vw + 248px);
+
+//2023/07/11 百瀬
+// -- 値のみを返すことができるよう関数を追加しました。
+//    ... padding: inc.size(wide, 48px, sp, 25px) inc.size(wide, 48px, sp, 15px, noClamp);　とすると
+//        padding: clamp(25px, 1.93vw + 17.7px, 48px) calc(2.77vw + 4.6px)　になります。
+//        この使い方の方が本来のcssベースになっていて使いやすそうです。
+
+// 数値aの小数点以下を任意のn桁で四捨五入
+//------------------------------------
+@function variableRound($a, $n) {
+  $nn: math.pow(10, $n);
+  $nt: round($a * $nn);
+  @return calc($nt / $nn);
+}
+
+// ２つのウィンドウ幅用のサイズをもとに変化直線の変化率を計算
+//------------------------------------
+@function autoSizeRatio($media1, $px1, $media2, $px2) {
+  $width1: map-get(setting.$breakpoints, $media1);
+  $width2: map-get(setting.$breakpoints, $media2);
+  $resizeRatio: calc(($px1 - $px2) / ($width1 - $width2));
+  @return variableRound(100vw * $resizeRatio, 2);
+}
+
+// ２つのウィンドウ幅用のサイズをもとに変化直線の原点を計算
+//------------------------------------
+@function autoSizeOrigin($media1, $px1, $media2, $px2) {
+  $width: map-get(setting.$breakpoints, $media1);
+  @return $px1 -
+    variableRound(
+      calc($width * autoSizeRatio($media1, $px1, $media2, $px2) / 100vw),
+      1
+    );
+}
+
+// ２つのウィンドウ幅用のサイズをもとに自動計算するプロパティを設定（pxで吐き出し）
+//------------------------------------
+@mixin sizing($property, $media1, $px1, $media2, $px2, $type: clamp) {
+  @if $type == noClamp {
+    #{$property}: calc(
+      autoSizeRatio($media1, $px1, $media2, $px2) +
+        autoSizeOrigin($media1, $px1, $media2, $px2)
+    );
+  } @else {
+    @if $px1 >= $px2 {
+      #{$property}: clamp(
+        $px2,
+        autoSizeRatio($media1, $px1, $media2, $px2) +
+          autoSizeOrigin($media1, $px1, $media2, $px2),
+        $px1
+      );
+    } @else if $px1 < $px2 {
+      #{$property}: clamp(
+        $px1,
+        autoSizeRatio($media1, $px1, $media2, $px2) +
+          autoSizeOrigin($media1, $px1, $media2, $px2),
+        $px2
+      );
+    }
+  }
+}
+
+//pxをremに変換
+//--------------------------------------------
+$BaseFontPx: 16px;
+@function convertToRem($pixels) {
+  @return calc($pixels / $BaseFontPx) * 1rem;
+}
+
+// ２つのウィンドウ幅用のサイズをもとに自動計算するプロパティを設定（remで吐き出し）
+//------------------------------------
+@mixin sizingRem($property, $media1, $px1, $media2, $px2, $type: clamp) {
+  @if $type == noClamp {
+    #{$property}: calc(
+      autoSizeRatio($media1, $px1, $media2, $px2) +
+        convertToRem(autoSizeOrigin($media1, $px1, $media2, $px2))
+    );
+  } @else {
+    @if $px1 >= $px2 {
+      #{$property}: clamp(
+        convertToRem($px2),
+        autoSizeRatio($media1, $px1, $media2, $px2) +
+          convertToRem(autoSizeOrigin($media1, $px1, $media2, $px2)),
+        convertToRem($px1)
+      );
+    } @else if $px1 < $px2 {
+      #{$property}: clamp(
+        convertToRem($px1),
+        autoSizeRatio($media1, $px1, $media2, $px2) +
+          convertToRem(autoSizeOrigin($media1, $px1, $media2, $px2)),
+        convertToRem($px2)
+      );
+    }
+  }
+}
+
+// ２つのウィンドウ幅用のサイズをもとに自動計算する値を返す関数
+//------------------------------------
+@function size($media1, $px1, $media2, $px2, $type: clamp) {
+  @if $type == noClamp {
+    @return calc(
+      autoSizeRatio($media1, $px1, $media2, $px2) +
+        autoSizeOrigin($media1, $px1, $media2, $px2)
+    );
+  } @else {
+    @if $px1 >= $px2 {
+      @return clamp(
+        $px2,
+        autoSizeRatio($media1, $px1, $media2, $px2) +
+          autoSizeOrigin($media1, $px1, $media2, $px2),
+        $px1
+      );
+    } @else if $px1 < $px2 {
+      @return clamp(
+        $px1,
+        autoSizeRatio($media1, $px1, $media2, $px2) +
+          autoSizeOrigin($media1, $px1, $media2, $px2),
+        $px2
+      );
+    }
+  }
+}
+
+
+// ２つのウィンドウ幅用のサイズをもとに自動計算する値を返す関数(単位：Rem)
+//------------------------------------
+@function sizeRem($media1, $px1, $media2, $px2, $type: clamp) {
+  @if $type == noClamp {
+    @return calc(
+      autoSizeRatio($media1, $px1, $media2, $px2) +
+        convertToRem(autoSizeOrigin($media1, $px1, $media2, $px2))
+    );
+  } @else {
+    @if $px1 >= $px2 {
+      @return clamp(
+        convertToRem($px2),
+        autoSizeRatio($media1, $px1, $media2, $px2) +
+          convertToRem(autoSizeOrigin($media1, $px1, $media2, $px2)),
+        convertToRem($px1)
+      );
+    } @else if $px1 < $px2 {
+      @return clamp(
+        convertToRem($px1),
+        autoSizeRatio($media1, $px1, $media2, $px2) +
+          convertToRem(autoSizeOrigin($media1, $px1, $media2, $px2)),
+        convertToRem($px2)
+      );
+    }
+  }
+}

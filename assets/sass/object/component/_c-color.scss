@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+button
+-----------------------------------------------------*/
+.c-color-wht {
+  color: inc.$base-color;
+}
+.c-color-blk {
+  color: inc.$theme-color-black;
+}
+.c-color-gry {
+  color: inc.$theme-color-gray;
+}
+// .c-color-ylw {
+//   color: inc.$theme-color-yellow;
+// }
+// .c-color-Lylw {
+//   color: inc.$theme-color-lightyellow;
+// }
+// .c-color-Dylw {
+//   color: inc.$theme-color-darkyellow;
+// }
+// .c-color-gld {
+//   color: inc.$theme-color-gold;
+// }
+// .c-color-Dgrn {
+//   color: inc.$theme-color-darkgreen;
+// }
+// .c-color-Dgrn {
+//   color: inc.$theme-color-darkgreen;
+// }

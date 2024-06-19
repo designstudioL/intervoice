@@ -1,0 +1,142 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+gmenu
+-----------------------------------------------------*/
+// .c-gmenu-primary {
+//   &__item {
+//     border-top: 1px solid inc.$theme-color-yellow;
+//     @include inc.mq(tab) {
+//       border: none;
+//     }
+//   }
+//   &__link {
+//     padding: 1.34em 5%;
+//     position: relative;
+//     display: block;
+//     background: #F8F8F0;
+//     background-clip: content-box;
+//     border: 1px solid #FFF;
+//     @include inc.mq(tab) {
+//       border: none;
+//       padding: 0;
+//     }
+//     &::after {
+//       content: '';
+//       width: .4em; height: .4em;
+//       display: block;
+//       border-top: 1px solid;
+//       border-right: 1px solid;
+//       position: absolute;
+//       top: 0; bottom: 0;
+//       right: 5%;
+//       margin: auto;
+//       transform: rotate(45deg);
+//       @include inc.mq(tab) {
+//         display: none;
+//       }
+//     }
+//   }
+//   &.-home {
+//     background: inc.$theme-color-lightyellow;
+//     display: flex;
+//     flex-direction:column; justify-content:center; align-items:center;
+//     @include inc.mq(tab) {
+//       @include inc.sizing(height, full, 160px, tab, 120px);
+//     }
+//     ul {
+//       width: 100%;
+//       @include inc.mq(tab) {
+//         display: flex;
+//         @include inc.sizing(width, full, 1470px, sp, 330px);
+//         max-width: 90%;
+//         margin: 0 auto;
+//         border-right: 1px solid #E2E2B9;
+//       }
+//     }
+//     .c-gmenu-primary__item {
+//       width: 100%;
+//       @include inc.mq(tab) {
+//         height: 60px;
+//         border-left: 1px solid #E2E2B9;
+//         width: calc(100% / 5);
+//         display:flex; flex-direction:column; justify-content:center; align-items:center;
+//       }
+//     }
+//     .c-gmenu-primary__link {
+//       @include inc.mq(tab) {
+//         width: 90%;
+//         text-align: center;
+//       }
+//       &::after {
+//         @include inc.mq(tab) {
+//           display: none;
+//         }
+//         @include inc.mq(lap-l) {
+//           display: block;
+//         }
+//       }
+//     }
+//   }
+
+// }
+// .c-gmenu-secondary {
+//   display: grid;
+//   grid-template-columns: repeat(3, minmax(0,1fr));
+//   gap: inc.size(full, 10px, sp, 5px);
+//   align-items: center;
+  
+//   @include inc.mq(tab) {
+//     display: flex;
+//     gap: 0;
+//     justify-content: right;
+//   }
+  
+  
+//   &__textbtn {
+//     text-align: center;
+//     @include inc.mq(tab) {
+//       margin-right: auto;
+//     }
+//   }
+//   &__blockbtn {
+//     justify-content: center;
+//     @include inc.mq(tab) {
+//       max-width: 10em;
+//       @include inc.sizing(margin-left, full, 10px, sp, 5px);
+//       padding-top: 0!important;
+//       padding-bottom: 0!important;
+//       //height: 46px;
+//       height: 2.75em;
+//     }
+//   }
+  
+//   &__hamburger {
+//     @include inc.mq(tab) {
+//       margin: 0;
+//       @include inc.sizing(margin-left, full, 10px, sp, 5px);
+//       //height: 2.75em;
+//       //@include inc.sizing(margin-bottom, full, 10px, sp, 5px);
+//     }
+//   }
+// }
+
+
+// .c-gmenu-tertiary {
+//   display: flex;
+//   align-items: center;
+  
+//   &__item {
+//     & + & {
+//       margin-left: 1em;
+//       @include inc.mq(lap) {
+//         margin-left: 2em;
+//       }
+//     }
+//   }
+  
+// }
+
+// .c-gmenu-lang {
+//   display: flex;
+// }

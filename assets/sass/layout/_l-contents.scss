@@ -1,0 +1,156 @@
+@charset 'UTF-8';
+@use "../inc/" as inc;
+
+/*
+ contents
+-----------------------------------------------------*/
+.l-contents {
+}
+
+
+
+
+// .l-contents {
+  
+  
+//   &--left-title {
+//     @include inc.mq(lap) {
+//       display: grid;
+//       grid-template-columns: 100px minmax(0, 1fr);
+    
+//       &__title {
+//         margin-right: auto;
+//       }
+//       &.-ribbon {
+//         grid-template-columns: 200px minmax(0, 1fr);
+//       }
+//     }
+    
+//     &.-title-large {
+//       @include inc.mq(lap) {
+//       grid-template-columns: 24% minmax(0, 1fr);
+//       }
+//     }
+//   }
+  
+//   // &--ribbon-title {
+//   //   overflow: hidden;
+//   //   background: inc.$theme-color-lightyellow;
+//   //   @include inc.mq(tab, max) {
+//   //     padding-top: 0;
+//   //     &.l-spacer {
+//   //       padding-top: 0;
+//   //     }
+//   //   }
+//   //   &__ribbon {
+//   //     color: #FFF;
+//   //     padding: .5em 0;
+//   //     border-image-source: linear-gradient(inc.$theme-color-darkyellow, inc.$theme-color-darkyellow);
+//   //     border-image-slice: 0 fill;
+//   //     border-image-outset: 100px 100vw 0;
+//   //     text-align: center;
+//   //     margin-bottom: 10vw;
+//   //     @include inc.mq(tab) {
+//   //       padding: 0 .5em 1em;
+//   //       margin-bottom: 0;
+//   //       border-image-slice: 0 0 0 fill;
+//   //       border-image-outset: 100px 0 0;
+//   //     }
+//   //   }
+//   //   & + .c-border-t {
+//   //     margin-top: 0!important;
+//   //   }
+//   // }
+// }
+
+
+// .l-contents-block {
+  
+//   & + &,
+//   &__spacer {
+//     @include inc.sizing(margin-top, full, 50px, wsp, 16px);
+//   }
+  
+//   &__wrap {
+//     @include inc.sizing(padding-top, full, 50px, wsp, 16px);
+//     @include inc.sizing(padding-bottom, full, 50px, wsp, 16px);
+//     @include inc.sizing(padding-left, full, 50px, wsp, 16px);
+//     @include inc.sizing(padding-right, full, 50px, wsp, 16px);
+//   }
+  
+//   &__inner {
+//     @include inc.sizing(padding-top, full, 50px, wsp, 16px);
+//     @include inc.sizing(padding-bottom, full, 50px, wsp, 16px);
+//   }
+// }
+
+// .l-contents-2column {
+//   @include inc.mq(lap) {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+//   &.-best3 + .-best3 {
+//     margin-top: 3em;
+//   }
+//   &.-pc-rl {
+//     @include inc.mq(lap) {
+//       flex-direction: row-reverse;
+//     }
+//   }
+//   &.reverse {
+//     @include inc.mq(lap) {
+//       flex-direction: row-reverse;
+//     }
+//   }
+//   &__block {
+//     @include inc.mq(lap) {
+//       &.-w-1_2 {
+//         width: 45%;
+//       }
+
+//       &.-w-1_2--left {
+//         width: calc(45% - 50px);
+//       }
+
+//       &.-w-1_2--right {
+//         width: calc(45% + 50px);
+//       }
+
+//       &.-w-1_2--left2 {
+//         width: calc(45% - 100px);
+//       }
+
+//       &.-w-1_2--right2 {
+//         width: calc(45% + 100px);
+//       }
+
+//       &.-w-1_3 {
+//         width: 30%;
+//       }
+//       &.-w-2_3 {
+//         width: 60%;
+//       }
+//     }
+
+//     & + & {
+//       @include inc.mq(lap, max) {
+//         margin-top: 2rem;
+//       }
+//     }
+//   }
+// }
+
+// .l-contents-2column + .l-contents-2column {
+//   margin-top: 1rem;
+//   @include inc.mq(lap) {
+//     margin-top: 2rem;
+//   }
+// }
+
+// .held {
+//   display: block;
+//   position: relative;
+// }
+// .held + .held {
+//   margin-top: 3rem;
+// }

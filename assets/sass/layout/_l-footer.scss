@@ -1,0 +1,192 @@
+@charset 'UTF-8';
+@use "../inc/" as inc;
+/*
+footer
+-----------------------------------------------------*/
+.l-footer {
+    padding: 56px 32px;
+    @include inc.mq(tab) {
+        padding: 80px 0;
+    }
+    &--message {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem 0;
+        margin-bottom: 113px;
+        @include inc.mq(wsp) {
+            margin-bottom: 44px;
+        }
+        .-L {
+            width: 100%;
+            @include inc.mq(wsp) {
+                width: 65.67%;
+            }
+            img {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        .-R {
+            width: 100%;
+            max-width: 324px;
+            @include inc.mq(wsp) {
+                width: calc(100% - 65.7%);
+            }
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            // align-items:center;
+        }
+    }
+    &__logo {
+        margin-bottom: 72px;
+        @include inc.mq(tab) {
+            margin-bottom: 46px;
+        }
+        img {
+            @include inc.sizing(width, tab, 270px, sp, 229px);
+        }
+    }
+    &--nav {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction:column;
+            gap: 1.5rem 0;
+            @include inc.mq(tab) {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: unset;
+                @include inc.sizing(gap, lap, 50px, tab, 32px);
+            }
+            li {
+                font-weight: 600;
+                line-height: 1;
+                a {
+                    @include inc.sizingRem(font-size, lap, 16px, sp, 14px);
+                    font-weight: 600;
+                    line-height: 1;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        /*絶対配置で線の位置を決める*/
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0%;
+                        /*線の形状*/
+                        width: 100%;
+                        height: 2px;
+                        background:inc.$theme-color-black;
+                        /*アニメーションの指定*/
+                        transition: all .3s;
+                        transform: scale(0, 1);/*X方向0、Y方向1*/
+                        transform-origin: center top;/*上部中央基点*/
+                    }
+                    @media (hover: hover) and (pointer: fine) {
+                        &:hover::after {
+                            transform: scale(1, 1);/*X方向にスケール拡大*/
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__copyright{
+        @include inc.sizingRem(font-size, tab, 11px, sp, 11px);
+        margin-top: 40px;
+        width: 100%;
+    }
+    &__privacy {
+        margin-left: 0;
+        display: block;
+        @include inc.mq(tab) {
+            margin-left: 32px;
+            display: inline-block;
+        }
+    }
+}
+
+
+.pageTop {
+    display: none;
+    position: fixed;
+    bottom: 2.4rem;
+    right: 2.5%;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: inc.$theme-color-black;
+    transition: all .5s ease;
+    z-index: 2;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background: inc.$theme-color-gray3;
+        }
+    }
+
+    .c-arrow-link--icon {
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 16px;
+        margin: auto 0;
+        line-height: 1;
+    }
+    .c-arrow-link--icon:before,
+    .c-arrow-link--icon:after {
+        content: "";
+        width: 10px;
+        height: 16px;
+        background: url(../img/common/icon_arrow_up_wh.svg) no-repeat 50% 50%;
+        position: absolute;
+
+        animation-fill-mode: both;
+        animation-duration: 0.6s;
+    }
+    .c-arrow-link--icon:after {
+        transform: translateY(-100%);
+    }
+    &.is-hover .c-arrow-link--icon:before {
+        animation-name: transformTopBottom6;
+        animation-delay: 0.3s;
+    }
+    &.is-hover .c-arrow-link--icon:after {
+        animation-name: transformBottomTop6;
+    }
+    @media (hover: hover) and (pointer: fine) {
+        &.is-hover:hover .c-arrow-link--icon:before {
+            animation-name: transformBottomTop6;
+            animation-delay: 0s;
+        }
+        &.is-hover:hover .c-arrow-link--icon:after {
+            animation-name: transformTopBottom6;
+            animation-delay: 0.3s;
+        }
+    }
+    @keyframes transformTopBottom6 {
+        0% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    @keyframes transformBottomTop6 {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
+    }
+}
+
+
+
+
+

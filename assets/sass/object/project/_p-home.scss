@@ -1,0 +1,81 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+home
+-----------------------------------------------------*/
+.p-home {
+    .p-kv {
+        margin-top: -80px;
+    }
+    &--block01 {
+        position: relative;
+        @include inc.sizing(padding-bottom, full, 260px, tab, 180px);
+        &::before {
+            content: "";
+            display: block;
+            aspect-ratio: 2658 / 1196;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            max-width: 1336px;
+            width: 90.58%;
+            background: url(../img/top/bg_001.png) no-repeat 100% 100%;
+            background-size: contain;
+        }
+    }
+    &--lead {
+        max-width: 875px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &--idea {
+        position: relative;
+        display: block;
+        background: #FFF;
+        border-radius: 1.5rem;
+        @include inc.sizing(padding, tab, 40px, sp, 30px);
+        .--card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            a {
+                display: block;
+                width: 100%;
+                @include inc.mq(lap) {
+                    width: calc(50% - 1rem);
+                }
+                border-radius: 1rem;
+                overflow: hidden;
+                figure {
+                    position: relative;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                    figcaption {
+                        position: relative;
+                        display: block;
+                        bottom: 0;
+                        left: 0;
+                        background: inc.$theme-color-black;
+                        color: inc.$base-color;
+                        @include inc.sizing(padding-top, full, 20px, sp, 14px);
+                        @include inc.sizing(padding-bottom, full, 20px, sp, 14px);
+                        @include inc.sizing(padding-left, full, 36px, sp, 20px);
+                        @include inc.sizing(padding-right, full, 36px, sp, 20px);
+                        i {
+                            position: absolute;
+                            @include inc.sizing(right, full, 36px, sp, 20px);
+                            top: 50%;
+                            transform: translate(0%, -50%);
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+

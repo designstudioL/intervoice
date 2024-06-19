@@ -1,0 +1,28 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+common
+-----------------------------------------------------*/
+// .u-transparent {
+//   display: contents;
+// }
+
+// .u-sp-hidden {
+//   display: none;
+//   @include inc.mq(tab) {
+//     display: initial;
+//   }
+// }
+// .u-sp-visible {
+//   @include inc.mq(tab) {
+//     display: none;
+//   }
+// }
+
+// .screen-reader-text {
+//   clip: rect(1px, 1px, 1px, 1px);
+//   position: absolute !important;
+//   height: 1px;
+//   width: 1px;
+//   overflow: hidden;
+// }

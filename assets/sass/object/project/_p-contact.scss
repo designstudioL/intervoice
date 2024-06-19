@@ -1,0 +1,34 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+contact
+-----------------------------------------------------*/
+// .p-form {
+//   &-select {
+//     width: 100%;
+//     padding: 1rem;
+//     @include inc.sizingRem(font-size, full, 16px, sp, 14px);
+//     border: 1px solid inc.$theme-color-yellow;
+//     border-radius: .2rem;
+//   }
+//   &-txt {
+//     width: 100%;
+//     padding: 0.6rem 1rem;
+//     @include inc.sizingRem(font-size, full, 16px, sp, 14px);
+//     border: 1px solid inc.$theme-color-yellow;
+//     border-radius: .2rem;
+//   }
+//   &-zip {
+//     padding: 0.6rem 1rem;
+//     @include inc.sizingRem(font-size, full, 16px, sp, 14px);
+//     border: 1px solid inc.$theme-color-yellow;
+//     border-radius: .2rem;
+//   }
+//   &-txt2 {
+//     width: 100%;
+//     padding: 0.6rem 1rem;
+//     @include inc.sizingRem(font-size, full, 16px, sp, 14px);
+//     border: 1px solid inc.$theme-color-yellow;
+//     border-radius: .2rem;
+//   }
+// }

@@ -1,0 +1,39 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+today
+-----------------------------------------------------*/
+// .c-today {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+  
+//   &.-head-drawer {
+//     @include inc.mq(tab) {
+//       flex-direction: column;
+//     }
+//   }
+  
+//   &__date {
+//     text-transform: lowercase;
+//     letter-spacing: .1em;
+//   }
+  
+//   &__temp {
+//     margin-left: 2em;
+//     &.-head-drawer {
+//       @include inc.mq(tab) {
+//         margin-left: 0;
+//       }
+//     }
+//   }
+// }
+
+// .post-type-archive-event,
+// .page-template-event {
+//   .-pagetitile {
+//     .c-today {
+//       justify-content: flex-start;
+//     }
+//   }
+// }

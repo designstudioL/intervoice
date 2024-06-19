@@ -1,0 +1,197 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+about
+-----------------------------------------------------*/
+.p-about {
+    main {
+        background: url(../img/about/main.png) no-repeat 50% 3vw;
+        background-size: 80%;
+        padding-top: 50vw;
+        @include inc.mq(min) {
+            @include inc.sizing(padding-top, tab, 132px, sp, 68px);
+            background: url(../img/about/main.png) no-repeat 90% 0;
+            @include inc.sizing(background-size, lap, 580px, min, 330px);
+        }
+    }
+    &--nav {
+        padding: 0 0 28px;
+        border-bottom: 1px solid inc.$theme-color-gray5;
+        @include inc.sizing(margin-bottom, full, 96px, sp, 48px);
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            li a {
+                position: relative;
+                text-decoration: none !important;
+                padding: 0 0 0 32px;
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 22px;
+                    height: 22px;
+                    background: inc.$theme-color-black;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                }
+                .c-arrow-link--icon {
+                    overflow: hidden;
+                    position: absolute;
+                    top: 10px;
+                    left: 6px;
+                    width: 10px;
+                    height: 8px;
+                    margin: auto 0;
+                    line-height: 1;
+                }
+                .c-arrow-link--icon:before,
+                .c-arrow-link--icon:after {
+                    content: "";
+                    width: 10px;
+                    height: 8px;
+                    background: url(../img/common/icon_arrow_down_wh.svg) no-repeat 50% 50%;
+                    position: absolute;
+                    animation-fill-mode: both;
+                    animation-duration: 0.6s;
+                }
+                .c-arrow-link--icon:after {
+                    transform: translateY(-100%);
+                }
+                &.is-hover .c-arrow-link--icon:before {
+                    animation-name: transformTopBottom;
+                    animation-delay: 0.3s;
+                }
+                &.is-hover .c-arrow-link--icon:after {
+                    animation-name: transformBottomTop;
+                }
+                @media (hover: hover) and (pointer: fine) {
+                    &.is-hover:hover .c-arrow-link--icon:before {
+                        animation-name: transformBottomTop;
+                        animation-delay: 0s;
+                    }
+                    &.is-hover:hover .c-arrow-link--icon:after {
+                        animation-name: transformTopBottom;
+                        animation-delay: 0.3s;
+                    }
+                }
+                @keyframes transformTopBottom {
+                    0% {
+                        transform: translateY(-100%);
+                    }
+                    100% {
+                        transform: translateY(0);
+                    }
+                    }
+                    @keyframes transformBottomTop {
+                    0% {
+                        transform: translateY(0);
+                    }
+                    100% {
+                        transform: translateY(100%);
+                    }
+                }
+            }
+        }
+    }
+    &--profile {
+        @include inc.sizing(margin-top, lap, 48px, sp, 32px);
+        display: grid;
+        grid-template-columns: 105px 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        .profile01 {
+            grid-area: 1 / 1 / 2 / 2;
+            width: 105px;
+            //@include inc.sizing(width, lap, 140px, sp, 105px);
+            img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1 / 1;
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+            }
+        }
+        .profile02 {
+            grid-area: 1 / 2 / 2 / 3;
+            padding-left: 1.5rem;
+            display:flex; flex-direction:column; justify-content:center;
+            h2 {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 1.5;
+                span {
+                    display: block;
+                    color: inc.$theme-color-gray3;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .profile03 {
+            grid-area: 2 / 1 / 3 / 3;
+            padding-top: 1rem;
+        }
+        @include inc.mq(tab) {
+            grid-template-columns: 190px 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            .profile01 {
+                grid-area: 1 / 1 / 3 / 2;
+                width: 190px;
+                //@include inc.sizing(width, lap, 190px, tab, 160px);
+                img {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 1 / 1;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1;
+                }
+            }
+            .profile02 {
+                grid-area: 1 / 2 / 2 / 3;
+                padding-left: 2rem;
+                display:flex; flex-direction:column; justify-content:center;
+                h2 {
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    span {
+                        display: block;
+                        color: inc.$theme-color-gray3;
+                        font-size: 15px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            .profile03 {
+                grid-area: 2 / 2 / 3 / 3;
+                padding-left: 2rem;
+                display:flex; flex-direction:column; justify-content:center;
+                padding-top: 0rem;
+            }
+        }
+    }
+}
+
+
+.gmap {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    * + & {
+        margin-top: 1rem;
+    }
+}

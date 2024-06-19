@@ -1,0 +1,51 @@
+@charset 'UTF-8';
+@use "../inc/" as inc;
+/*
+CTA
+-----------------------------------------------------*/
+.l-cta {
+    .c-title-ex-large {
+        margin-bottom: 0;
+    }
+    background: inc.$theme-color-black;
+    color: inc.$base-color;
+    @include inc.sizing(padding-top, tab, 127px, sp, 50px);
+    @include inc.sizing(padding-bottom, tab, 110px, sp, 50px);
+    &--2column {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 48px 0;
+        &--L {
+            width: 100%;
+        }
+        &--R {
+            width: 100%;
+            padding-right: 0%;
+        }
+        @include inc.mq(lap-l) {
+            gap: 0 8.36%;
+            &--L {
+                width: 25.15%;
+            }
+            &--R {
+                width: 57.9%;
+                padding-right: 7.76%;
+            }
+        }
+    }
+    .-btn.-sizeM {
+        @include inc.sizing(margin-top, tab, 50px, sp, 32px);
+        width: 100%;
+        @include inc.mq(wsp) {
+            width: 260px;
+            height: 60px;
+        }
+        transition: all .5s ease;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background: rgba(230,230,230,.8);
+            }
+        }
+    }
+}

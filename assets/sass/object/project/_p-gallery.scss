@@ -1,0 +1,26 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+gallery
+-----------------------------------------------------*/
+// .p-gallery-slider {
+  
+//   &__slide {
+//     width: auto;
+//   }
+//   &__img {
+//     width: auto;
+//     aspect-ratio: 16 / 9;
+//     object-fit: cover;
+//     //height: inc.size(full, 380px, sp, 176px);
+//   }
+  
+//   &__caption {
+//     //margin-top: 1em;
+//     @include inc.sizing(margin-top, full, 12px, sp, 6px);
+//     @include inc.sizingRem(font-size, full, 16px, sp, 14px);
+//   }
+// }
+// .swiper-wrapper {
+//   transition-timing-function: linear;
+// }

@@ -1,0 +1,214 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+service
+-----------------------------------------------------*/
+.p-service {
+    main {
+        background: url(../img/service/main.png) no-repeat 50% 8vw;
+        background-size: 80%;
+        padding-top: 50vw;
+        @include inc.mq(min) {
+            @include inc.sizing(padding-top, tab, 132px, sp, 68px);
+            background: url(../img/service/main.png) no-repeat 90% 5vw;
+            @include inc.sizing(background-size, lap, 580px, min, 330px);
+        }
+        @include inc.mq(lap) {
+            background: url(../img/service/main.png) no-repeat 90% 0;
+            @include inc.sizing(background-size, desk, 880px, lap, 560px);
+        }
+    }
+    &-home {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem 0;
+        @include inc.mq(lap) {
+            gap: 2rem;
+        }
+        &__block {
+            display: block;
+            width: 100%;
+            @include inc.mq(lap) {
+                width: calc((100% - 2rem) /2 );
+            }
+            background: inc.$base-color;
+            border-radius: inc.$border-radius-m;
+            @include inc.sizing(padding, tab, 30px, sp, 20px);
+            position: relative;
+            .-arw-s {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: inc.$theme-color-black;
+                transition: all .5s ease;
+                z-index: 2;
+                .c-arrow-link--icon {
+                    overflow: hidden;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 10px;
+                    height: 6px;
+                    margin: auto 0;
+                    line-height: 1;
+                }
+                .c-arrow-link--icon:before,
+                .c-arrow-link--icon:after {
+                    content: "";
+                    width: 10px;
+                    height: 6px;
+                    background: url(../img/common/icon_arrow_right_wh.svg) no-repeat 50% 50%;
+                    background-size: contain;
+                    position: absolute;
+                    animation-fill-mode: both;
+                    animation-duration: 0.6s;
+                }
+                .c-arrow-link--icon:after {
+                    transform: translateX(-100%);
+                }
+            }
+            &:hover {
+                .p-service-home__pic {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+                .-arw-s {
+                    @media (hover: hover) and (pointer: fine) {
+                        &:hover {
+                            background: inc.$theme-color-gray3;
+                        }
+                    }
+                }
+            }
+            &.is-hover .c-arrow-link--icon:before {
+                animation-name: transformLeftRight5;
+                animation-delay: 0.3s;
+            }
+            &.is-hover .c-arrow-link--icon:after {
+                animation-name: transformRightLeft5;
+            }
+            @media (hover: hover) and (pointer: fine) {
+                &.is-hover:hover .c-arrow-link--icon:before {
+                    animation-name: transformRightLeft5;
+                    animation-delay: 0s;
+                }
+                &.is-hover:hover .c-arrow-link--icon:after {
+                    animation-name: transformLeftRight5;
+                    animation-delay: 0.3s;
+                }
+            }
+            @keyframes transformLeftRight5 {
+                0% {
+                    transform: translateX(-100%);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+                }
+                @keyframes transformRightLeft5 {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(100%);
+                }
+            }
+        }
+        // &__inner {
+        //     position: relative;
+        // }
+		&__text {
+			@include inc.sizing(padding-top, tab, 18px, sp, 14px);
+            font-weight: 600;
+            line-height: 1.6;
+            position: relative;
+            padding-right: 32px;
+		}
+        &__pic {
+            width: 100%;
+            display: block;
+            overflow:hidden;
+            img{
+                object-fit: cover;
+                transition: all .3s;
+            }
+        }
+    }
+
+}
+
+.--scrollfix {
+    .images {
+        display: none;
+    }
+    .contents figure {
+        display:flex; flex-direction:column; justify-content:center; align-items:center;
+        @include inc.sizing(margin-bottom, tab, 24px, sp, 16px);
+        img {
+            width: 102%;
+            max-width: 102%;
+        }
+    }
+    .contents div + div {
+        @include inc.sizing(margin-top, tab, 108px, sp, 96px);
+    }
+}
+@include inc.mq(tab) {
+    .--scrollfix {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        .contents{ width: calc(50% - 1rem); }
+        .contents div{ padding-top: 50vh; }
+        .contents div:last-child{ padding-bottom: 50vh; }
+        .contents figure { display: none;}
+        .contents div + .contents div {
+            margin-top: 0;
+        }
+        /*画像のブロック*/
+        .images{
+            width: calc(50% - 1rem);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            position: -webkit-sticky;
+            top:0;
+        }
+        .images p {
+            height: auto;
+            margin: auto;
+            display: block;
+            visibility: hidden;
+            background: url(../img/service/bg.svg) no-repeat 50% 50%;
+            background-size: contain;
+            display:flex; flex-direction:column; justify-content:center; align-items:center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            /* フェード速度 */
+            transition: .8s;
+            opacity: 0;
+            img {
+                width: 80%;
+                height: auto;
+            }
+        }
+        .images p:first-child,
+        .images p.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        .scroll-box01 {
+            h2 {
+                margin-top: -9vh;
+            }
+        }
+    }
+}
+

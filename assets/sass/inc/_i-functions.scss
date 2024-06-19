@@ -1,0 +1,10 @@
+@charset 'UTF-8';
+/*
+i-functions
+-----------------------------------------------------*/
+//  font-size rem の計算
+//--------------------------------------------
+$baseFontSize: 16;
+@function rem($pixels) {
+  @return calc($pixels / $baseFontSize) * 1rem;
+}

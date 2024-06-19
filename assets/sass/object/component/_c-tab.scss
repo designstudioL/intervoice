@@ -1,0 +1,39 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+
+/*
+ tab
+-----------------------------------------------------*/
+// .c-tab-control {
+//   display: flex;
+  
+//   &__button {
+//     flex-grow: 1;
+//     color: inc.$theme-color-black;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     line-height: 1.7;
+//     padding: 1em .5em;
+//     background: inc.$theme-color-yellow;
+//     border-radius: inc.size(full, 10px, sp, 7px) inc.size(full, 10px, sp, 7px) 0 0;
+
+//     cursor: pointer;
+//     @include inc.sizingRem(font-size, full, 20px, sp, 14px);
+    
+//     &.-active {
+//       background: #FFF;
+//     }
+    
+//     & + & {
+//       margin-left: 10px;
+//     }
+//   }
+// }
+// .c-tab-contents {
+//   display: none;
+  
+//   &.-active {
+//     display: block;
+//   }
+// }

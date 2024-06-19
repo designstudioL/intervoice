@@ -1,0 +1,66 @@
+@charset 'UTF-8';
+
+/*
+i-setting
+-----------------------------------------------------*/
+
+//====================================
+//  Viewport
+//====================================
+// Contentの幅
+$content-width: 375px !default;
+// ブレークポイントの設定
+$breakpoints: (
+  sps: 320px,
+  sp: 375px,
+  sp2: 376px,
+  wsp: 520px,
+  min: 620px,
+  tab: 768px,
+  lap: 960px,
+  lap-l: 1080px,
+  lap-ll: 1160px,
+  desk: 1280px,
+  vr: 1366px,
+  wide: 1440px,
+  //full: 1568px,
+  full: 1630px,
+);
+
+//====================================
+//  Color
+//====================================
+
+// ベースカラー　背景色
+$base-color: #FFF;
+$theme-color-black: #000;
+$theme-color-gray: #EEEBE6;
+$theme-color-gray2: #e6e6e6;
+$theme-color-gray3: #4d4d4d;
+$theme-color-gray4: #f0f0f0;
+$theme-color-gray5: #c6c6c6;
+$theme-color-gray6: #7b7b7b;
+
+$border-color-gray: #e3e3e3;
+$border-color-gray2: #e9e9e9;
+
+$border-radius-m: 1.5rem;
+$border-radius-s: 1rem;
+
+//====================================
+//  リンクカラー
+//====================================
+// a, img, a img {
+//   border:none;
+//   outline:none;
+//   text-decoration: none;
+//   color: #000;
+// }
+
+//====================================
+//  Typeface
+//====================================
+
+$font-set-primary: "Noto Sans JP", sans-serif;;
+$font-set-en: "Urbanist", sans-serif;
+

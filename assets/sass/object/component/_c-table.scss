@@ -1,0 +1,20 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+
+/*
+table
+-----------------------------------------------------*/
+.c-table {
+    border-top: 1px solid inc.$theme-color-gray5;
+    th, td {
+        @include inc.sizing(padding-top, full, 24px, sp, 16px);
+        @include inc.sizing(padding-bottom, full, 24px, sp, 16px);
+        border-bottom: 1px solid inc.$theme-color-gray5;
+        line-height: 2;
+    }
+    th {
+        @include inc.sizing(min-width, tab, 130px, sp, 110px);
+    }
+}
+
+

@@ -1,0 +1,8 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+bg
+-----------------------------------------------------*/
+.c-bg {
+    background: url(../img/common/bg.png) repeat 0 0 inc.$theme-color-gray;
+}

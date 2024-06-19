@@ -1,0 +1,86 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+language
+-----------------------------------------------------*/
+// .c-lang {
+//    font-size: inc.rem(14);
+  
+//   &.-header {  
+//     display: flex;
+//     margin-left: 2em;
+//     @include inc.mq(lap) {
+//       margin-left: 3em;
+//     }
+//   }
+  
+//   &.-head-drawer {
+//     display: block;
+//   }
+  
+  
+//   &__label {
+//     &.-header{ 
+//       color: inc.$theme-color-gray;
+//       &::after {
+//         content: ':';
+//       }
+//     }
+//     &.-head-drawer {
+//       display: block;
+//       text-align: center;
+//       padding: 1.5em;
+//       border-top: 1px solid inc.$theme-color-yellow;
+//       cursor: pointer; 
+      
+//       &::before {
+//         content: '';
+//         width: .4em;
+//         height: .4em;
+//         display: inline-block;
+//         border-right: 1px solid;
+//         border-bottom: 1px solid;
+//         vertical-align: middle;
+//         margin-right: .5em;
+//         transform: translateY(-25%) rotate(45deg);
+//       }
+      
+//       &.-open::before {
+//         transform: translateY(25%) rotate(-135deg);
+//       }
+//     }
+//   }
+//   &__list {
+//     &.-head-drawer {
+//       display: none;
+//       padding: 0 1em 1em ;
+//       text-align: center;
+//     }
+//   }
+  
+//   .glink {
+//     margin-left: 1em;
+
+//     @include inc.mq(tab) {
+//       margin-left: .5em;
+//     }
+//     @include inc.mq(lap) {
+//       margin-left: 1em;
+//     }
+    
+//     &:first-of-type {
+//       @include inc.mq(tab, max) {
+//         margin-left: 0;
+//       }
+//     }
+    
+//     img {
+//       display: none;
+//     }
+//   }
+
+//   .gt-current-lang {
+//     text-decoration: underline;
+//     text-underline-offset: 0.2em;
+//   }
+// }

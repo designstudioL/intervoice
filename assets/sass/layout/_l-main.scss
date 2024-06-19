@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+@use "../inc/" as inc;
+/*
+main
+-----------------------------------------------------*/
+.l-main {
+    @include inc.sizing(padding-top, tab, 132px, sp, 68px);
+    @include inc.sizing(padding-bottom, tab, 111px, sp, 110px);
+    overflow: hidden;
+}
+
+.p-news.post {
+    @include inc.sizing(padding-top, tab, 100px, sp, 68px);
+
+}

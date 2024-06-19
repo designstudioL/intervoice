@@ -1,0 +1,18 @@
+@charset 'UTF-8';
+@use "../../inc/" as inc;
+/*
+position
+-----------------------------------------------------*/
+// .-flxEnd {
+//   display: flex;
+//   justify-content: end;
+//   a {
+//     width: 100%;
+//   }
+//   @include inc.mq(lap) {
+//     display: block;
+//     a {
+//       width: auto;
+//     }
+//   }
+// }

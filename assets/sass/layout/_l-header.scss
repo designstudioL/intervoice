@@ -1,0 +1,404 @@
+@charset 'UTF-8';
+@use "../inc/" as inc;
+/*
+ header
+-----------------------------------------------------*/
+body {
+    @include inc.sizingRem(font-size, lap, 16px, sp, 14px);
+}
+
+#loading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: inc.$theme-color-gray;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+    pointer-events: none;
+}
+
+.l-header {
+    position: relative;
+    z-index: 2;
+    // position: absolute;
+    // top: 0;
+    @include inc.sizing(height, lap, 207px, sp, 113px);
+    width: 100%;
+    .-inner {
+        padding: 0 3% 0 4.8%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &-logo {
+        @include inc.sizing(width, lap, 148px, sp, 89px);
+        @include inc.sizing(height, lap, 160px, sp, 92px);
+        line-height: 0;
+        @include inc.sizing(padding-top, lap, 48px, sp, 21px);
+        img {
+            margin: 0;
+            padding: 0;
+            display: block;
+            line-height: 0;
+            font-size: 0;
+        }
+    }
+    &-nav {
+        display: none;
+        @include inc.mq(lap) {
+            position: fixed;
+            top: 0;
+            right: 3%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 36px;
+            justify-content: right;
+            padding-top: 60px;
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0 36px;
+                justify-content: right;
+                a {
+                    @include inc.sizingRem(font-size, lap, 16px, sp, 14px);
+                    font-weight: 600;
+                    line-height: 1;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        /*絶対配置で線の位置を決める*/
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0%;
+                        /*線の形状*/
+                        width: 100%;
+                        height: 2px;
+                        background:inc.$theme-color-black;
+                        /*アニメーションの指定*/
+                        transition: all .3s;
+                        transform: scale(0, 1);/*X方向0、Y方向1*/
+                        transform-origin: center top;/*上部中央基点*/
+                    }
+                    @media (hover: hover) and (pointer: fine) {
+                        &:hover::after {
+                            transform: scale(1, 1);/*X方向にスケール拡大*/
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-btn {
+        margin-top: -13px;
+        span {
+            padding: 0!important;
+        }
+    }
+    &-hamburger {
+        display: flex!important;
+        @include inc.mq(lap) {
+            display: none!important;
+        }
+        position: fixed;
+        right: 3%;
+        z-index: 4;
+        @include inc.sizing(top, lap, 47px, sp, 21px);
+        span {
+            padding: 0!important;
+        }
+        .icon{
+            transition: .4s;
+            @include inc.sizing(width, lap, 23px, sp, 16px);
+            @include inc.sizing(height, lap, 10px, sp, 8px);
+            display: flex;
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%);
+            @include inc.sizing(right, lap, 30px, sp, 18px);
+            @include inc.sizing(margin-top, lap, 1px, sp, 0px);
+            &::before{
+                transition: .4s;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background: #fff;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0px;
+                transform: translateY(100%);
+            }
+            &::after{
+                transition: .4s;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background: #fff;
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0px;
+                transform: translateY(-100%);
+            }
+        }
+        &-bg {
+            transition: .4s;
+            background: url(../img/common/bg.png) repeat 50% 50% inc.$theme-color-gray;
+            opacity: 0;
+            position: fixed;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            &.-open {
+                opacity: 1;
+                top: 50%;
+                left: 50%;
+                width: 140vh;
+                height: 140vh;
+                z-index: 2;
+            }
+        }
+        &-bg01 {
+            transition: .4s;
+            background: url(../img/common/nav_bg01.svg) no-repeat 50% 50%;
+            background-size: contain;
+            opacity: 0;
+            position: fixed;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            &.-open {
+                opacity: 1;
+                top: 50%;
+                left: 50%;
+                width: 520px;
+                height: 520px;
+                z-index: 3;
+            }
+        }
+        &-bg02 {
+            transition: .4s;
+            background: url(../img/common/nav_bg02.svg) no-repeat 50% 50%;
+            background-size: contain;
+            opacity: 0;
+            position: fixed;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 131px;
+            height: 77px;
+            margin-top: -11rem;
+            &.-open {
+                opacity: 1;
+                @include inc.sizing(width, lap, 160px, sp, 131px);
+                @include inc.sizing(height, lap, 94px, sp, 77px);
+                margin-top: -14rem;
+                z-index: 3;
+            }
+        }
+        &-bg03 {
+            transition: .6s;
+            background: url(../img/common/nav_bg03.svg) no-repeat 50% 50%;
+            background-size: contain;
+            opacity: 0;
+            position: fixed;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            width: 53px;
+            height: 63px;
+            transform: translate(-50%, -50%);
+            margin-top: -10rem;
+            margin-left: 4rem;
+            &.-open {
+                opacity: 1;
+                @include inc.sizing(width, lap, 63px, sp, 53px);
+                @include inc.sizing(height, lap, 74px, sp, 63px);
+                margin-top: -13rem;
+                margin-left: 7rem;
+                z-index: 3;
+            }
+        }
+        &-bg04 {
+            transition: .6s;
+            background: url(../img/common/nav_bg04.svg) no-repeat 50% 50%;
+            background-size: contain;
+            opacity: 0;
+            position: fixed;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            width: 155px;
+            height: 145px;
+            transform: translate(-50%, -50%);
+            margin-top: -3rem;
+            margin-left: 10rem;
+            &.-open {
+                opacity: 1;
+                @include inc.sizing(width, lap, 185px, sp, 155px);
+                @include inc.sizing(height, lap, 174px, sp, 145px);
+                margin-top: -6rem;
+                margin-left: 13rem;
+                z-index: 3;
+            }
+        }
+        &-bg05 {
+            transition: .6s;
+            background: url(../img/common/nav_bg05.svg) no-repeat 50% 50%;
+            background-size: contain;
+            opacity: 0;
+            position: fixed;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            width: 172px;
+            height: 146px;
+            transform: translate(-50%, -50%);
+            margin-top: 9rem;
+            margin-left: -7rem;
+            &.-open {
+                opacity: 1;
+                @include inc.sizing(width, lap, 202px, sp, 172px);
+                @include inc.sizing(height, lap, 172px, sp, 146px);
+                margin-top: 12rem;
+                margin-left: -10rem;
+                z-index: 3;
+            }
+        }
+        &-bg06 {
+            transition: .6s;
+            background: url(../img/common/nav_bg06.svg) no-repeat 50% 50%;
+            background-size: contain;
+            opacity: 0;
+            position: fixed;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            width: 84px;
+            height: 89px;
+            transform: translate(-50%, -50%);
+            margin-top: 1rem;
+            margin-left: 1rem;
+            &.-open {
+                opacity: 1;
+                @include inc.sizing(width, lap, 113px, sp, 84px);
+                @include inc.sizing(height, lap, 120px, sp, 89px);
+                margin-top: 14rem;
+                margin-left: 4rem;
+                z-index: 3;
+            }
+        }
+        &-bg07 {
+            transition: .6s;
+            background: url(../img/common/nav_bg07.svg) no-repeat 50% 50%;
+            background-size: contain;
+            opacity: 0;
+            position: fixed;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            width: 130px;
+            height: 116px;
+            transform: translate(-50%, -50%);
+            margin-top: 15rem;
+            margin-left: 8rem;
+            &.-open {
+                opacity: 1;
+                @include inc.sizing(width, lap, 160px, sp, 130px);
+                @include inc.sizing(height, lap, 143px, sp, 116px);
+                margin-top: 18rem;
+                margin-left: 11rem;
+                z-index: 3;
+            }
+        }
+        &-logo {
+            transition: .4s;
+            opacity: 0;
+            position: fixed;
+            z-index: -999;
+            @include inc.sizing(width, lap, 148px, sp, 89px);
+            @include inc.sizing(height, lap, 160px, sp, 92px);
+            @include inc.sizing(padding-top, lap, 48px, sp, 21px);
+            left: 4.8%;
+            top: 0;
+            img {
+                margin: 0;
+                padding: 0;
+                display: block;
+                line-height: 0;
+                font-size: 0;
+            }
+            &.-open {
+                opacity: 1;
+                transition: 1s;
+            }
+        }
+        &-nav {
+            transition: .4s;
+            opacity: 0;
+            position: fixed;
+            z-index: -999;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction:column;
+                gap: 1.5rem 0;
+                li {
+                    width: 160px;
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+            &.-open {
+                opacity: 1;
+            }
+        }
+        &-copyright {
+            transition: .4s;
+            opacity: 0;
+            position: fixed;
+            z-index: -999;
+            @include inc.sizingRem(font-size, tab, 11px, sp, 11px);
+            width: 100%;
+            bottom: 1rem;
+            left: 4.8%;
+            &.-open {
+                opacity: 1;
+            }
+        }
+        &-privacy {
+            display: block;
+        }
+    }
+}
+
+
+.l-header-hamburger.-open .icon::before {
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    top: .25rem;
+}
+.l-header-hamburger.-open .icon::after {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    top: .25rem;
+}
+
+
+
