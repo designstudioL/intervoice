@@ -2,32 +2,21 @@
 /*Template Name: 404 */
 ?>
 <?php get_header(); ?>
-<div class="l-spacer">
-	<div class="l-container--wide">
-		<?php get_template_part('inc/breadcrumb'); ?>
-	</div>
-</div>
 
-<section class="l-spacer -medium -both">
-	<div class="l-container--primary">
-		<h1 class="c-title-ex-large">404 Error</h1>
-	</div>
-</section>
-
-<section class="l-spacer -medium -both">
-	<div class="l-container--primary-s">
-		<article class="l-contents">
+<section class="l-container--primary">
+	<h1 class="c-title-pageTitle -en">Not Found<span>ページが見つかりません</span></h1>
+	<section class="l-container--2column">
+		<section class="--L">
+		</section>
+		<section class="--R">
 			<div class="l-spacer -medium">
-				<h2 class="c-title-medium">ページが見つかりませんでした</h2>
-				<p>まことに申し訳ありませんが、指定されたURLのページは存在しません。<br>
-				サイト更新などによってURLが変更になったか、URLが正しく入力されていない可能性があります。<br>
-				恐れ入りますが、ナビゲーションのリンクからご希望のページをお探しください。</p>
-				<p>
-					<a href="../" class="c-button-block -lightyellow -arrow"><span>ホームへ戻る</span></a>
-				</p>
+				<p>こ指定されたページは見つかりませんでした。<br>ページが移動または削除されたか、URLが間違っている可能性がございます。</p>
 			</div>
-		</article>
-	</div>
+			<div class="l-spacer -medium">
+				<a href="<?php echo home_url(); ?>" class="-btn -bk -fontsM -sizeL -arw -auto --back"><i class="c-arrow-link--icon"></i><span class="-center">ホームへ戻る</span></a>
+			</div>
+		</section>
+	</section>
 </section>
 
 <?php get_footer(); ?>

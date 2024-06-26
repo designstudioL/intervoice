@@ -6,10 +6,10 @@ main
 .l-main {
     @include inc.sizing(padding-top, tab, 132px, sp, 68px);
     @include inc.sizing(padding-bottom, tab, 111px, sp, 110px);
-    overflow: hidden;
+    //overflow: hidden;
 }
 
-.p-news.post {
+.p-column.post {
     @include inc.sizing(padding-top, tab, 100px, sp, 68px);
 
 }

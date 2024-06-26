@@ -12,13 +12,9 @@ add_theme_support( 'post-thumbnails' );
 この例は、テーマフォルダ内の/css/editor-style.cssに
 ビジュアルエディタ用のCSSを記述し、読み込んでいます。
 -------------------------------------------------------------------------*/
-//add_editor_style(get_template_directory_uri().'/assets/css/editor-style.css' );
-//add_editor_style('https://elb-hoshino-area-1086539244.ap-northeast-1.elb.amazonaws.com/wp-content/themes/hoshino-area/assets/css/editor-style.css');
-
 /* 【管理画面】管理画面カスタマイズ用CSSを読込 */
 function admin_css() {
-// echo '<link rel="stylesheet" type="text/css" href="https://elb-hoshino-area-1086539244.ap-northeast-1.elb.amazonaws.com/wp-content/themes/hoshino-area/assets/css/editor-style.css">';
-echo '<link rel="stylesheet" type="text/css" href="https://admin.hoshino-area.jp/wp-content/themes/hoshino-area/assets/css/editor-style.css">';
+echo '<link rel="stylesheet" type="text/css" href="https://intervoiceinc.jp/cms//wp-content/themes/intervoice/assets/css/editor-style.css">';
 }
 add_action('admin_head', 'admin_css');
 
@@ -33,32 +29,16 @@ remove_action( 'template_redirect', 'wp_redirect_admin_locations', 1000 );
 CSS・JSを登録する
 -------------------------------------------------------------------------*/
 function register_files() {
-	wp_register_style( 'fontawesome', 'https://use.fontawesome.com/releases/v6.4.2/css/all.css');
-	wp_register_style( 'theme-font', 'https://fonts.googleapis.com/css2?family=Poppins:wght@300:600&display=swap');
-	wp_register_style( 'swiper', get_template_directory_uri().'/assets/css/swiper.min_v8.css');
-	wp_register_style( 'wpadminbar', get_template_directory_uri().'/assets/css/wpadminbar.css', array(), filemtime( get_template_directory().'/assets/css/wpadminbar.css') );
-	wp_register_style( 'theme-common', get_template_directory_uri().'/assets/css/common.css', array(), filemtime( get_template_directory().'/assets/css/common.css') );
-	//wp_register_style( 'endlesscss', get_template_directory_uri().'/assets/css/endless-river.css');
-
-	wp_deregister_script('jquery');
-	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery.min.js');
-	wp_register_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper.min_v8.js');
-	wp_register_script( 'function', get_template_directory_uri() . '/assets/js/common.js', array(), filemtime( get_template_directory().'/assets/js/common.js') );
-	wp_register_script( 'weather', get_template_directory_uri() . '/assets/js/weather.js');
-	//wp_register_script( 'endless', get_template_directory_uri() . '/assets/js/endless-river.js');
+	// wp_register_style( 'common_css', get_template_directory_uri().'/assets/css/common.css');
+	// wp_deregister_script('jquery');
+	// wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?ver=6.5.2');
+	// wp_register_script( 'common_js', get_template_directory_uri() . '/assets/js/common.js');
 }
 function my_enqueue_files() {
-    register_files();
-	wp_enqueue_style( 'fontawesome' );
-	wp_enqueue_style( 'theme-font' );
-	wp_enqueue_style( 'swiper' );
-	wp_enqueue_style( 'wpadminbar' );
-	wp_enqueue_style( 'theme-common' );
-	//wp_enqueue_style( 'endlesscss' );
-	wp_enqueue_script( 'swiper' );
-	wp_enqueue_script( 'function' );
-	wp_enqueue_script( 'weather' );
-	//wp_enqueue_script( 'endless' );
+    // register_files();
+	// wp_enqueue_style( 'common_css' );
+	// wp_enqueue_script( 'jquery' );
+	// wp_enqueue_script( 'common_js' );
 }
 add_action( 'wp_enqueue_scripts', 'my_enqueue_files' );
 
@@ -70,55 +50,28 @@ function get_custom_template( $page_template ) {
 	global $wp_query;
 
 	//single
-	if(is_singular('news')) {
-	$page_template = dirname( __FILE__ ) . "/news/single.php";
+	if(is_singular('column_blog')) {
+	$page_template = dirname( __FILE__ ) . "/column_blog/single.php";
 	}
-	else if(is_singular('event')) {
-	$page_template = dirname( __FILE__ ) . "/event/single.php";
-	}
-	else if(is_singular('business-hours')) {
-	$page_template = dirname( __FILE__ ) . "/business-hours/single.php";
-	}
-	else if(is_singular('shop')) {
-	$page_template = dirname( __FILE__ ) . "/shop/single.php";
-	}
-	else if(is_singular('harunireterrace')) {
-		$page_template = dirname( __FILE__ ) . "/shop/single.php";
+	else if(is_singular('projects')) {
+	$page_template = dirname( __FILE__ ) . "/projects/single.php";
 	}
 
 	//archive
-	else if(is_post_type_archive('news')){
-	$page_template = dirname( __FILE__ ) . "/news/archive.php";
+	else if(is_post_type_archive('column_blog')){
+	$page_template = dirname( __FILE__ ) . "/column_blog/archive.php";
 	}
-	else if(is_post_type_archive('event')){
-	$page_template = dirname( __FILE__ ) . "/event/archive.php";
-	}
-	else if(is_post_type_archive('business-hours')){
-	$page_template = dirname( __FILE__ ) . "/business-hours/archive.php";
-	}
-	else if(is_post_type_archive('shop')){
-	$page_template = dirname( __FILE__ ) . "/shop/archive.php";
-	}
-	else if(is_post_type_archive('harunireterrace')){
-		$page_template = dirname( __FILE__ ) . "/shop/archive.php";
+	else if(is_post_type_archive('projects')){
+	$page_template = dirname( __FILE__ ) . "/projects/archive.php";
 	}
 
 	//taxonomy
-	else if(is_tax('news_cat')){
-	$page_template = dirname( __FILE__ ) . "/news/taxonomy.php";
+	else if(is_tax('column_blog_cat')){
+	$page_template = dirname( __FILE__ ) . "/column_blog/taxonomy.php";
 	}
-	else if(is_tax('event_cat')){
-	$page_template = dirname( __FILE__ ) . "/event/taxonomy.php";
+	else if(is_tax('projects_cat')){
+	$page_template = dirname( __FILE__ ) . "/projects/taxonomy.php";
 	}
-	else if(is_tax('business-hours_cat')){
-	$page_template = dirname( __FILE__ ) . "/business-hours/taxonomy.php";
-	}
-	else if(is_tax('shop_cat')){
-	$page_template = dirname( __FILE__ ) . "/shop/taxonomy.php";
-	}
-	else if(is_tax('harunireterrace_cat')){
-		$page_template = dirname( __FILE__ ) . "/shop/taxonomy.php";
-		}
 
 	return $page_template;
 	}
@@ -144,7 +97,6 @@ include_once( get_template_directory().'/functions/custompost.php' );
 
 /*ダッシュボードのカスタマイズ*/
 //include_once( get_template_directory().'/functions/dashboard.php' );
-
 
 
 /*カスタム投稿ページのみベーシック認証をかける*/
@@ -173,8 +125,6 @@ return $slug;
 add_filter( 'wp_unique_post_slug', 'auto_post_slug', 10, 4 );
 
 
-
-
 /*-------------------------------------------*/
 /* 　カスタムフィールドもプレビューできるようにする
 /*-------------------------------------------*/
@@ -195,49 +145,10 @@ function fix_post_id_on_preview($null, $post_id) {
 add_filter('acf/pre_load_post_id', 'fix_post_id_on_preview', 10, 2);
 
 
-
-
 /* ---------------------------------------------------------------------
 Lazy Blocksで勝手に出力されるdivをまとめて消す
 -------------------------------------------------------------------------*/
 add_filter( 'lzb/block_render/allow_wrapper', '__return_false' );
-
-
-/* ---------------------------------------------------------------------
-ACFでブロックエディタを制作する
--------------------------------------------------------------------------*/
-add_action('acf/init', 'my_acf_init_block_types');
-function my_acf_init_block_types() {
-    // Check function exists.
-    if( function_exists('acf_register_block_type') ) {
-        // register a dl block.
-        acf_register_block_type(array(
-            'name'              => 'dl',
-            'title'             => __('見出し付きリスト'),
-            'description'       => __('A custom dl block.'),
-            'render_template'   => 'blocks/dl.php',
-            'category'          => 'my-category',
-            'icon'              => 'list-view',
-            'keywords'          => array( 'dl', 'quote' ),
-            'enqueue_style'     => get_template_directory_uri() . '/blocks/acf.css',
-            'mode' => 'auto',
-        ));
-
-		acf_register_block_type(array(
-            'name'              => 'pickup',
-            'title'             => __('一覧エリア'),
-            'description'       => __('A custom pick up block.'),
-            'render_template'   => 'blocks/pickup.php',
-            'category'          => 'my-category',
-            'icon'              => 'awards',
-            'keywords'          => array( 'pick up' ),
-            'enqueue_style'     => get_template_directory_uri() . '/blocks/acf.css',
-            'mode' => 'auto',
-        ));
-    }
-}
-
-
 
 
 /* ---------------------------------------------------------------------
@@ -252,7 +163,6 @@ function my_acf_init_block_types() {
 // }
 // }
 // add_action('publish_event', 'add_defaultcategory_automatically'); // publish_カスタム投稿タイプのスラッグ
-
 
 
 //----------------------------------------------------

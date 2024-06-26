@@ -44,16 +44,22 @@ carousel
 
 
 
-
+.swiper-slide{ height: 100%!important; }
 
 .p-carousel-card {
 	position: relative;
-	display: block;
+	//display: block;
 	background: inc.$base-color;
 	border-radius: inc.$border-radius-m;
+	height: 100%!important;
+
+	display: flex;
+	flex-direction: column;
+
 	@include inc.sizing(padding, tab, 40px, sp, 30px);
 	&__text {
-		@include inc.sizing(padding-top, tab, 20px, sp, 20px);
+		@include inc.sizing(padding-top, tab, 12px, sp, 10px);
+		flex-grow: 1;
 	}
 	&__cat {
 		max-width: 100%; /* 省略せずに表示するサイズを指定 */
@@ -70,12 +76,39 @@ carousel
 		overflow: hidden;
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 2; /* 任意の行数を指定 */
+		-webkit-line-clamp: 3; /* 任意の行数を指定 */
+		&.--projects {
+			@include inc.sizing(padding-top, tab, 0px, sp, 0px);
+		}
+	}
+	&__cop {
+		@include inc.sizingRem(font-size, tab, 14px, sp, 13px);
+		color: inc.$theme-color-gray7;
+		line-height: 1.6;
+	}
+	&__title2 {
+		@include inc.sizing(padding-top, tab, 4px, sp, 4px);
+		@include inc.sizing(padding-bottom, tab, 16px, sp, 16px);
+		@include inc.sizingRem(font-size, tab, 18px, sp, 16px);
+		font-weight: 600;
+		line-height: 2;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3; /* 任意の行数を指定 */
+	}
+	&__tag {
+		padding-right: 40px;
 	}
 	&__date {
 		font-size: 14px;
 		line-height: 1;
 		@include inc.sizing(padding-top, tab, 40px, sp, 24px);
+	}
+	&__cname {
+		@include inc.sizingRem(font-size, tab, 18px, sp, 16px);
+		color: inc.$theme-color-gray7;
+		@include inc.sizingRem(font-size, tab, 14px, sp, 12px);
 	}
 	.p-carousel-card__img{
 		width: 100%;

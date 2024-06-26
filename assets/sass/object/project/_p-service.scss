@@ -167,9 +167,9 @@ service
         .contents div{ padding-top: 50vh; }
         .contents div:last-child{ padding-bottom: 50vh; }
         .contents figure { display: none;}
-        .contents div + .contents div {
-            margin-top: 0;
-        }
+        // .contents div + .contents div {
+        //     margin-top: 0;
+        // }
         /*画像のブロック*/
         .images{
             width: calc(50% - 1rem);

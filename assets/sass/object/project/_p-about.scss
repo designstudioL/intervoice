@@ -137,11 +137,11 @@ about
             padding-top: 1rem;
         }
         @include inc.mq(tab) {
-            grid-template-columns: 190px 1fr;
+            grid-template-columns: 298px 1fr;
             grid-template-rows: repeat(2, 1fr);
             .profile01 {
                 grid-area: 1 / 1 / 3 / 2;
-                width: 190px;
+                width: 298px;
                 //@include inc.sizing(width, lap, 190px, tab, 160px);
                 img {
                     width: 100%;

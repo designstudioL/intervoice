@@ -3,32 +3,112 @@
 /*
 contact
 -----------------------------------------------------*/
-// .p-form {
-//   &-select {
-//     width: 100%;
-//     padding: 1rem;
-//     @include inc.sizingRem(font-size, full, 16px, sp, 14px);
-//     border: 1px solid inc.$theme-color-yellow;
-//     border-radius: .2rem;
-//   }
-//   &-txt {
-//     width: 100%;
-//     padding: 0.6rem 1rem;
-//     @include inc.sizingRem(font-size, full, 16px, sp, 14px);
-//     border: 1px solid inc.$theme-color-yellow;
-//     border-radius: .2rem;
-//   }
-//   &-zip {
-//     padding: 0.6rem 1rem;
-//     @include inc.sizingRem(font-size, full, 16px, sp, 14px);
-//     border: 1px solid inc.$theme-color-yellow;
-//     border-radius: .2rem;
-//   }
-//   &-txt2 {
-//     width: 100%;
-//     padding: 0.6rem 1rem;
-//     @include inc.sizingRem(font-size, full, 16px, sp, 14px);
-//     border: 1px solid inc.$theme-color-yellow;
-//     border-radius: .2rem;
-//   }
-// }
+.p-contact {
+    background: inc.$base-color;
+	@include inc.sizing(padding, tab, 40px, sp, 30px);
+    @include inc.mq(lap) {
+        border-radius: inc.$border-radius-m;
+    }
+    &--conts {
+        & + & {
+            @include inc.sizing(margin-top, tab, 32px, sp, 24px);
+        }
+        h2 {
+            @include inc.sizingRem(font-size, full, 16px, sp, 16px);
+            @include inc.sizing(margin-bottom, tab, 16px, sp, 12px);
+            font-weight: 500;
+            span {
+                @include inc.sizingRem(font-size, full, 14px, sp, 14px);
+                color: #EC0000;
+                font-weight: 400;
+                margin-left: .8rem;
+            }
+        }
+        .checkbox_flex {
+            .wpcf7-list-item {
+                display: block;
+                margin: 0 1em 0 0;
+                @include inc.mq(lap) {
+                    display: inline-block;
+                    margin: 0 1em 0 0;
+                }
+            }
+            @include inc.mq(lap) {
+                .wpcf7-list-item + .wpcf7-list-item {
+                    margin-top: .8rem;
+                }
+            }
+        }
+    }
+    &-select {
+        width: 100%;
+        padding: 1rem;
+        @include inc.sizingRem(font-size, full, 16px, sp, 14px);
+        border-radius: .2rem;
+    }
+    &-txt {
+        width: 100%;
+        padding: 0.6rem 1rem;
+        @include inc.sizingRem(font-size, full, 16px, sp, 14px);
+        border: 1px solid #1a1a1a;
+        border-radius: .5rem;
+    }
+    &-zip {
+        padding: 0.6rem 1rem;
+        @include inc.sizingRem(font-size, full, 16px, sp, 14px);
+        border: 1px solid #1a1a1a;
+        border-radius: .5rem;
+    }
+    &-txt2 {
+        width: 100%;
+        padding: 0.6rem 1rem;
+        @include inc.sizingRem(font-size, full, 16px, sp, 14px);
+        border: 1px solid #1a1a1a;
+        border-radius: .5rem;
+    }
+    .checkbox {
+        accent-color: #000;
+    }
+    .checkbox_list {
+        .wpcf7-list-item + .wpcf7-list-item {
+            margin-top: .8rem;
+        }
+    }
+    .count {
+        color:#666;
+        @include inc.sizingRem(font-size, full, 12px, sp, 11px);
+        line-height: 1;
+        margin-top: 6px;
+    }
+    .hankaku {
+        color: inc.$theme-color-gray3;
+        display: block;
+        margin-bottom: 10px;
+        @include inc.sizingRem(font-size, full, 14px, sp, 12px);
+
+    }
+}
+
+
+.wpcf7-submit {
+    transition: .4s;
+    height: 100%;
+    border: none;
+    background: none;
+    color: inc.$base-color;
+    font-weight: 600;
+    @include inc.sizingRem(font-size, lap, 14px, sp, 12px);
+}
+.wpcf7-submit:hover {
+    color: inc.$theme-color-black;
+}
+
+
+.wpcf7-list-item {
+    display: inline-block;
+    margin: 0 1em 0 0;
+}
+
+.checkbox_list .wpcf7-list-item {
+    display: block;
+}

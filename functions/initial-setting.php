@@ -25,14 +25,14 @@ add_action('admin_print_footer_scripts', 'admin_manual_link');
 -----------------------------------------------------------------------------------*/
 //add_action( 'wp_footer', 'redirect_thanks_page' );
 function redirect_thanks_page() {
-  if(is_page('contact') || is_singular('tour')) { 
+  if(is_page('contact')) {
   ?>
   <script>
     document.addEventListener( 'wpcf7mailsent', function( event ) {
       location = '<?php echo home_url('contact/thanks'); ?>';
     }, false );
   </script>
-  <?php 
+  <?php
   }
 }
 
