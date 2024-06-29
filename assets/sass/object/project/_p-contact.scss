@@ -100,7 +100,7 @@ contact
     @include inc.sizingRem(font-size, lap, 14px, sp, 12px);
 }
 .wpcf7-submit:hover {
-    color: inc.$theme-color-black;
+    color: inc.$base-color;
 }
 
 

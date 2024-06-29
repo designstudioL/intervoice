@@ -25,7 +25,9 @@ $('.l-header-hamburger').on('click', function() {
 
 function globalMenuOpen() {
   $('.l-header-hamburger-bg').addClass('-open');
-  $('.l-header-hamburger-bg01').addClass('-open');
+  setTimeout(function(){
+    $('.l-header-hamburger-bg01').addClass('-open');
+  }, 200);
   setTimeout(function(){
     $('.l-header-hamburger-bg02').addClass('-open');
     $('.l-header-hamburger-bg03').addClass('-open');
@@ -33,15 +35,19 @@ function globalMenuOpen() {
     $('.l-header-hamburger-bg05').addClass('-open');
     $('.l-header-hamburger-bg06').addClass('-open');
     $('.l-header-hamburger-bg07').addClass('-open');
-  }, 500);
-  $('.l-header-hamburger-logo').css({'z-index':'4'});
-  $('.l-header-hamburger-nav').css({'z-index':'5'});
-  $('.l-header-hamburger-copyright').css({'z-index':'6'});
-  setTimeout(function(){
+    // $('.l-header-hamburger-logo').css({'z-index':'4'});
+    // $('.l-header-hamburger-nav').css({'z-index':'5'});
+    // $('.l-header-hamburger-copyright').css({'z-index':'6'});
     $('.l-header-hamburger-logo').addClass('-open');
     $('.l-header-hamburger-nav').addClass('-open');
     $('.l-header-hamburger-copyright').addClass('-open');
-  }, 1000);
+  }, 500);
+
+  // setTimeout(function(){
+  //   $('.l-header-hamburger-logo').addClass('-open');
+  //   $('.l-header-hamburger-nav').addClass('-open');
+  //   $('.l-header-hamburger-copyright').addClass('-open');
+  // }, 1000);
 }
 
 function globalMenuClose() {
@@ -51,8 +57,8 @@ function globalMenuClose() {
   $('.l-header-hamburger-bg05').removeClass('-open');
   $('.l-header-hamburger-bg06').removeClass('-open');
   $('.l-header-hamburger-bg07').removeClass('-open');
-  $('.l-header-hamburger-logo').css({'z-index':'-999'});
-  $('.l-header-hamburger-nav').css({'z-index':'-999'});
+  // $('.l-header-hamburger-logo').css({'z-index':'-999'});
+  // $('.l-header-hamburger-nav').css({'z-index':'-999'});
   $('.l-header-hamburger-logo').removeClass('-open');
   $('.l-header-hamburger-nav').removeClass('-open');
   $('.l-header-hamburger-copyright').removeClass('-open');
@@ -81,9 +87,9 @@ $(window).on('load resize', function(){
     $('.l-header-hamburger-bg05').removeClass('-open');
     $('.l-header-hamburger-bg06').removeClass('-open');
     $('.l-header-hamburger-bg07').removeClass('-open');
-    $('.l-header-hamburger-logo').css({'z-index':'-999'});
-    $('.l-header-hamburger-nav').css({'z-index':'-999'});
-    $('.l-header-hamburger-copyright').css({'z-index':'-999'});
+    // $('.l-header-hamburger-logo').css({'z-index':'-999'});
+    // $('.l-header-hamburger-nav').css({'z-index':'-999'});
+    // $('.l-header-hamburger-copyright').css({'z-index':'-999'});
     $('.l-header-hamburger-logo').removeClass('-open');
     $('.l-header-hamburger-nav').removeClass('-open');
     $('.l-header-hamburger-copyright').removeClass('-open');

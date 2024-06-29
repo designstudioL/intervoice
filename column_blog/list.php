@@ -23,22 +23,24 @@
     <section class="l-spacer -large">
         <div class="p-column-home">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <a href="<?php the_permalink(); ?>" class="p-carousel-card">
+
+                <a href="<?php the_permalink(); ?>" class="p-carousel-card -column">
                     <div class="p-carousel-card__img">
                         <img src="<?php if (has_post_thumbnail()) : ?><?php echo wp_get_attachment_url(get_post_thumbnail_id($post_id)); ?><?php else : ?><?php bloginfo('template_url') ?>/common/img/noimage.jpg<?php endif; ?>" alt="<?php the_title(); ?>" />
                     </div>
-                    <div class="p-carousel-card__text">
+                    <div class="p-carousel-card__text -column">
                         <p class="p-carousel-card__cat">
                             <?php $terms = get_the_terms($post->ID, 'column_blog_cat');
                             foreach ($terms as $term) {
                                 echo '<span class="c-tag">' . $term->name . '</span>';
                             } ?>
                         </p>
-                        <h3 class="p-carousel-card__title"><?php the_title(); ?></h3>
-                        <p class="p-carousel-card__date -en"><?php the_time('Y.m.d') ?></p>
+                        <h3 class="p-carousel-card__title -column"><?php the_title(); ?></h3>
                     </div>
+                    <p class="p-carousel-card__date -en"><?php the_time('Y.m.d') ?></p>
                     <div class="-arw-s"><i class="c-arrow-link--icon"></i></div>
                 </a>
+
             <?php endwhile; endif; ?>
         </div>
         <section class="l-container--primary">

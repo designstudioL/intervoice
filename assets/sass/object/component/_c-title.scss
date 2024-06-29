@@ -72,6 +72,12 @@ title
             }
         }
     }
+    br.sp_none {
+        display: none;
+        @include inc.mq(tab) {
+            display: block;
+        }
+    }
 }
 .c-title-large {
     @include inc.sizingRem(font-size, lap, 30px, sp, 22px);
@@ -82,7 +88,7 @@ title
 .c-title-medium {
     @include inc.sizingRem(font-size, lap, 26px, sp, 18px);
     font-weight: 600;
-    margin-bottom: 32px;
+    margin-bottom: 26px;
     line-height: 1.6;
     span {
         display: block;

@@ -3,17 +3,33 @@
 /*
 column
 -----------------------------------------------------*/
-.p-column_blog {
+.p-column_blog.top {
     main {
+        position: relative;
         background: url(../img/column_blog/main.png) no-repeat 50% 8vw;
         background-size: 80%;
         padding-top: 50vw;
         @include inc.mq(min) {
             @include inc.sizing(padding-top, tab, 132px, sp, 68px);
+            //background: none;
+            // &:before {
+            //     content: "";
+            //     display: block;
+            //     background: url(../img/column_blog/main.png) no-repeat 90% -1vw;
+            //     @include inc.sizing(background-size, lap, 580px, min, 330px);
+            //     @include inc.sizing(width, lap, 580px, min, 330px);
+            //     aspect-ratio: 1458 / 644;
+            //     position: absolute;
+            //     right: 10%;
+            //     @include inc.sizing(top, lap, -70px, min, -50px);
+            // }
             background: url(../img/column_blog/main.png) no-repeat 90% -1vw;
             @include inc.sizing(background-size, lap, 580px, min, 330px);
         }
         @include inc.mq(lap) {
+            // &:before {
+            //     @include inc.sizing(background-size, full, 720px, lap, 500px);
+            // }
             background: url(../img/column_blog/main.png) no-repeat 90% 0;
             @include inc.sizing(background-size, full, 720px, lap, 500px);
         }
@@ -49,8 +65,12 @@ column
             justify-content: space-between;
             @include inc.sizing(padding-top, tab, 24px, sp, 16px);
             @include inc.sizing(padding-bottom, tab, 24px, sp, 16px);
-            display: flex;
-	        flex-direction: column;
+	        //flex-direction: column;
+            &.-column {
+                @include inc.mq(tab) {
+                    flex-direction: column;
+                }
+            }
             &__img {
                 width: 33%;
                 border: none;
@@ -76,13 +96,17 @@ column
                 &__text {
                     @include inc.sizing(padding-top, tab, 20px, sp, 20px);
                     width: 100%;
-                    flex-grow: 1;
+                    &.-column {
+                        @include inc.mq(tab) {
+                            flex-grow: 1;
+                        }
+                    }
                 }
                 &__date {
                     @include inc.sizing(padding-top, tab, 40px, sp, 24px);
                 }
                 @include inc.sizing(padding, tab, 40px, sp, 30px);
-                display: block;
+                display: flex;
                 width: calc((100% - 2rem) / 2);
             }
             @include inc.mq(lap) {

@@ -21,16 +21,19 @@ CTA
         }
         &--R {
             width: 100%;
-            padding-right: 0%;
+            //padding-right: 0%;
         }
         @include inc.mq(lap-l) {
-            gap: 0 8.36%;
+            //gap: 0 8.36%;
+            gap: 2rem;
             &--L {
-                width: 25.15%;
+                //width: 25.15%;
+                width: calc(50% - 1rem);
             }
             &--R {
-                width: 57.9%;
-                padding-right: 7.76%;
+                //width: 57.9%;
+                width: calc(50% - 1rem);
+                //padding-right: 7.76%;
             }
         }
     }

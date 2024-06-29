@@ -46,13 +46,13 @@ jQuery(function(){
 <?php elseif(is_page('service')): ?>
 <body class="p-service" id="service">
 
-<?php elseif(is_post_type_archive('column_blog') || is_tax('column_blog')): ?>
-<body class="p-column_blog" id="column_blog">
+<?php elseif(is_post_type_archive('column_blog') || is_tax('column_blog_cat')): ?>
+<body class="p-column_blog top" id="column_blog">
 
 <?php elseif(is_singular('column_blog')): ?>
 <body class="p-column_blog post" id="column_blog">
 
-<?php elseif(is_post_type_archive('projects') || is_tax('projects')): ?>
+<?php elseif(is_post_type_archive('projects') || is_tax('projects_cat')): ?>
 <body class="p-projects" id="projects">
 
 <?php elseif(is_singular('projects')): ?>
@@ -70,10 +70,10 @@ jQuery(function(){
     <div class="l-header-logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo.svg" alt="intervoice"></a></div>
     <nav class="l-header-nav">
       <ul>
-        <li><a href="<?php echo home_url('/about'); ?>">私たちについて</a></li>
-        <li><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
-        <li><a href="<?php echo home_url('/service'); ?>">サービス</a></li>
-        <li><a href="<?php echo home_url('/column_blog'); ?>">コラム＆ブログ</a></li>
+        <li class="nav01"><a href="<?php echo home_url('/about'); ?>">私たちについて</a></li>
+        <li class="nav02"><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
+        <li class="nav03"><a href="<?php echo home_url('/service'); ?>">サービス</a></li>
+        <li class="nav04"><a href="<?php echo home_url('/column_blog'); ?>">コラム＆ブログ</a></li>
       </ul>
       <div><a href="<?php echo home_url('/contact'); ?>" class="-btn -bk -fontsS -sizeS -center l-header-btn"><span>お問い合わせ</span></a></div>
     </nav>
@@ -81,27 +81,28 @@ jQuery(function(){
 </header>
 
 <button class="l-header-hamburger -btn -bk -sizeH" id="hamburger"><span class="-en">menu</span><i class="icon"><span></span></i></button>
-<div class="l-header-hamburger-bg"></div>
-<div class="l-header-hamburger-bg01"></div>
-<div class="l-header-hamburger-bg02"></div>
-<div class="l-header-hamburger-bg03"></div>
-<div class="l-header-hamburger-bg04"></div>
-<div class="l-header-hamburger-bg05"></div>
-<div class="l-header-hamburger-bg06"></div>
-<div class="l-header-hamburger-bg07"></div>
-<div class="l-header-hamburger-logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo.svg" alt="intervoice"></div>
-<nav class="l-header-hamburger-nav">
-  <ul>
-    <li><a href="<?php echo home_url(); ?>">トップ</a></li>
-    <li><a href="<?php echo home_url('/about'); ?>">私たちについて</a></li>
-    <li><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
-    <li><a href="<?php echo home_url('/service'); ?>">サービス</a></li>
-    <li><a href="<?php echo home_url('/column_blog'); ?>">コラム＆ブログ</a></li>
-    <li><a href="<?php echo home_url('/contact'); ?>">お問い合わせ</a></li>
-  </ul>
-</nav>
-<div class="l-header-hamburger-copyright">
-  <p>&copy; intervoiceinc. All Rights Reserved.<a href="<?php echo home_url('/privacy'); ?>" class="l-header-hamburger-privacy">プライバシーポリシー</a></p>
+<div class="l-header-hamburger-bg">
+  <div class="l-header-hamburger-bg01"></div>
+  <div class="l-header-hamburger-bg02"></div>
+  <div class="l-header-hamburger-bg03"></div>
+  <div class="l-header-hamburger-bg04"></div>
+  <div class="l-header-hamburger-bg05"></div>
+  <div class="l-header-hamburger-bg06"></div>
+  <div class="l-header-hamburger-bg07"></div>
+  <div class="l-header-hamburger-logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo.svg" alt="intervoice"></div>
+  <nav class="l-header-hamburger-nav">
+    <ul>
+      <li><a href="<?php echo home_url(); ?>">トップ</a></li>
+      <li><a href="<?php echo home_url('/about'); ?>">私たちについて</a></li>
+      <li><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
+      <li><a href="<?php echo home_url('/service'); ?>">サービス</a></li>
+      <li><a href="<?php echo home_url('/column_blog'); ?>">コラム＆ブログ</a></li>
+      <li><a href="<?php echo home_url('/contact'); ?>">お問い合わせ</a></li>
+    </ul>
+  </nav>
+  <div class="l-header-hamburger-copyright">
+    <p>&copy; intervoiceinc. All Rights Reserved.<a href="<?php echo home_url('/privacy'); ?>" class="l-header-hamburger-privacy">プライバシーポリシー</a></p>
+  </div>
 </div>
 <!--/header-->
 
@@ -112,7 +113,7 @@ jQuery(function(){
 <?php endif; ?>
 
 <?php if(is_home() || is_front_page()): ?>
-<main class="l-main" id="">
+<main class="l-main --hidden " id="">
 <?php elseif(is_singular('projects')): ?>
 <main class="l-main -post" id="">
 <?php else: ?>

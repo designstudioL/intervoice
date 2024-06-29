@@ -15,7 +15,7 @@
 	企業とブランドに新しい変化を生み出していきます。</p>
 </section>
 
-<section class="l-container--primary l-spacer -large --scrollfix">
+<section class="l-container--primary l-spacer --scrollfix">
 	<!-- 画像のブロック -->
 	<div class="images">
 		<p class="scroll-box01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/service/pic_001.png" alt=""></p>

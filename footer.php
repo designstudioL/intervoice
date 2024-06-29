@@ -5,7 +5,117 @@
 ?>
 </main>
 
-<section class="l-cta">
+<?php if(is_home() || is_front_page()): ?>
+
+<?php elseif(is_page('about')): ?>
+<section class="l-container--primary">
+  <nav class="c-breadcrumb">
+    <ul>
+      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
+      <li><span>私たちについて</span></li>
+    </ul>
+  </nav>
+</section>
+
+<?php elseif(is_page('service')): ?>
+<section class="l-container--primary">
+  <nav class="c-breadcrumb">
+    <ul>
+      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
+      <li><span>サービス</span></li>
+    </ul>
+  </nav>
+</section>
+
+<?php elseif(is_post_type_archive('column_blog') || is_tax('column_blog')): ?>
+<section class="l-container--primary">
+  <nav class="c-breadcrumb">
+    <ul>
+      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
+      <li><span>コラム＆ブログ</span></li>
+    </ul>
+  </nav>
+</section>
+
+<?php elseif(is_singular('column_blog')): ?>
+<section class="l-container--primary">
+  <nav class="c-breadcrumb">
+    <ul>
+      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
+      <li><a href="<?php echo home_url('/column_blog'); ?>" class="underline">コラム＆ブログ</span></a></li>
+      <li><span><?php the_title(); ?></span></li>
+    </ul>
+  </nav>
+</section>
+
+<?php elseif(is_post_type_archive('projects') || is_tax('projects')): ?>
+<section class="l-container--primary">
+  <nav class="c-breadcrumb">
+    <ul>
+      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
+      <li><span>取り組み実績</span></li>
+    </ul>
+  </nav>
+</section>
+
+<?php elseif(is_singular('projects')): ?>
+  <section class="l-container--primary">
+  <nav class="c-breadcrumb">
+    <ul>
+      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
+      <li><a href="<?php echo home_url('/projects'); ?>" class="underline">取り組み実績</a></li>
+      <li><span><?php the_title(); ?></span></li>
+    </ul>
+  </nav>
+</section>
+
+<?php elseif(is_page('service')): ?>
+<section class="l-container--primary">
+  <nav class="c-breadcrumb">
+    <ul>
+      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
+      <li><span>プライバシーポリシー</span></li>
+    </ul>
+  </nav>
+</section>
+
+<?php elseif(is_page('contact')): ?>
+<section class="l-container--primary">
+  <nav class="c-breadcrumb">
+    <ul>
+      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
+      <li><span>お問い合わせ</span></li>
+    </ul>
+  </nav>
+</section>
+
+<?php elseif(is_page('thanks')): ?>
+<section class="l-container--primary">
+  <nav class="c-breadcrumb">
+    <ul>
+      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
+      <li><span>お問い合わせ完了</span></li>
+    </ul>
+  </nav>
+</section>
+
+<?php elseif(is_page('404')): ?>
+<section class="l-container--primary">
+  <nav class="c-breadcrumb">
+    <ul>
+      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
+      <li><span>404</span></li>
+    </ul>
+  </nav>
+</section>
+
+<?php else: ?>
+<?php endif; ?>
+
+
+<?php if(is_page('contact') || is_page('thanks')): ?>
+<?php else: ?>
+  <section class="l-cta">
   <div class="l-container--primary">
     <div class="l-cta--2column">
       <div class="l-cta--2column--L">
@@ -25,9 +135,11 @@
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 <footer class="l-footer">
   <div class="l-container--primary">
+    <?php if(is_home() || is_front_page()): ?>
     <div class="l-footer--message">
       <div class="-L">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/bg_008.png" alt="">
@@ -36,15 +148,16 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/bg_009.png" alt="">
       </div>
     </div>
+    <?php endif; ?>
     <div class="l-footer__logo">
         <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/intervoice.svg" alt="intervoice"></a>
     </div>
     <nav class="l-footer--nav">
       <ul>
-      <li><a href="<?php echo home_url('/about'); ?>">私たちについて</a></li>
-      <li><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
-      <li><a href="<?php echo home_url('/service'); ?>">サービス</a></li>
-      <li><a href="<?php echo home_url('/column_blog'); ?>">コラム＆ブログ</a></li>
+      <li class="nav01"><a href="<?php echo home_url('/about'); ?>">私たちについて</a></li>
+      <li class="nav02"><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
+      <li class="nav03"><a href="<?php echo home_url('/service'); ?>">サービス</a></li>
+      <li class="nav04"><a href="<?php echo home_url('/column_blog'); ?>">コラム＆ブログ</a></li>
       </ul>
     </nav>
     <div class="l-footer__copyright">

@@ -39,7 +39,6 @@ carousel
 			}
 		}
 	}
-	
 }
 
 
@@ -51,15 +50,31 @@ carousel
 	//display: block;
 	background: inc.$base-color;
 	border-radius: inc.$border-radius-m;
-	height: 100%!important;
-
+	//height: 100%!important;
 	display: flex;
-	flex-direction: column;
-
+	&.-projects {
+		height: 100%!important;
+	}
 	@include inc.sizing(padding, tab, 40px, sp, 30px);
 	&__text {
 		@include inc.sizing(padding-top, tab, 12px, sp, 10px);
-		flex-grow: 1;
+		@include inc.sizing(padding-bottom, tab, 16px, sp, 16px);
+		&.-column {
+			@include inc.mq(tab) {
+				flex-grow: 1;
+			}
+		}
+		&.-projects {
+			flex-grow: 1;
+		}
+	}
+	&.-projects {
+		flex-direction: column;
+	}
+	&.-column {
+		@include inc.mq(tab) {
+			flex-direction: column;
+		}
 	}
 	&__cat {
 		max-width: 100%; /* 省略せずに表示するサイズを指定 */
@@ -80,6 +95,12 @@ carousel
 		&.--projects {
 			@include inc.sizing(padding-top, tab, 0px, sp, 0px);
 		}
+		&.-column {
+			padding-top: 4px;
+			@include inc.mq(tab) {
+				@include inc.sizing(padding-top, tab, 16px, sp, 16px);
+			}
+		}
 	}
 	&__cop {
 		@include inc.sizingRem(font-size, tab, 14px, sp, 13px);
@@ -88,9 +109,9 @@ carousel
 	}
 	&__title2 {
 		@include inc.sizing(padding-top, tab, 4px, sp, 4px);
-		@include inc.sizing(padding-bottom, tab, 16px, sp, 16px);
+		//@include inc.sizing(padding-bottom, tab, 16px, sp, 16px);
 		@include inc.sizingRem(font-size, tab, 18px, sp, 16px);
-		font-weight: 600;
+		font-weight: 400;
 		line-height: 2;
 		overflow: hidden;
 		display: -webkit-box;
@@ -99,6 +120,10 @@ carousel
 	}
 	&__tag {
 		padding-right: 40px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: .3rem;
+
 	}
 	&__date {
 		font-size: 14px;

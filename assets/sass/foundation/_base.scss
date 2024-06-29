@@ -15,7 +15,7 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
-  line-height: 2;
+  line-height: 2.1;
   font-family: inc.$font-set-primary, sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -93,7 +93,7 @@ dd {
 p {
   margin: 0;
   padding: 0;
-  line-height: 2;
+  line-height: 2.1;
 }
 p + p {
   margin-top: 2rem;

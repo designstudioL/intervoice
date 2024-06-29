@@ -4,7 +4,8 @@
 footer
 -----------------------------------------------------*/
 .l-footer {
-    padding: 56px 32px;
+    //padding: 56px 32px;
+    padding: 56px 0;
     @include inc.mq(tab) {
         padding: 80px 0;
     }
@@ -29,8 +30,14 @@ footer
         .-R {
             width: 100%;
             max-width: 324px;
+            img {
+                width: 60%;
+            }
             @include inc.mq(wsp) {
                 width: calc(100% - 65.7%);
+                img {
+                    width: 100%;
+                }
             }
             display:flex;
             flex-direction:column;
@@ -69,26 +76,29 @@ footer
                     margin: 0;
                     padding: 0;
                     position: relative;
-                    &::after {
-                        content: '';
-                        /*絶対配置で線の位置を決める*/
-                        position: absolute;
-                        bottom: -2px;
-                        left: 0%;
-                        /*線の形状*/
-                        width: 100%;
-                        height: 2px;
-                        background:inc.$theme-color-black;
-                        /*アニメーションの指定*/
-                        transition: all .3s;
-                        transform: scale(0, 1);/*X方向0、Y方向1*/
-                        transform-origin: center top;/*上部中央基点*/
+                    &:hover {
+                        color: inc.$theme-color-gray6;
                     }
-                    @media (hover: hover) and (pointer: fine) {
-                        &:hover::after {
-                            transform: scale(1, 1);/*X方向にスケール拡大*/
-                        }
-                    }
+                    // &::after {
+                    //     content: '';
+                    //     /*絶対配置で線の位置を決める*/
+                    //     position: absolute;
+                    //     bottom: -2px;
+                    //     left: 0%;
+                    //     /*線の形状*/
+                    //     width: 100%;
+                    //     height: 2px;
+                    //     background:inc.$theme-color-black;
+                    //     /*アニメーションの指定*/
+                    //     transition: all .3s;
+                    //     transform: scale(0, 1);/*X方向0、Y方向1*/
+                    //     transform-origin: center top;/*上部中央基点*/
+                    // }
+                    // @media (hover: hover) and (pointer: fine) {
+                    //     &:hover::after {
+                    //         transform: scale(1, 1);/*X方向にスケール拡大*/
+                    //     }
+                    // }
                 }
             }
         }
@@ -188,5 +198,14 @@ footer
 
 
 
-
+#about .l-footer--nav .nav01 a,
+#projects .l-footer--nav .nav02 a,
+#service .l-footer--nav .nav03 a,
+#column_blog .l-footer--nav .nav04 a {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5em;
+    text-decoration-color: #fff;
+    text-underline-offset: -0.2em;
+    text-decoration-skip-ink: none;
+}
 

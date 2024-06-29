@@ -9,7 +9,8 @@ home
     }
     &--block01 {
         position: relative;
-        @include inc.sizing(padding-bottom, full, 260px, tab, 180px);
+        //@include inc.sizing(padding-bottom, full, 260px, tab, 180px);
+        @include inc.sizing(padding-bottom, full, 340px, tab, 200px);
         &::before {
             content: "";
             display: block;

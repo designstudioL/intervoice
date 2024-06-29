@@ -7,6 +7,9 @@ main
     @include inc.sizing(padding-top, tab, 132px, sp, 68px);
     @include inc.sizing(padding-bottom, tab, 111px, sp, 110px);
     //overflow: hidden;
+    &.--hidden {
+        overflow: hidden;
+    }
 }
 
 .p-column.post {

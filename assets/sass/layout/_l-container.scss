@@ -8,7 +8,7 @@
     &--primary {
         width: 100%;
         max-width: 1660px;
-        padding: 0 4%;
+        padding: 0 6%;
         @include inc.mq(lap) {
             padding: 0 4.8%;
         }
@@ -17,7 +17,7 @@
     &--secondary {
         width: 100%;
         max-width: calc(1080px + 8%);
-        padding: 0 4%;
+        padding: 0 6%;
         @include inc.mq(lap) {
             max-width: calc(1080px + 9.6%);
             padding: 0 4.8%;
@@ -62,7 +62,7 @@
             }
             .--R {
                 width: 74.78%;
-                padding-right: 7.76%;
+                //padding-right: 7.76%;
             }
         }
         &.--home {
@@ -116,13 +116,13 @@
             }
             margin: 0 auto;
             .--L {
-                padding: 0 4%;
+                padding: 0 6%;
                 @include inc.mq(lap) {
                     padding: 0;
                 }
             }
             .--inner {
-                padding: 0 4%;
+                padding: 0 6%;
                 @include inc.mq(lap) {
                     padding: 0;
                 }

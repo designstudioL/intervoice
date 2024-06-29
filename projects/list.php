@@ -23,11 +23,11 @@
     <section class="l-spacer -large">
         <div class="p-projects-home">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <a href="<?php the_permalink(); ?>" class="p-carousel-card">
+                <a href="<?php the_permalink(); ?>" class="p-carousel-card -projects">
                     <div class="p-carousel-card__img">
                         <img src="<?php if (has_post_thumbnail()) : ?><?php echo wp_get_attachment_url(get_post_thumbnail_id($post_id)); ?><?php else : ?><?php bloginfo('template_url') ?>/common/img/noimage.jpg<?php endif; ?>" alt="<?php the_title(); ?>" />
                     </div>
-                    <div class="p-carousel-card__text">
+                    <div class="p-carousel-card__text -projects">
                         <?php if(get_field('name')): ?>
                         <p class="p-carousel-card__cname">
                             <?php the_field('name'); ?>

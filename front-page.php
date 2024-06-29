@@ -6,7 +6,7 @@
 <section class="p-home--block01 l-spacer -large">
     <section class="l-container--primary">
         <div class="p-home--lead">
-            <h2 class="c-title-ex-large">ママーケティング思考とアイデアで、<br>〇〇を変える。</h2>
+            <h2 class="c-title-ex-large">マーケティング思考とアイデアで、<br class="sp_none">〇〇を変える。</h2>
             <p>intervoiceは、マーケティング思考とアイデアを源泉に、<br>事業やブランドの問題を特定し、課題を立て、解決のためのビジョンと道筋を提供する、<br>ブランディングと戦略リサーチの会社です。</p>
             <p>クライアントとともに、慣習を疑い、着眼を変え、社会と人を捉えなおすことで、<br>今を変えるアイデア、人に響くプロダクトやサービス、長く愛されるブランドをつくっていく。<br>そしてそのプロセスと経験を、人を成長させる糧に変えていく。<br>そこから、新しい変化を生み出していく。</p>
             <p>私たちは、「戦略思考」「対話のデザイン」「仮説発想」の３つを軸に、<br>思考を変え、対話を変え、発想を変え、<br>人と社会に新しい変化をもたらす企業でありたいと思っています。</p>
@@ -26,7 +26,7 @@
             <section class="--R">
                     <div class="l-spacer -medium">
                         <p>私たちが大切にしているのは、「戦略思考」「対話のデザイン」「仮説発想」。<br>すべての業務領域において、この３つの軸はベースにあります。<br>どの領域のどのお仕事においても、クライアントと私たちで、思考をめぐらせ、チームで対話し、規制にとらわれず自由に発想することで、企業とブランドに新しい変化を生み出していきます。</p>
-                        <p><a href="" class="-btn -bk -fontsM -sizeM -arw"><span>サービス</span><i class="c-arrow-link--icon"></i></a></p>
+                        <p><a href="<?php echo home_url('/service'); ?>" class="-btn -bk -fontsM -sizeM -arw"><span>サービス</span><i class="c-arrow-link--icon"></i></a></p>
                     </div>
                     <div class="l-spacer -medium">
                         <div class="p-service-home">
@@ -75,20 +75,21 @@
         <div class="p-column-home p-column--bg02">
             <?php $news_posts = get_posts('post_type=column_blog&posts_per_page=6'); if (!empty($news_posts)) : ?>
             <?php foreach ($news_posts as $post) : setup_postdata($post); ?>
-            <a href="<?php the_permalink(); ?>" class="p-carousel-card">
+            <a href="<?php the_permalink(); ?>" class="p-carousel-card -column">
                 <div class="p-carousel-card__img">
                     <img src="<?php if (has_post_thumbnail()) : ?><?php echo wp_get_attachment_url(get_post_thumbnail_id($post_id)); ?><?php else : ?><?php bloginfo('template_url') ?>/common/img/noimage.jpg<?php endif; ?>" alt="<?php the_title(); ?>" />
                 </div>
-                <div class="p-carousel-card__text">
+                <div class="p-carousel-card__text -column">
                     <p class="p-carousel-card__cat">
                         <?php $terms = get_the_terms($post->ID, 'column_blog_cat');
                         foreach ($terms as $term) {
                             echo '<span class="c-tag">' . $term->name . '</span>';
                         } ?>
                     </p>
-                    <h3 class="p-carousel-card__title"><?php the_title(); ?></h3>
-                    <p class="p-carousel-card__date -en"><?php the_time('Y.m.d') ?></p>
+                    <h3 class="p-carousel-card__title -column"><?php the_title(); ?></h3>
+                    
                 </div>
+                <p class="p-carousel-card__date -en"><?php the_time('Y.m.d') ?></p>
                 <div class="-arw-s"><i class="c-arrow-link--icon"></i></div>
             </a>
             <?php endforeach; wp_reset_postdata(); ?>

@@ -6,6 +6,15 @@ button
 .-btn {
     display:flex; flex-direction:column; justify-content:center;
     border-radius: 9999px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    //margin: 0 auto;
+    @include inc.mq(wsp) {
+        //margin: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
     &.l-header-hamburger {
         @include inc.sizing(padding-left, lap, 30px, sp, 24px);
         span {
@@ -20,7 +29,7 @@ button
             color: inc.$base-color;
             font-weight: 600;
             //transition: .4s;
-            padding: 0 65px 0 30px;
+            //padding: 0 65px 0 30px;
             &.-center {
                 text-align: center;
             }
@@ -28,9 +37,9 @@ button
         transition: all .5s ease;
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                background: inc.$theme-color-gray2;
+                background: inc.$theme-color-gray3;
                 span {
-                    color: inc.$theme-color-black;
+                    color: inc.$base-color;
                 }
                 .icon {
                     &::before{
@@ -67,14 +76,17 @@ button
     }
     &.-sizeS {
         width: 140px;
+        max-width: 90%;
         height: 44px;
     }
     &.-sizeM {
         width: 260px;
+        max-width: 90%;
         height: 60px;
     }
     &.-sizeL {
         width: 480px;
+        max-width: 90%;
         height: 60px;
         text-align: center;
     }
@@ -153,7 +165,7 @@ button
             background: url(../img/common/icon_arrow_right_wh.svg) no-repeat 50% 50%;
         }
         .c-arrow-link--icon:after {
-            background: url(../img/common/icon_arrow_right_bk.svg) no-repeat 50% 50%;
+            background: url(../img/common/icon_arrow_right_wh.svg) no-repeat 50% 50%;
         }
     }
     &.--back {
