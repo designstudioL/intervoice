@@ -3,12 +3,26 @@
 /*
 main
 -----------------------------------------------------*/
+body {
+    letter-spacing: .1rem;
+    &.--hidden {
+        overflow: hidden;
+    }
+}
+
 .l-main {
-    @include inc.sizing(padding-top, tab, 132px, sp, 68px);
+    //@include inc.sizing(padding-top, tab, 132px, sp, 68px);
     @include inc.sizing(padding-bottom, tab, 111px, sp, 110px);
     //overflow: hidden;
     &.--hidden {
         overflow: hidden;
+    }
+}
+
+.p-home .l-main {
+    padding-bottom: 0;
+    @include inc.mq(tab) {
+        @include inc.sizing(padding-bottom, tab, 111px, sp, 110px);
     }
 }
 

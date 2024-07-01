@@ -51,6 +51,9 @@ column
         flex-wrap: wrap;
         margin: 0 auto;
         @include inc.sizing(margin-bottom, full, 48px, sp, 32px);
+        &.-pdf {
+            margin-bottom: 0;
+        }
         gap: 0rem;
         background: inc.$base-color;
         @include inc.mq(tab) {
@@ -287,7 +290,7 @@ column
         aspect-ratio: 729 / 426;
         background: url(../img/top/bg_010.png) no-repeat 0 0 / contain;
         position: absolute;
-        @include inc.sizing(top, lap, -270px, sp, -300px);
+        @include inc.sizing(top, lap, -270px, sp, -240px);
         @include inc.sizing(left, lap, -50px, sp, -120px);
         z-index: -1;
         @include inc.mq(lap) {
@@ -323,25 +326,25 @@ column
 }
 
 .p-column--bg03 {
-    position: relative;
-    &:before {
-        content: "";
-        display: block;
-        width: 337px;
-        @include inc.sizing(width, full, 337px, sp, 234px);
-        height: auto;
-        aspect-ratio: 337 / 295;
-        background: url(../img/top/bg_007.png) no-repeat 0 0 / contain;
-        position: absolute;
-        top: -18vw;
-        left: -12vw;
-        transform: translate(10vw, 0);
-        z-index: -1;
-        @include inc.mq(lap) {
-            top: -13vw;
-            left: -8vw;
-        }
-    }
+    // position: relative;
+    // &:before {
+    //     content: "";
+    //     display: block;
+    //     width: 337px;
+    //     @include inc.sizing(width, full, 337px, sp, 234px);
+    //     height: auto;
+    //     aspect-ratio: 337 / 295;
+    //     background: url(../img/top/bg_007.png) no-repeat 0 0 / contain;
+    //     position: absolute;
+    //     top: -18vw;
+    //     left: -12vw;
+    //     transform: translate(10vw, 0);
+    //     z-index: -1;
+    //     @include inc.mq(lap) {
+    //         top: -13vw;
+    //         left: -8vw;
+    //     }
+    // }
 }
 
 

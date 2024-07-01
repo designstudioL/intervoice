@@ -26,6 +26,7 @@ service
             gap: 2rem;
         }
         &__block {
+            transition: all .3s;
             display: block;
             width: 100%;
             @include inc.mq(lap) {
@@ -72,11 +73,12 @@ service
                 }
             }
             &:hover {
-                .p-service-home__pic {
-                    img {
-                        transform: scale(1.1);
-                    }
-                }
+                transform: scale(.98);
+                // .p-service-home__pic {
+                //     img {
+                //         transform: scale(1.1);
+                //     }
+                // }
                 .-arw-s {
                     @media (hover: hover) and (pointer: fine) {
                         &:hover {
@@ -148,7 +150,7 @@ service
     }
     .contents figure {
         display:flex; flex-direction:column; justify-content:center; align-items:center;
-        @include inc.sizing(margin-bottom, tab, 24px, sp, 16px);
+        @include inc.sizing(margin-bottom, tab, 32px, sp, 24px);
         img {
             width: 102%;
             max-width: 102%;
@@ -157,13 +159,17 @@ service
     .contents div + div {
         @include inc.sizing(margin-top, tab, 108px, sp, 96px);
     }
+    .supplement {
+        padding-top: 2rem;
+        border-top: 1px solid inc.$theme-color-gray5;
+    }
 }
 @include inc.mq(tab) {
     .--scrollfix {
         display: flex;
         justify-content: space-between;
         position: relative;
-        .contents{ width: calc(50% - 1rem); }
+        .contents{ width: calc(50% - 2rem); }
         .contents div{ padding-top: 50vh; }
         .contents div:last-child{ padding-bottom: 50vh; }
         .contents figure { display: none;}
@@ -172,7 +178,7 @@ service
         // }
         /*画像のブロック*/
         .images{
-            width: calc(50% - 1rem);
+            width: calc(50% - 2rem);
             height: 100vh;
             display: flex;
             align-items: center;

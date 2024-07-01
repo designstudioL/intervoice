@@ -12,7 +12,6 @@ get_header(); ?>
 			foreach ($terms as $term) {
 				echo '<li><a href="'.get_term_link($term->slug, 'projects_cat').'">' . $term->name . '</a></li>';
 			} ?>
-			<li><?php the_time('Y.m.d') ?></li>
 		</ul>
 	</section>
 </section>
@@ -67,7 +66,7 @@ get_header(); ?>
 				<?php endif; ?>
 
 				<?php if(have_rows('img')): ?>
-				<div class="p-projects--conts">
+				<div class="p-projects--conts --conts2">
 					<?php while(have_rows('img')): the_row(); ?>
 					<figure class="p-projects--img">
 						<div><img src="<?php the_sub_field('figure'); ?>" alt=""></div>
@@ -80,7 +79,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="l-spacer -medium">
-			<a href="<?php echo home_url('/projects'); ?>" class="-btn -bk -fontsM -sizeL -arw -auto --back"><i class="c-arrow-link--icon"></i><span class="-center">コラム＆ブログ</span></a>
+			<a href="<?php echo home_url('/projects'); ?>" class="-btn -bk -fontsM -sizeLL -arw -auto --back"><i class="c-arrow-link--icon"></i><span class="-center">コラム＆ブログ</span></a>
 		</div>
 	</section>
 </section>

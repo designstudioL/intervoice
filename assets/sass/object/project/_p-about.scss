@@ -26,6 +26,7 @@ about
                 position: relative;
                 text-decoration: none !important;
                 padding: 0 0 0 32px;
+                font-weight: 600;
                 &:before {
                     content: "";
                     display: block;
@@ -100,7 +101,9 @@ about
         @include inc.sizing(margin-top, lap, 48px, sp, 32px);
         display: grid;
         grid-template-columns: 105px 1fr;
-        grid-template-rows: repeat(2, 1fr);
+        @include inc.mq(tab) {
+            grid-template-rows: repeat(2, 1fr);
+        }
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         .profile01 {
@@ -128,7 +131,7 @@ about
                     display: block;
                     color: inc.$theme-color-gray3;
                     font-size: 15px;
-                    font-weight: 400;
+                    font-weight: 500;
                 }
             }
         }
@@ -164,7 +167,7 @@ about
                         display: block;
                         color: inc.$theme-color-gray3;
                         font-size: 15px;
-                        font-weight: 400;
+                        font-weight: 500;
                     }
                 }
             }

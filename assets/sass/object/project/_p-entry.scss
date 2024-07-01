@@ -250,7 +250,7 @@ post
 
 
 .p-entry h2.p-title-small {
-    @include inc.sizingRem(font-size, lap, 22px, sp, 16px);
+    @include inc.sizingRem(font-size, lap, 22px, sp, 20px);
     @include inc.sizing(margin-bottom, lap, 54px, sp, 40px);
     position: relative;
     padding-left: 24px;
@@ -263,7 +263,7 @@ post
         background: #E4B137;
         position: absolute;
         left: 0;
-        top: 50%;
+        top: 1.15rem;
         transform: translate(0%, -50%);
         margin-top: 3px;
     }
@@ -276,7 +276,7 @@ post
         background: #E0512E;
         position: absolute;
         left: 0;
-        top: 50%;
+        top: 1.15rem;
         transform: translate(0%, -50%);
         margin-top: 3px;
     }
@@ -289,7 +289,7 @@ post
         background: #225DAD;
         position: absolute;
         left: 0;
-        top: 50%;
+        top: 1.15rem;
         transform: translate(0%, -50%);
         margin-top: 3px;
     }
@@ -302,7 +302,7 @@ post
         background: #37967B;
         position: absolute;
         left: 0;
-        top: 50%;
+        top: 1.4rem;
         transform: translate(0%, -50%);
         margin-top: 3px;
     }
@@ -320,8 +320,9 @@ post
 }
 
 .p-projects--conts dl dt {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
+    line-height: 2;
     & + dd {
         margin-top: 20px;
     }
@@ -329,6 +330,7 @@ post
 
 .p-projects--conts dl dd {
     font-size: 14px;
+    line-height: 2;
 }
 
 .p-projects--check {

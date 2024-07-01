@@ -11,7 +11,9 @@ title
     line-height: 1.6;
     margin-top: -2rem;
     font-weight: 600;
+    letter-spacing: .1rem;
     span {
+        letter-spacing: .16rem;
         display: block;
         @include inc.sizingRem(font-size, lap, 16px, sp, 16px);
         font-weight: 600;
@@ -47,7 +49,8 @@ title
     @include inc.sizingRem(font-size, lap, 34px, sp, 24px);
     @include inc.sizing(margin-bottom, lap, 60px, sp, 50px);
     font-weight: 600;
-    line-height: 2;
+    //line-height: 2;
+    line-height: 1.8;
     &.-cta {
         @include inc.sizingRem(font-size, lap, 80px, sp, 50px);
         color: inc.$base-color;

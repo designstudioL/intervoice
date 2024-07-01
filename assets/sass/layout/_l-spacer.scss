@@ -4,7 +4,18 @@
 spacer
 -----------------------------------------------------*/
 .l-spacer {
+    &.-ex {
+        & + .l-spacer.-exll {
+            @include inc.sizing(margin-top, full, 409px, sp, 400px);
+        }
+    }
     &.-large {
+        & + .l-spacer.-exl {
+            @include inc.sizing(margin-top, full, 360px, sp, 160px);
+        }
+        & + .l-spacer.-ex {
+            @include inc.sizing(margin-top, full, 280px, sp, 124px);
+        }
         & + .l-spacer.-large {
             @include inc.sizing(margin-top, full, 196px, sp, 124px);
         }

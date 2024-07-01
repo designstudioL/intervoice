@@ -1,5 +1,5 @@
-<section class="l-spacer -large p-column--bg03">
-    <section class="l-container--primary">
+<section class="l-spacer -exl p-column--bg03">
+    <section class="l-container--primary0000 p-column-home -pdf">
         <section class="l-container--2column --home p-home--idea">
             <h2 class="c-title-small">思考と学びのベースフレーム</h2>
             <p class="-mgB-s">私たちが各プロジェクトで使用している思考フレームのベース、アクティブラーニング研修で使用している資料のベースが以下のフォーマットです。<br>思考の整理やアイデア開発の一助として、また、研修メニュー検討の一助としてお役立てください。</p>

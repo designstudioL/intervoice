@@ -42,3 +42,63 @@ breadcrumb
         }
     }
 }
+
+p.c-breadcrumb {
+    @include inc.sizing(padding-bottom, tab, 32px, sp, 32px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.6;
+    @include inc.sizingRem(font-size, tab, 12px, sp, 12px);
+    .dot {
+        height: .5rem;
+        display: inline-block;
+        position: relative;
+        padding-left: 1.5rem;
+        &::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            display: block;
+            vertical-align: middle;
+            border-radius: 50%;
+            background: inc.$theme-color-black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    // a + a {
+    //     padding-left: 2rem;
+    // }
+    // a + a::before {
+    //     content: '';
+    //     width: 5px;
+    //     height: 5px;
+    //     display: block;
+    //     vertical-align: middle;
+    //     border-radius: 50%;
+    //     background: inc.$theme-color-black;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: .55rem;
+    //     transform: translate(0%, -50%);
+    // }
+    // a + span {
+    //     padding-left: 2rem;
+    // }
+    // a + span::before {
+    //     content: '';
+    //     width: 5px;
+    //     height: 5px;
+    //     display: block;
+    //     vertical-align: middle;
+    //     border-radius: 50%;
+    //     background: inc.$theme-color-black;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: .55rem;
+    //     transform: translate(0%, -50%);
+    // }
+}

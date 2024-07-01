@@ -54,6 +54,19 @@ carousel
 	display: flex;
 	&.-projects {
 		height: 100%!important;
+		gap: 1rem;
+		flex-direction: column;
+		@include inc.mq(tab) {
+			gap: 0;
+			flex-direction: column;
+		}
+		&.-unset {
+			height: auto!important;
+			flex-direction: unset;
+			@include inc.mq(tab) {
+				flex-direction: column;
+			}
+		}
 	}
 	@include inc.sizing(padding, tab, 40px, sp, 30px);
 	&__text {
@@ -68,9 +81,15 @@ carousel
 			flex-grow: 1;
 		}
 	}
-	&.-projects {
-		flex-direction: column;
-	}
+	// &.-projects {
+	// 	gap: 1rem;
+	// 	//flex-direction: column;
+	// 	flex-direction: unset;
+	// 	@include inc.mq(tab) {
+	// 		gap: 0;
+	// 		flex-direction: column;
+	// 	}
+	// }
 	&.-column {
 		@include inc.mq(tab) {
 			flex-direction: column;
@@ -111,7 +130,7 @@ carousel
 		@include inc.sizing(padding-top, tab, 4px, sp, 4px);
 		//@include inc.sizing(padding-bottom, tab, 16px, sp, 16px);
 		@include inc.sizingRem(font-size, tab, 18px, sp, 16px);
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 2;
 		overflow: hidden;
 		display: -webkit-box;
@@ -140,9 +159,11 @@ carousel
 		display: block;
 		overflow:hidden;
 		border: 1px solid inc.$border-color-gray;
+		aspect-ratio: 233 / 132;
 		img{
 			object-fit: cover;
 			transition: all .3s;
+			aspect-ratio: 233 / 132;
 		}
 	}
 	.-arw-s {

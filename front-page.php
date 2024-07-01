@@ -17,7 +17,7 @@
 
 <?php get_template_part('projects/list-inc'); ?>
 
-<section class="l-spacer -large p-column--bg04">
+<section class="l-spacer -ex p-column--bg04">
     <section class="l-container--primary">
         <section class="l-container--2column --home">
             <section class="--L">
@@ -53,7 +53,7 @@
     </section>
 </section>
 
-<section class="l-spacer -large p-column--bg01">
+<section class="l-spacer -exll p-column--bg01">
     <section class="l-container--primary">
         <div class="p-column-home__title">
             <h2 class="c-title-en-medium -home">column&blog<span><span class="title_sub">コラム＆ブログ</span></span></h2>
@@ -87,7 +87,6 @@
                         } ?>
                     </p>
                     <h3 class="p-carousel-card__title -column"><?php the_title(); ?></h3>
-                    
                 </div>
                 <p class="p-carousel-card__date -en"><?php the_time('Y.m.d') ?></p>
                 <div class="-arw-s"><i class="c-arrow-link--icon"></i></div>
@@ -95,7 +94,7 @@
             <?php endforeach; wp_reset_postdata(); ?>
             <?php endif; ?>
         </div>
-        <p><a href="<?php echo home_url('/column_blog'); ?>" class="-btn -bk -fontsM -sizeL -arw -auto"><span class="-center">コラム&ブログ一覧</span><i class="c-arrow-link--icon"></i></a></p>
+        <p><a href="<?php echo home_url('/column_blog'); ?>" class="-btn -bk -fontsM -sizeLL -arw -auto"><span class="-center">コラム&ブログ一覧</span><i class="c-arrow-link--icon"></i></a></p>
     </section>
 </section>
 

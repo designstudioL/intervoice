@@ -5,7 +5,7 @@ projects
 -----------------------------------------------------*/
 .p-projects {
     main {
-        background: url(../img/projects/main.png) no-repeat 50% 8vw;
+        background: url(../img/projects/main.png) no-repeat 50% 2vw;
         background-size: 80%;
         padding-top: 50vw;
         @include inc.mq(min) {
@@ -74,6 +74,7 @@ projects
             width: 100%;
             padding: 0 4%;
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
             justify-content: space-between;
             @include inc.sizing(padding-top, tab, 24px, sp, 16px);
@@ -108,7 +109,7 @@ projects
                     @include inc.sizing(padding-top, tab, 40px, sp, 24px);
                 }
                 @include inc.sizing(padding, tab, 40px, sp, 30px);
-                display: block;
+                //display: block;
                 width: calc((100% - 2rem) / 2);
             }
             @include inc.mq(lap) {
@@ -139,6 +140,16 @@ projects
         }
     }
     &-nav {
+        width: 100%;
+        overflow-x: auto;
+        padding: 0 0 0 6%;
+        margin: 0 auto;
+        @include inc.mq(tab) {
+            overflow: unset;
+            width: 100%;
+            max-width: 1660px;
+            padding: 0 4.8%;
+        }
         ul {
             display: flex;
             flex-wrap: wrap;
@@ -254,7 +265,11 @@ projects
     @include inc.sizing(padding-top, full, 50px, sp, 40px);
     border-top: 1px solid inc.$theme-color-gray5;
 }
-
+.p-projects--conts + .p-projects--conts.--conts2 {
+    @include inc.sizing(margin-top, full, 80px, sp, 60px);
+    @include inc.sizing(padding-top, full, 80px, sp, 60px);
+    border-top: none;
+}
 
 
 

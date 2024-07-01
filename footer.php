@@ -9,104 +9,72 @@
 
 <?php elseif(is_page('about')): ?>
 <section class="l-container--primary">
-  <nav class="c-breadcrumb">
-    <ul>
-      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
-      <li><span>私たちについて</span></li>
-    </ul>
-  </nav>
+  <p class="c-breadcrumb">
+    <a href="<?php echo home_url(); ?>" class="underline">トップ</a><span class="dot"></span><span>私たちについて</span>
+  </p>
 </section>
 
 <?php elseif(is_page('service')): ?>
 <section class="l-container--primary">
-  <nav class="c-breadcrumb">
-    <ul>
-      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
-      <li><span>サービス</span></li>
-    </ul>
-  </nav>
+  <p class="c-breadcrumb">
+    <a href="<?php echo home_url(); ?>" class="underline">トップ</a><span class="dot"></span><span>サービス</span>
+  </p>
 </section>
 
 <?php elseif(is_post_type_archive('column_blog') || is_tax('column_blog')): ?>
 <section class="l-container--primary">
-  <nav class="c-breadcrumb">
-    <ul>
-      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
-      <li><span>コラム＆ブログ</span></li>
-    </ul>
-  </nav>
+  <p class="c-breadcrumb">
+    <a href="<?php echo home_url(); ?>" class="underline">トップ</a><span class="dot"></span><span>コラム＆ブログ</span>
+  </p>
 </section>
 
 <?php elseif(is_singular('column_blog')): ?>
 <section class="l-container--primary">
-  <nav class="c-breadcrumb">
-    <ul>
-      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
-      <li><a href="<?php echo home_url('/column_blog'); ?>" class="underline">コラム＆ブログ</span></a></li>
-      <li><span><?php the_title(); ?></span></li>
-    </ul>
-  </nav>
+  <p class="c-breadcrumb">
+    <a href="<?php echo home_url(); ?>" class="underline">トップ</a><span class="dot"></span><a href="<?php echo home_url('/column_blog'); ?>" class="underline">コラム＆ブログ</span></a><span class="dot"></span><span><?php the_title(); ?></span>
+  </p>
 </section>
 
 <?php elseif(is_post_type_archive('projects') || is_tax('projects')): ?>
 <section class="l-container--primary">
-  <nav class="c-breadcrumb">
-    <ul>
-      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
-      <li><span>取り組み実績</span></li>
-    </ul>
-  </nav>
+  <p class="c-breadcrumb">
+    <a href="<?php echo home_url(); ?>" class="underline">トップ</a><span class="dot"></span><span>取り組み実績</span>
+  </p>
 </section>
 
 <?php elseif(is_singular('projects')): ?>
   <section class="l-container--primary">
-  <nav class="c-breadcrumb">
-    <ul>
-      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
-      <li><a href="<?php echo home_url('/projects'); ?>" class="underline">取り組み実績</a></li>
-      <li><span><?php the_title(); ?></span></li>
-    </ul>
-  </nav>
+  <p class="c-breadcrumb">
+    <a href="<?php echo home_url(); ?>" class="underline">トップ</a><span class="dot"></span><a href="<?php echo home_url('/projects'); ?>" class="underline">取り組み実績</a><span class="dot"></span><span><?php the_title(); ?></span>
+  </p>
 </section>
 
 <?php elseif(is_page('service')): ?>
 <section class="l-container--primary">
-  <nav class="c-breadcrumb">
-    <ul>
-      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
-      <li><span>プライバシーポリシー</span></li>
-    </ul>
-  </nav>
+  <p class="c-breadcrumb">
+    <a href="<?php echo home_url(); ?>" class="underline">トップ</a><span class="dot"></span><span>プライバシーポリシー</span></li>
+  </p>
 </section>
 
 <?php elseif(is_page('contact')): ?>
 <section class="l-container--primary">
-  <nav class="c-breadcrumb">
-    <ul>
-      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
-      <li><span>お問い合わせ</span></li>
-    </ul>
-  </nav>
+  <p class="c-breadcrumb">
+    <a href="<?php echo home_url(); ?>" class="underline">トップ</a><<span class="dot"></span><span>お問い合わせ</span>
+  </p>
 </section>
 
 <?php elseif(is_page('thanks')): ?>
 <section class="l-container--primary">
-  <nav class="c-breadcrumb">
-    <ul>
-      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
-      <li><span>お問い合わせ完了</span></li>
-    </ul>
-  </nav>
+  <p class="c-breadcrumb">
+    <a href="<?php echo home_url(); ?>" class="underline">トップ</a><span class="dot"></span><span>お問い合わせ完了</span>
+  </p>
 </section>
 
 <?php elseif(is_page('404')): ?>
 <section class="l-container--primary">
-  <nav class="c-breadcrumb">
-    <ul>
-      <li><a href="<?php echo home_url(); ?>" class="underline">トップ</a></li>
-      <li><span>404</span></li>
-    </ul>
-  </nav>
+  <p class="c-breadcrumb">
+    <a href="<?php echo home_url(); ?>" class="underline">トップ</a><span class="dot"></span><span>404</span>
+  </p>
 </section>
 
 <?php else: ?>
@@ -138,7 +106,7 @@
 <?php endif; ?>
 
 <footer class="l-footer">
-  <div class="l-container--primary">
+  <div class="l-container--primary -footer">
     <?php if(is_home() || is_front_page()): ?>
     <div class="l-footer--message">
       <div class="-L">
@@ -155,9 +123,10 @@
     <nav class="l-footer--nav">
       <ul>
       <li class="nav01"><a href="<?php echo home_url('/about'); ?>">私たちについて</a></li>
-      <li class="nav02"><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
       <li class="nav03"><a href="<?php echo home_url('/service'); ?>">サービス</a></li>
+      <li class="nav02"><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
       <li class="nav04"><a href="<?php echo home_url('/column_blog'); ?>">コラム＆ブログ</a></li>
+      <li class="nav04"><a href="<?php echo home_url('/contact'); ?>">お問い合わせ</a></li>
       </ul>
     </nav>
     <div class="l-footer__copyright">

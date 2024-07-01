@@ -13,6 +13,13 @@
             padding: 0 4.8%;
         }
         margin: 0 auto;
+        &.-footer {
+            max-width: unset;
+            padding: 0 6%;
+            @include inc.mq(lap) {
+                padding: 0 6%;
+            }
+        }
     }
     &--secondary {
         width: 100%;
@@ -53,6 +60,9 @@
         .--R {
             width: 100%;
             padding-right: 0%;
+        }
+        .--L + .--R {
+            margin-top: 32px;
         }
         @include inc.mq(lap) {
             justify-content: space-between;

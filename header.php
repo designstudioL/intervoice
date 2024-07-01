@@ -56,7 +56,7 @@ jQuery(function(){
 <body class="p-projects" id="projects">
 
 <?php elseif(is_singular('projects')): ?>
-<body class="p-projects post" id="projects">
+<body class="p-projects post -hidden" id="projects">
 
 <?php else: ?>
 <body class="p-home" id="home">
@@ -71,8 +71,8 @@ jQuery(function(){
     <nav class="l-header-nav">
       <ul>
         <li class="nav01"><a href="<?php echo home_url('/about'); ?>">私たちについて</a></li>
-        <li class="nav02"><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
         <li class="nav03"><a href="<?php echo home_url('/service'); ?>">サービス</a></li>
+        <li class="nav02"><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
         <li class="nav04"><a href="<?php echo home_url('/column_blog'); ?>">コラム＆ブログ</a></li>
       </ul>
       <div><a href="<?php echo home_url('/contact'); ?>" class="-btn -bk -fontsS -sizeS -center l-header-btn"><span>お問い合わせ</span></a></div>
@@ -94,8 +94,8 @@ jQuery(function(){
     <ul>
       <li><a href="<?php echo home_url(); ?>">トップ</a></li>
       <li><a href="<?php echo home_url('/about'); ?>">私たちについて</a></li>
-      <li><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
       <li><a href="<?php echo home_url('/service'); ?>">サービス</a></li>
+      <li><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
       <li><a href="<?php echo home_url('/column_blog'); ?>">コラム＆ブログ</a></li>
       <li><a href="<?php echo home_url('/contact'); ?>">お問い合わせ</a></li>
     </ul>

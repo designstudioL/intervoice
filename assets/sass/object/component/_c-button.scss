@@ -82,12 +82,21 @@ button
     &.-sizeM {
         width: 260px;
         max-width: 90%;
-        height: 60px;
+        //height: 60px;
+        @include inc.sizing(height, lap, 60px, sp, 50px);
     }
     &.-sizeL {
         width: 480px;
         max-width: 90%;
-        height: 60px;
+        //height: 60px;
+        @include inc.sizing(height, lap, 60px, sp, 50px);
+        text-align: center;
+    }
+    &.-sizeLL {
+        width: 480px;
+        max-width: 90%;
+        //height: 80px;
+        @include inc.sizing(height, lap, 80px, sp, 50px);
         text-align: center;
     }
     &.-center {
@@ -203,28 +212,12 @@ button
                 animation-delay: 0.3s;
             }
         }
-        // @keyframes transformLeftRight {
-        //     0% {
-        //         transform: translateX(100%);
-        //     }
-        //     100% {
-        //         transform: translateX(0);
-        //     }
-        //     }
-        //     @keyframes transformRightLeft {
-        //     0% {
-        //         transform: translateX(0);
-        //     }
-        //     100% {
-        //         transform: translateX(-100%);
-        //     }
-        // }
         &.-bk {
             .c-arrow-link--icon:before {
                 background: url(../img/common/icon_arrow_left_wh.svg) no-repeat 50% 50%;
             }
             .c-arrow-link--icon:after {
-                background: url(../img/common/icon_arrow_left_bk.svg) no-repeat 50% 50%;
+                background: url(../img/common/icon_arrow_left_wh.svg) no-repeat 50% 50%;
             }
         }
     }

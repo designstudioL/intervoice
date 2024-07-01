@@ -3,7 +3,7 @@
 ?>
 <?php get_header(); ?>
 
-<section class="l-container--primary l-main">
+<section class="l-container--primary">
 	<h1 class="c-title-pageTitle -en">about<span>私たちについて</span></h1>
 	<nav class="p-about--nav">
 		<ul>
@@ -14,19 +14,19 @@
 	</nav>
 	<section class="l-container--2column l-spacer -large" id="vision">
 		<section class="--L">
-			<h2 class="c-title-en-small">vision<span><span class="title_sub">実現したい未来</span></span></h2>
+			<h2 class="c-title-en-small -en">vision<span><span class="title_sub">実現したい未来</span></span></h2>
 		</section>
 		<section class="--R">
 			<section class="l-spacer -large">
 				<div class="l-spacer -large">
-					<p>都市と地域、人と人とが有機的につながり、心躍る変化が生まれる<br>全国各地に“マーケティング・プレイヤー”が増えていく</p>
+					<p class="c-title-small">都市と地域、人と人とが有機的につながり、心躍る変化が生まれる<br>全国各地に“マーケティング・プレイヤー”が増えていく</p>
 				</div>
 			</section>
 		</section>
 	</section>
 	<section class="l-container--2column l-spacer -large" id="message">
 		<section class="--L">
-			<h2 class="c-title-en-small">message<span><span class="title_sub">代表メッセージ</span></span></h2>
+			<h2 class="c-title-en-small -en">message<span><span class="title_sub">代表メッセージ</span></span></h2>
 		</section>
 		<section class="--R">
 			<section class="l-spacer -large">
@@ -54,7 +54,7 @@
 	</section>
 	<section class="l-container--2column l-spacer -large" id="outline">
 		<section class="--L">
-			<h2 class="c-title-en-small">outline<span><span class="title_sub">会社概要</span></span></h2>
+			<h2 class="c-title-en-small -en">outline<span><span class="title_sub">会社概要</span></span></h2>
 		</section>
 		<section class="--R">
 			<section class="l-spacer -large">
