@@ -185,6 +185,19 @@ $(function() {
       });
   }
 });
+$(function() {
+  const arrowLinks3 = document.querySelectorAll('.p-column-card');
+  if(arrowLinks3.length > 0) {
+      arrowLinks3.forEach((arrowLink3) => {
+          arrowLink3.addEventListener('mouseenter', function() {
+              arrowLink3.classList.add('is-hover');
+          },{
+              once: true
+          });
+      });
+  }
+});
+
 
 //スライド前後ボタン
 $(function() {
@@ -228,10 +241,10 @@ $(function() {
 		speed: 1000, //切り替えのアニメーションスピード
     slidesPerView: 1,
     centeredSlides: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     // ページネーションが必要なら追加
     pagination: {
       el: ".swiper-pagination",
@@ -283,4 +296,90 @@ $(function(){
       }
     });
   });
+});
+
+
+
+
+
+/*------------------------------------------------------------------
+ハンバーガーメニュー展開時に背景をスクロールさせない
+/*------------------------------------------------------------------*/
+$(function () {
+  // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+  $(".l-header-hamburger").click(function () {
+    // 現在のbodyタグのoverflowスタイルを確認
+    if ($("body").css("overflow") === "hidden") {
+      // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+      $("body").css({ height: "", overflow: "" });
+    } else {
+      // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+      $("body").css({ height: "100%", overflow: "hidden" });
+    }
+  });
+});
+
+
+
+
+
+
+
+// $(document).ready(function() {
+//   // ページ読み込み完了から1秒後に実行
+//   setTimeout(function() {
+//     // .ani_pcクラスを持つ要素を全て取得
+//     var elements = $('.ani_parts').toArray();
+    
+//     // 要素をシャッフル
+//     for (var i = elements.length - 1; i > 0; i--) {
+//       var j = Math.floor(Math.random() * (i + 1));
+//       [elements[i], elements[j]] = [elements[j], elements[i]];
+//     }
+    
+//     // 最初は全ての要素を非表示にする
+//     $('.ani_parts').hide();
+    
+//     // シャッフルされた順番で要素を表示
+//     $.each(elements.slice(0, 12), function(index, element) {
+//       setTimeout(function() {
+//         $(element).fadeIn(800);
+//       }, index * 100); // 100ミリ秒ごとに表示
+//     });
+//   }, 1000); // 1000ミリ秒（1秒）後に実行
+// });
+
+
+$(document).ready(function() {
+  // ページ読み込み完了から1秒後に実行
+  setTimeout(function() {
+    // .ani_partsクラスを持つ要素を全て取得
+    var elements = $('.ani_parts').toArray();
+    
+    // 要素をシャッフル
+    for (var i = elements.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      [elements[i], elements[j]] = [elements[j], elements[i]];
+    }
+    
+    // 最初は全ての要素を非表示にする
+    $('.ani_parts').hide();
+    
+    // シャッフルされた順番で要素を表示
+    $.each(elements.slice(0, 12), function(index, element) {
+      setTimeout(function() {
+        $(element).fadeIn(800);
+        
+        // 最後の.ani_parts要素が表示された後に.ani_titleを表示
+        // if (index === 11) {
+        //   setTimeout(function() {
+        //     $('.ani_title').fadeIn(800);
+        //     setTimeout(function() {
+        //       $('.ani_sub').fadeIn(800);
+        //     }, 150); // .ani_titleの最後のフェードインが終わってから表示
+        //   }, 800); // .ani_partsの最後のフェードインが終わってから表示
+        // }
+      }, index * 200); // 200ミリ秒ごとに表示
+    });
+  }, 1500); // 1000ミリ秒（1秒）後に実行
 });

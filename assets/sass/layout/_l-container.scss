@@ -8,23 +8,24 @@
     &--primary {
         width: 100%;
         max-width: 1660px;
-        padding: 0 6%;
+        padding: 0 7.5%;
         @include inc.mq(lap) {
             padding: 0 4.8%;
         }
         margin: 0 auto;
         &.-footer {
             max-width: unset;
-            padding: 0 6%;
+            padding: 0 7.5%;
             @include inc.mq(lap) {
-                padding: 0 6%;
+                padding: 0 7.5%;
+                padding: 0 3% 0 4.8%;
             }
         }
     }
     &--secondary {
         width: 100%;
         max-width: calc(1080px + 8%);
-        padding: 0 6%;
+        padding: 0 7.5%;
         @include inc.mq(lap) {
             max-width: calc(1080px + 9.6%);
             padding: 0 4.8%;
@@ -63,6 +64,9 @@
         }
         .--L + .--R {
             margin-top: 32px;
+        }
+        .--L + .--R.--none {
+            margin-top: 0px;
         }
         @include inc.mq(lap) {
             justify-content: space-between;
@@ -126,13 +130,13 @@
             }
             margin: 0 auto;
             .--L {
-                padding: 0 6%;
+                padding: 0 7.5%;
                 @include inc.mq(lap) {
                     padding: 0;
                 }
             }
             .--inner {
-                padding: 0 6%;
+                padding: 0 7.5%;
                 @include inc.mq(lap) {
                     padding: 0;
                 }

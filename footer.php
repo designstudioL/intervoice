@@ -70,6 +70,13 @@
   </p>
 </section>
 
+<?php elseif(is_page('privacy')): ?>
+<section class="l-container--primary">
+  <p class="c-breadcrumb">
+    <a href="<?php echo home_url(); ?>" class="underline">トップ</a><span class="dot"></span><span>プライバシーポリシー</span>
+  </p>
+</section>
+
 <?php elseif(is_page('404')): ?>
 <section class="l-container--primary">
   <p class="c-breadcrumb">
@@ -110,7 +117,10 @@
     <?php if(is_home() || is_front_page()): ?>
     <div class="l-footer--message">
       <div class="-L">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/bg_008.png" alt="">
+        <picture>
+          <source media="(min-width: 520px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/top/bg_008.png">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/bg_008_sp.png">
+        </picture>
       </div>
       <div class="-R">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/bg_009.png" alt="">
@@ -122,11 +132,11 @@
     </div>
     <nav class="l-footer--nav">
       <ul>
-      <li class="nav01"><a href="<?php echo home_url('/about'); ?>">私たちについて</a></li>
-      <li class="nav03"><a href="<?php echo home_url('/service'); ?>">サービス</a></li>
-      <li class="nav02"><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
-      <li class="nav04"><a href="<?php echo home_url('/column_blog'); ?>">コラム＆ブログ</a></li>
-      <li class="nav04"><a href="<?php echo home_url('/contact'); ?>">お問い合わせ</a></li>
+      <li class=""><a href="<?php echo home_url('/about'); ?>">私たちについて</a></li>
+      <li class=""><a href="<?php echo home_url('/service'); ?>">サービス</a></li>
+      <li class=""><a href="<?php echo home_url('/projects'); ?>">取り組み実績</a></li>
+      <li class=""><a href="<?php echo home_url('/column_blog'); ?>">コラム＆ブログ</a></li>
+      <li class=""><a href="<?php echo home_url('/contact'); ?>">お問い合わせ</a></li>
       </ul>
     </nav>
     <div class="l-footer__copyright">

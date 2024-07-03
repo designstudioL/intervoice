@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="l-container--primary l-spacer -large">
+<section class="l-container--primary l-spacer">
     <h1 class="c-title-pageTitle -en">column & blog<span>コラム＆ブログ</span></h1>
 </section>
 

@@ -31,7 +31,11 @@ button
             //transition: .4s;
             //padding: 0 65px 0 30px;
             &.-center {
-                text-align: center;
+                text-align: left;
+                padding-left: 2rem;
+                @include inc.mq(wsp) {
+                    text-align: center;
+                }
             }
         }
         transition: all .5s ease;
@@ -48,6 +52,14 @@ button
                     &::after{
                         background: #000;
                     }
+                    &.-hamburger {
+                        &::before{
+                            background: #fff;
+                        }
+                        &::after{
+                            background: #fff;
+                        }
+                    }
                 }
             }
         }
@@ -57,7 +69,7 @@ button
         span {
             color: inc.$theme-color-black;
             font-weight: 600;
-            padding: 0 65px 0 30px;
+            //padding: 0 65px 0 30px;
         }
         transition: all .5s ease;
         @media (hover: hover) and (pointer: fine) {
@@ -78,19 +90,39 @@ button
         width: 140px;
         max-width: 90%;
         height: 44px;
+        text-align: left;
+        padding-left: 2rem;
+        @include inc.mq(wsp) {
+            text-align: center;
+            padding-left: unset;
+        }
     }
     &.-sizeM {
-        width: 260px;
-        max-width: 90%;
+        width: 100%;
+        max-width: 375px;
         //height: 60px;
+        text-align: left;
+        padding-left: 2rem;
         @include inc.sizing(height, lap, 60px, sp, 50px);
+        @include inc.mq(wsp) {
+            width: 260px;
+            max-width: 90%;
+            text-align: center;
+            padding-left: unset;
+        }
     }
     &.-sizeL {
         width: 480px;
-        max-width: 90%;
+        max-width: 100%;
         //height: 60px;
         @include inc.sizing(height, lap, 60px, sp, 50px);
-        text-align: center;
+        text-align: left;
+        padding-left: 2rem;
+        @include inc.mq(wsp) {
+            max-width: 90%;
+            text-align: center;
+            padding-left: unset;
+        }
     }
     &.-sizeLL {
         width: 480px;
@@ -98,6 +130,12 @@ button
         //height: 80px;
         @include inc.sizing(height, lap, 80px, sp, 50px);
         text-align: center;
+        span {
+            text-align: center!important;
+        }
+        @include inc.mq(wsp) {
+            max-width: 90%;
+        }
     }
     &.-center {
         display:flex; flex-direction:column; justify-content:center; align-items:center;

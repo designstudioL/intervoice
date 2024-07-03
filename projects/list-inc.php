@@ -1,7 +1,7 @@
 <section class="l-spacer -large p-column--bg05">
     <section class="l-container--primary">
     <?php if(is_home() || is_front_page()): ?>
-        <h2 class="c-title-en-medium -home -en">projects<span><span class="title_sub">取り組み実績</span></span></h2>
+        <h2 class="c-title-en-medium -home -en --projects">projects<span><span class="title_sub">取り組み実績</span></span></h2>
     <?php else: ?>
         <h2 class="c-title-en-small -en">projects<span><span class="title_sub">取り組み実績</span></span></h2>
     <?php endif; ?>

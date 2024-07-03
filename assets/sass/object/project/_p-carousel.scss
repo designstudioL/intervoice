@@ -43,7 +43,9 @@ carousel
 
 
 
-.swiper-slide{ height: 100%!important; }
+// .swiper-slide{ height: 100%!important; }
+.swiper-slide{ height: auto; }
+.p-carousel-card { height: 100%;}
 
 .p-carousel-card {
 	position: relative;
@@ -53,7 +55,10 @@ carousel
 	//height: 100%!important;
 	display: flex;
 	&.-projects {
-		height: 100%!important;
+		// height: 100%!important;
+		height: 100%;
+		width: 100%;
+		//max-width: 420px;
 		gap: 1rem;
 		flex-direction: column;
 		@include inc.mq(tab) {
@@ -207,7 +212,7 @@ carousel
 		&:hover {
 			.p-carousel-card__img {
 				img {
-					transform: scale(1.1);
+					transform: scale(1.03);
 				}
 			}
 			.-arw-s {
@@ -421,3 +426,9 @@ carousel
 
 
 
+
+
+
+.swiper-slide {
+	height: 100%!important;
+}

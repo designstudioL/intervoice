@@ -52,7 +52,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="l-spacer -medium">
+			<section class="l-spacer -medium -mgB-l">
 				<div>
 					<div>
 						<h2 class="c-title-medium">お問い合わせ窓口</h2>

@@ -4,6 +4,11 @@
 spacer
 -----------------------------------------------------*/
 .l-spacer {
+    &.-exll {
+        & + .l-spacer.-exl {
+            @include inc.sizing(margin-top, full, 409px, sp, 160px);
+        }
+    }
     &.-ex {
         & + .l-spacer.-exll {
             @include inc.sizing(margin-top, full, 409px, sp, 400px);
@@ -22,11 +27,16 @@ spacer
         & + .l-spacer.-medium {
             @include inc.sizing(margin-top, full, 108px, sp, 96px);
         }
+        & + .l-spacer.-small {
+            @include inc.sizing(margin-top, full, 108px, sp, 96px);
+        }
     }
     &.-medium {
         & + & {
             @include inc.sizing(margin-top, full, 54px, sp, 48px);
-
+        }
+        & + .l-spacer.-large {
+            @include inc.sizing(margin-top, full, 196px, sp, 124px);
         }
     }
 }

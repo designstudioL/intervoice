@@ -7,7 +7,7 @@ about
     main {
         background: url(../img/about/main.png) no-repeat 50% 3vw;
         background-size: 80%;
-        padding-top: 50vw;
+        padding-top: 55vw;
         @include inc.mq(min) {
             @include inc.sizing(padding-top, tab, 132px, sp, 68px);
             background: url(../img/about/main.png) no-repeat 90% 0;

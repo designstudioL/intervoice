@@ -11,11 +11,11 @@ service
         @include inc.mq(min) {
             @include inc.sizing(padding-top, tab, 132px, sp, 68px);
             background: url(../img/service/main.png) no-repeat 90% 5vw;
-            @include inc.sizing(background-size, lap, 580px, min, 330px);
+            @include inc.sizing(background-size, lap, 540px, min, 330px);
         }
         @include inc.mq(lap) {
             background: url(../img/service/main.png) no-repeat 90% 0;
-            @include inc.sizing(background-size, desk, 880px, lap, 560px);
+            @include inc.sizing(background-size, desk, 980px, lap, 540px);
         }
     }
     &-home {
@@ -170,7 +170,10 @@ service
         justify-content: space-between;
         position: relative;
         .contents{ width: calc(50% - 2rem); }
-        .contents div{ padding-top: 50vh; }
+        // .contents div{ padding-top: 50vh; }
+        .contents div{
+            @include inc.sizing(padding-top, full, 120px, tab, 320px);
+        }
         .contents div:last-child{ padding-bottom: 50vh; }
         .contents figure { display: none;}
         // .contents div + .contents div {

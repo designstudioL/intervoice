@@ -5,16 +5,16 @@ projects
 -----------------------------------------------------*/
 .p-projects {
     main {
-        background: url(../img/projects/main.png) no-repeat 50% 2vw;
+        background: url(../img/projects/main.png) no-repeat 50% 0vw;
         background-size: 80%;
         padding-top: 50vw;
         @include inc.mq(min) {
             @include inc.sizing(padding-top, tab, 132px, sp, 68px);
-            background: url(../img/projects/main.png) no-repeat 90% -1vw;
+            background: url(../img/projects/main.png) no-repeat 90% -3vw;
             @include inc.sizing(background-size, lap, 580px, min, 330px);
         }
         @include inc.mq(lap) {
-            background: url(../img/projects/main.png) no-repeat 90% 0;
+            background: url(../img/projects/main.png) no-repeat 90% -2.7%;
             @include inc.sizing(background-size, full, 720px, lap, 500px);
         }
         &.-post {
@@ -37,14 +37,7 @@ projects
                     right: -3vw;
                     z-index: -1;
                 }
-                // @include inc.sizing(padding-top, tab, 132px, sp, 68px);
-                // background: url(../img/projects/main2.png) no-repeat 110% -1vw;
-                // @include inc.sizing(background-size, lap, 580px, min, 330px);
             }
-            // @include inc.mq(lap) {
-            //     background: url(../img/projects/main2.png) no-repeat 110% 0;
-            //     @include inc.sizing(background-size, full, 720px, lap, 500px);
-            // }
         }
     }
 }
@@ -142,7 +135,7 @@ projects
     &-nav {
         width: 100%;
         overflow-x: auto;
-        padding: 0 0 0 6%;
+        padding: 0 0 0 7.5%;
         margin: 0 auto;
         @include inc.mq(tab) {
             overflow: unset;
@@ -274,6 +267,10 @@ projects
 
 
 
-
+.p-projects.post {
+    h1.c-title-ex-large {
+        @include inc.sizing(margin-bottom, lap, 30px, sp, 20px);
+    }
+}
 
 

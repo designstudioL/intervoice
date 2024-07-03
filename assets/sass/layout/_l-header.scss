@@ -24,8 +24,10 @@ body {
     @include inc.sizing(height, lap, 207px, sp, 113px);
     width: 100%;
     .-inner {
-        padding: 0 3% 0 4.8%;
-        padding: 0 6% 0 6%;
+        padding: 0 7.5% 0 7.5%;
+        @include inc.mq(lap) {
+            padding: 0 3% 0 4.8%;
+        }
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -102,12 +104,13 @@ body {
     }
     &-hamburger {
         display: flex!important;
+        right: 5%;
         @include inc.mq(lap) {
             display: none!important;
+            right: 3%;
         }
         position: fixed;
-        right: 3%;
-        z-index: 4;
+        z-index: 21;
         @include inc.sizing(top, lap, 47px, sp, 21px);
         span {
             padding: 0!important;
@@ -169,7 +172,8 @@ body {
                 // left: 50%;
                 // width: 140vh;
                 // height: 140vh;
-                z-index: 2;
+                z-index: 20;
+                overflow: scroll;
             }
         }
         &-bg01 {
@@ -377,7 +381,7 @@ body {
                 display: flex;
                 flex-wrap: wrap;
                 flex-direction:column;
-                gap: 1.5rem 0;
+                gap: 2.2rem 0;
                 li {
                     width: 160px;
                     text-align: center;

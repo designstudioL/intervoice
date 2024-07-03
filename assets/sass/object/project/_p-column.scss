@@ -60,73 +60,50 @@ column
             background: none;
             gap: 2rem;
         }
-        .p-carousel-card {
-            width: 100%;
-            padding: 0 4%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            @include inc.sizing(padding-top, tab, 24px, sp, 16px);
-            @include inc.sizing(padding-bottom, tab, 24px, sp, 16px);
-	        //flex-direction: column;
-            &.-column {
-                @include inc.mq(tab) {
-                    flex-direction: column;
-                }
-            }
-            &__img {
-                width: 33%;
-                border: none;
-                img {
-                    border: 1px solid inc.$border-color-gray;
-                }
-            }
-            &__text {
-                padding-top: 0;
-                width: 62%;
-            }
-            &__date {
-                padding-top: 16px;
-            }
+    }
+    &-card {
+        width: 100%;
+        position: relative;
+        background: inc.$base-color;
+        border-radius: inc.$border-radius-m;
+        // padding: 0 4%;
+        // @include inc.sizing(padding-top, tab, 24px, sp, 16px);
+        // @include inc.sizing(padding-bottom, tab, 24px, sp, 16px);
+        @include inc.sizing(padding, tab, 40px, sp, 30px);
+        &.-grid {
+            display: grid;
+            grid-template-columns: 30% 1fr;
+            grid-column-gap: 2rem;
             @include inc.mq(tab) {
-                &__img {
-                    border: 1px solid inc.$border-color-gray;
-                    width: 100%;
-                    img {
-                        border: none;
-                    }
-                }
-                &__text {
-                    @include inc.sizing(padding-top, tab, 20px, sp, 20px);
-                    width: 100%;
-                    &.-column {
-                        @include inc.mq(tab) {
-                            flex-grow: 1;
-                        }
-                    }
-                }
-                &__date {
-                    @include inc.sizing(padding-top, tab, 40px, sp, 24px);
-                }
-                @include inc.sizing(padding, tab, 40px, sp, 30px);
                 display: flex;
-                width: calc((100% - 2rem) / 2);
-            }
-            @include inc.mq(lap) {
-                width: calc((100% - 4rem) / 3);
-            }
-            .-arw-s {
-                @include inc.sizing(bottom, tab, 24px, sp, 16px);
-                margin-bottom: -3px;
-                right: 4%;
-                @include inc.mq(tab) {
-                    margin-bottom: 0;
-                    bottom: 2.2rem;
-		            right: 10.5%;
-                }
+                flex-wrap: wrap;
+                flex-direction: column;
             }
         }
-        .p-carousel-card + .p-carousel-card {
+        .-grid1 {
+            grid-area: 1 / 1 / 5 / 2;
+        }
+        .-grid2 {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+        .-grid3 {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+        .-grid4 {
+            grid-area: 3 / 2 / 4 / 3;
+        }
+        .-grid5 {
+            grid-area: 4 / 2 / 5 / 3;
+        }
+        @include inc.mq(tab) {
+            @include inc.sizing(padding, tab, 40px, sp, 30px);
+            display: flex;
+            width: calc((100% - 2rem) / 2);
+        }
+        @include inc.mq(lap) {
+            width: calc((100% - 4rem) / 3);
+        }
+        & + & {
             border-top: 1px solid inc.$border-color-gray2;
             border-radius: 0;
             @include inc.mq(tab) {
@@ -134,11 +111,154 @@ column
                 border-radius: inc.$border-radius-m;
             }
         }
+        &__text {
+            flex-grow: 1;
+        }
+        &__cat {
+            max-width: 100%; /* 省略せずに表示するサイズを指定 */
+            width: auto;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @include inc.sizing(padding-top, tab, 10px, sp, 8px);
+        }
         &__title {
-            text-align: center;
+            @include inc.sizing(padding-top, tab, 12px, sp, 10px);
+            @include inc.sizingRem(font-size, tab, 16px, sp, 14px);
+            font-weight: 600;
+            line-height: 2;
+            flex-grow: 1;
+        }
+        &__date {
+            font-size: 14px;
+            line-height: 1;
+        }
+        &__date {
+            padding-top: 16px;
+        }
+        &__img{
             width: 100%;
+            //width: 33%;
+            display: block;
+            overflow:hidden;
+            border: none;
+            aspect-ratio: 233 / 132;
+            img{
+                width: 100%;
+                object-fit: cover;
+                transition: all .3s;
+                aspect-ratio: 233 / 132;
+                border: 1px solid inc.$border-color-gray;
+            }
+        }
+        @include inc.mq(tab) {
+            &__img {
+                border: 1px solid inc.$border-color-gray;
+                width: 100%;
+                img {
+                    border: none;
+                }
+            }
+            &__date {
+                @include inc.sizing(padding-top, tab, 40px, sp, 24px);
+            }
+        }
+        .-arw-s {
+            // @include inc.sizing(bottom, tab, 24px, sp, 16px);
+            // // margin-bottom: -3px;
+            // // right: 4%;
+            // @include inc.mq(tab) {
+            //     margin-bottom: 0;
+            //     bottom: 2.2rem;
+            //     right: 10.5%;
+            // }
+        }
+        .-arw-s {
+            position: absolute;
+            // bottom: 2.2rem;
+            // right: 10.5%;
+            bottom: -3px;
+            right: 6px;
+            //@include inc.sizing(bottom, tab, 24px, sp, 16px);
+            @include inc.mq(tab) {
+                margin-bottom: 0;
+                bottom: 2.2rem;
+                right: 10.5%;
+            }
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: inc.$theme-color-black;
+            transition: all .5s ease;
+            z-index: 2;
+            .c-arrow-link--icon {
+                overflow: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 10px;
+                height: 6px;
+                margin: auto 0;
+                line-height: 1;
+            }
+            .c-arrow-link--icon:before,
+            .c-arrow-link--icon:after {
+                content: "";
+                width: 10px;
+                height: 6px;
+                background: url(../img/common/icon_arrow_right_wh.svg) no-repeat 50% 50%;
+                background-size: contain;
+                position: absolute;
+                animation-fill-mode: both;
+                animation-duration: 0.6s;
+            }
+            .c-arrow-link--icon:after {
+                transform: translateX(-100%);
+            }
+        }
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                .p-carousel-card__img {
+                    img {
+                        transform: scale(1.03);
+                    }
+                }
+                .-arw-s {
+                    background: inc.$theme-color-gray3;
+                }
+            }
+        }
+        &.is-hover .c-arrow-link--icon:before {
+            animation-name: transformLeftRight2;
+            animation-delay: 0.3s;
+        }
+        &.is-hover .c-arrow-link--icon:after {
+            animation-name: transformRightLeft2;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            &.is-hover:hover .c-arrow-link--icon:before {
+                animation-name: transformRightLeft2;
+                animation-delay: 0s;
+            }
+            &.is-hover:hover .c-arrow-link--icon:after {
+                animation-name: transformLeftRight2;
+                animation-delay: 0.3s;
+            }
         }
     }
+    // .p-carousel-card + .p-carousel-card {
+    //     border-top: 1px solid inc.$border-color-gray2;
+    //     border-radius: 0;
+    //     @include inc.mq(tab) {
+    //         border: none;
+    //         border-radius: inc.$border-radius-m;
+    //     }
+    // }
+    // &__title {
+    //     text-align: center;
+    //     width: 100%;
+    // }
     &-nav {
         ul {
             display: flex;
@@ -318,33 +438,39 @@ column
         aspect-ratio: 423 / 434;
         background: url(../img/top/bg_006.png) no-repeat 0 0 / contain;
         position: absolute;
-        bottom: -24vw;
+        //bottom: -24vw;
+        bottom: -38vw;
+        @include inc.mq(lap) {
+            bottom: -24vw;
+        }
         right: 5vw;
         transform: translate(10vw, 0);
         z-index: -1;
     }
 }
 
-.p-column--bg03 {
-    // position: relative;
-    // &:before {
-    //     content: "";
-    //     display: block;
-    //     width: 337px;
-    //     @include inc.sizing(width, full, 337px, sp, 234px);
-    //     height: auto;
-    //     aspect-ratio: 337 / 295;
-    //     background: url(../img/top/bg_007.png) no-repeat 0 0 / contain;
-    //     position: absolute;
-    //     top: -18vw;
-    //     left: -12vw;
-    //     transform: translate(10vw, 0);
-    //     z-index: -1;
-    //     @include inc.mq(lap) {
-    //         top: -13vw;
-    //         left: -8vw;
-    //     }
-    // }
+.p-home .p-column--bg03 {
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        width: 337px;
+        @include inc.sizing(width, full, 337px, sp, 234px);
+        height: auto;
+        aspect-ratio: 337 / 295;
+        background: url(../img/top/bg_007.png) no-repeat 0 0 / contain;
+        position: absolute;
+        // top: -18vw;
+        // left: -12vw;
+        top: -25vw;
+        left: -26vw;
+        transform: translate(10vw, 0);
+        z-index: -1;
+        @include inc.mq(lap) {
+            top: -13vw;
+            left: -8vw;
+        }
+    }
 }
 
 
@@ -359,8 +485,10 @@ column
         aspect-ratio: 493 / 417;
         background: url(../img/top/bg_003.png) no-repeat 0 0 / contain;
         position: absolute;
-        top: 60vw;
-        left: -25vw;
+        // top: 60vw;
+        // left: -25vw;
+        top: 112vw;
+        left: -52vw;
         transform: translate(10vw, 0);
         z-index: -1;
         @include inc.mq(lap) {
@@ -395,3 +523,4 @@ column
         }
     }
 }
+

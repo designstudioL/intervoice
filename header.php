@@ -80,7 +80,7 @@ jQuery(function(){
   </div>
 </header>
 
-<button class="l-header-hamburger -btn -bk -sizeH" id="hamburger"><span class="-en">menu</span><i class="icon"><span></span></i></button>
+<button class="l-header-hamburger -btn -bk -sizeH" id="hamburger"><span class="-en">menu</span><i class="icon -hamburger"><span></span></i></button>
 <div class="l-header-hamburger-bg">
   <div class="l-header-hamburger-bg01"></div>
   <div class="l-header-hamburger-bg02"></div>
@@ -107,8 +107,63 @@ jQuery(function(){
 <!--/header-->
 
 <?php if(is_home() || is_front_page()): ?>
-<section class="l-container--primary p-kv">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/main.png" alt="">
+<section class="p-kv">
+  <div class="ani_parts">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/arw_01.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/arw_01_sp.svg">
+  </div>
+  <div class="ani_parts">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/arw_02.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/arw_02_sp.svg">
+  </div>
+  <div class="ani_parts">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/arw_03.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/arw_03_sp.svg">
+  </div>
+  <div class="ani_parts">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/arw_04.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/arw_04_sp.svg">
+  </div>
+  <div class="ani_parts">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/hand_01.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/hand_01_sp.svg">
+  </div>
+  <div class="ani_parts">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/hand_02.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/hand_02_sp.svg">
+  </div>
+  <div class="ani_parts">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/red.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/red_sp.svg">
+  </div>
+  <div class="ani_parts">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/blue.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/blue_sp.svg">
+  </div>
+  <div class="ani_parts">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/green_s.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/green_s_sp.svg">
+  </div>
+  <div class="ani_parts">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/yellow.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/yellow_sp.svg">
+  </div>
+  <div class="ani_parts">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/blue_s.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/blue_s_sp.svg">
+  </div>
+  <div class="ani_parts">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/green.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/green_sp.svg">
+  </div>
+  <div class="ani_title">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/lead.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/lead_sp.svg">
+  </div>
+  <div class="ani_sub">
+    <img class="ani_pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/sub.svg">
+    <img class="ani_sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/ani/sub_sp.svg">
+  </div>
 </section>
 <?php endif; ?>
 

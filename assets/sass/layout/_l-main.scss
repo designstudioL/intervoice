@@ -11,7 +11,7 @@ body {
 }
 
 .l-main {
-    //@include inc.sizing(padding-top, tab, 132px, sp, 68px);
+    @include inc.sizing(padding-top, tab, 132px, sp, 68px);
     @include inc.sizing(padding-bottom, tab, 111px, sp, 110px);
     //overflow: hidden;
     &.--hidden {
@@ -22,6 +22,7 @@ body {
 .p-home .l-main {
     padding-bottom: 0;
     @include inc.mq(tab) {
+        padding-top: 200px;
         @include inc.sizing(padding-bottom, tab, 111px, sp, 110px);
     }
 }
@@ -29,4 +30,11 @@ body {
 .p-column.post {
     @include inc.sizing(padding-top, tab, 100px, sp, 68px);
 
+}
+
+.p-service .l-main {
+    overflow: hidden;
+    @include inc.mq(tab) {
+        overflow: unset;
+    }
 }

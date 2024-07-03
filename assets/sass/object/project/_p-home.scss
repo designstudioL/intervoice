@@ -5,23 +5,130 @@ home
 -----------------------------------------------------*/
 .p-home {
     .p-kv {
-        margin-top: -80px;
+        padding-top: 0;
+        position: relative;
+        aspect-ratio: 336 / 591;
+        width: 94%;
+        margin: 0 auto;
+        @include inc.mq(tab) {
+            width: 94%;
+            max-width: 1660px;
+            aspect-ratio: 1656 / 935;
+            margin: -80px auto 0;
+            height: auto;
+            //max-height: 86vh;
+            text-align: center;
+        }
+        picture.base {
+            opacity: 0.2;
+        }
+        .ani_parts {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: auto;
+            aspect-ratio: 336 / 591;
+            @include inc.mq(tab) {
+                aspect-ratio: 1656 / 935;
+                img {
+                    height: auto;
+                    max-height: 86vh;
+                }
+            }
+        }
+        .ani_title {
+            //display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: auto;
+            @include inc.mq(tab) {
+                aspect-ratio: 1656 / 935;
+                img {
+                    height: auto;
+                    max-height: 86vh;
+                }
+            }
+        }
+        .ani_sub {
+            //display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: auto;
+            aspect-ratio: 336 / 591;
+            @include inc.mq(tab) {
+                aspect-ratio: 1656 / 934;
+                img {
+                    height: auto;
+                    max-height: 86vh;
+                }
+            }
+        }
+        .ani_pc {
+            display: none;
+            width: 100%;
+            height: auto;
+            @include inc.mq(tab) {
+                display: block;
+                // position: absolute;
+                // top: 50%;
+                // left: 50%;
+                // transform: translate(-50%, -50%);
+                // width: 100%;
+                // height: auto;
+                // aspect-ratio: 257 / 145;
+            }
+        }
+        .ani_sp {
+            display: block;
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            // width: 100%;
+            // height: auto;
+            // aspect-ratio: 336 / 591;
+            width: 100%;
+            height: auto;
+            @include inc.mq(tab) {
+                display: none;
+            }
+        }
+
     }
     &--block01 {
         position: relative;
         //@include inc.sizing(padding-bottom, full, 260px, tab, 180px);
-        @include inc.sizing(padding-bottom, full, 340px, tab, 200px);
+        @include inc.sizing(padding-top, tab, 340px, sps, 200px);
+        padding-bottom: 60px;
+        @include inc.mq(tab) {
+            padding-top: 0;
+            @include inc.sizing(padding-bottom, full, 340px, tab, 200px);
+        }
         &::before {
             content: "";
             display: block;
             aspect-ratio: 2658 / 1196;
             position: absolute;
             right: 0;
-            bottom: 0;
+            top: 0;
+            bottom: unset;
             max-width: 1336px;
             width: 90.58%;
             background: url(../img/top/bg_001.png) no-repeat 100% 100%;
             background-size: contain;
+            @include inc.mq(tab) {
+                top: unset;
+                bottom: 0;
+            }
         }
     }
     &--lead {

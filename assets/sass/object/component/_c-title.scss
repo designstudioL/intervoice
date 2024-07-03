@@ -31,6 +31,12 @@ title
             left: 0;
             transform: translate(0%, -50%);
         }
+        &.--wide {
+            margin-top: 0.15rem;
+            @include inc.mq(tab) {
+                margin-top: 0;
+            }
+        }
     }
     &.-cta {
         @include inc.sizingRem(font-size, lap, 80px, sp, 50px);
@@ -42,9 +48,17 @@ title
     }
 }
 
+.p-column_blog .c-title-pageTitle {
+    margin-bottom: 64px;
+    @include inc.mq(tab) {
+        @include inc.sizing(margin-bottom, lap, 146px, sp, 54px);
 
-// 34 30 26 22
-// 24 22 18 16
+    }
+}
+
+
+
+
 .c-title-ex-large {
     @include inc.sizingRem(font-size, lap, 34px, sp, 24px);
     @include inc.sizing(margin-bottom, lap, 60px, sp, 50px);
@@ -76,12 +90,26 @@ title
         }
     }
     br.sp_none {
-        display: none;
+        display: block;
         @include inc.mq(tab) {
-            display: block;
+            display: none;
         }
     }
 }
+
+br.sp_none {
+    display: block;
+    @include inc.mq(tab) {
+        display: none;
+    }
+}
+br.pc_none {
+    display: none;
+    @include inc.mq(tab) {
+        display: block;
+    }
+}
+
 .c-title-large {
     @include inc.sizingRem(font-size, lap, 30px, sp, 22px);
     @include inc.sizing(margin-bottom, lap, 48px, sp, 32px);
@@ -92,7 +120,10 @@ title
     @include inc.sizingRem(font-size, lap, 26px, sp, 18px);
     font-weight: 600;
     margin-bottom: 26px;
-    line-height: 1.6;
+    line-height: 1.2;
+    &.--projects {
+        line-height: 1.6;
+    }
     span {
         display: block;
         line-height: 0;
@@ -121,20 +152,20 @@ title
     }
 }
 .c-title-small {
-    @include inc.sizingRem(font-size, lap, 22px, sp, 16px);
+    @include inc.sizingRem(font-size, lap, 22px, sp, 18px);
     @include inc.sizing(margin-bottom, lap, 54px, sp, 40px);
     font-weight: 600;
     @include inc.mq(tab) {
         margin-bottom: 36px;
     }
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .c-title-en-medium {
     @include inc.sizingRem(font-size, lap, 72px, sp, 42px);
     @include inc.sizing(margin-bottom, lap, 40px, sp, 40px);
     @include inc.sizing(margin-top, lap, -32px, sp, -18px);
-    line-height: 1.2;
+    line-height: 1.6;
     //margin-top: -2rem;
     span {
         display: block;

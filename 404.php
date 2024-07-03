@@ -12,7 +12,7 @@
 			<div class="l-spacer -medium">
 				<p>こ指定されたページは見つかりませんでした。<br>ページが移動または削除されたか、URLが間違っている可能性がございます。</p>
 			</div>
-			<div class="l-spacer -medium">
+			<div class="l-spacer -medium -mgB-l">
 				<a href="<?php echo home_url(); ?>" class="-btn -bk -fontsM -sizeL -arw -auto --back"><i class="c-arrow-link--icon"></i><span class="-center">ホームへ戻る</span></a>
 			</div>
 		</section>

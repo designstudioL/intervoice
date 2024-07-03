@@ -30,7 +30,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="l-spacer -medium">
-			<a href="<?php echo home_url('/column_blog'); ?>" class="-btn -bk -fontsM -sizeLL -arw -auto --back"><i class="c-arrow-link--icon"></i><span class="-center">コラム＆ブログ</span></a>
+			<a href="<?php echo home_url('/column_blog'); ?>" class="-btn -bk -fontsM -sizeLL -arw -auto --back"><i class="c-arrow-link--icon"></i><span class="-center">コラム＆ブログ一覧</span></a>
 		</div>
 	</section>
 </section>
