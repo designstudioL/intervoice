@@ -6,83 +6,15 @@
 post
 -----------------------------------------------------*/
 .p-entry {
-    // p {
-    //     a:not([class]) {
-    //         text-decoration: underline;
-    //         text-underline-offset: 0.2em;
-    //     }
-    // }
-    // margin: 0 auto;
-    // h2.wp-block-heading {
-    //     @include inc.sizingRem(font-size, full, 32px, sp, 20px);
-    //     line-height: 1.4;
-    //     @include inc.sizing(width, tab, 670px, sp, 330px);
-    //     @include inc.mq(tab) {
-    //         width: 100%;
-    //     }
-    //     font-weight: bold;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     margin-bottom: 0;
-    // }
-    // h3.wp-block-heading {
-    //     @include inc.sizingRem(font-size, full, 24px, sp, 18px);
-    //     line-height: 1.4;
-    //     @include inc.sizing(width, tab, 670px, sp, 330px);
-    //     @include inc.mq(tab) {
-    //         width: 100%;
-    //     }
-    //     font-weight: bold;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     margin-bottom: 0;
-    // }
-    // h4.wp-block-heading {
-    //     @include inc.sizingRem(font-size, full, 20px, sp, 16px);
-    //     line-height: 1.4;
-    //     @include inc.sizing(width, tab, 670px, sp, 330px);
-    //     @include inc.mq(tab) {
-    //     width: 100%;
-    //     }
-    //     font-weight: bold;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    //     margin-bottom: 0;
-    // }
-    // .wp-block-image {
-    //     max-width: 100%;
-    //     @include inc.sizing(width, tab, 970px, sp, 330px);
-    //     @include inc.mq(tab) {
-    //         width: 100%;
-    //     }
-    //     figure {
-    //         width: auto;
-    //         height: auto;
-    //     }
-    //     margin-left: auto;
-    //     margin-right: auto;
-    // }
-    // p {
-    //     @include inc.sizing(width, tab, 670px, sp, 330px);
-    //     @include inc.mq(tab) {
-    //         width: 100%;
-    //     }
-    //     margin-left: auto;
-    //     margin-right: auto;
-    // }
-    // .has-text-align-center p {
-    //     width: 100%;
-    // }
-
     ul {
         padding-left: 1.3em;
         @include inc.sizing(width, tab, 670px, sp, 330px);
         max-width: 90%;
         @include inc.mq(tab) {
-        width: 100%;
+            width: 100%;
         }
-        margin-left: auto;
-        margin-right: auto;
+        //margin-left: auto;
+        //margin-right: auto;
         li {
             list-style-type: disc;
             line-height: 1.4;
@@ -94,11 +26,12 @@ post
     ol {
         padding-left: 1.5em;
         @include inc.sizing(width, tab, 670px, sp, 330px);
+        max-width: 90%;
         @include inc.mq(tab) {
             width: 100%;
         }
-        margin-left: auto;
-        margin-right: auto;
+        //margin-left: auto;
+        //margin-right: auto;
         li {
             list-style-type: decimal;
             line-height: 1.4;
@@ -114,6 +47,10 @@ post
         }
         margin-left: auto;
         margin-right: auto;
+    }
+
+    h4 {
+        font-weight: 600;
     }
 
     p + h2,
@@ -199,35 +136,9 @@ post
     ol + ul,
     ol + ol,
     ol + .c-border,
-    ol + .wp-block-image,
-
-    // .c-list-kome {
-    //     li {
-    //         list-style-type: none;
-    //     }
-    // }
-    // .p-post-list {
-    //     padding: 0;
-    //     li {
-    //         list-style-type: none;
-    //         h3 + p {
-    //         margin-top: 1rem;
-    //         display: inline;
-    //         }
-    //     }
-    //     li + li {
-    //         margin-top: 0;
-    //     }
-    // }
-    // .business-hours {
-    // &.c-border-t {
-    //     margin-top: 0;
-    // }
-    // }
-    // .-break-w {
-    // max-width: none;
-    // }
-
+    ol + .wp-block-image {
+        margin-top: 1.5rem;
+    }
 
     .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
         background: none;
@@ -243,10 +154,6 @@ post
 
 
 }
-
-
-
-
 
 
 .p-entry h2.p-title-small {
@@ -376,4 +283,16 @@ post
         aspect-ratio: 4 / 3;
         object-fit: contain;
     }
+}
+
+
+
+
+.is-type-video .wp-block-embed__wrapper{
+width: 100%;
+aspect-ratio: 16 / 9;
+}
+.is-type-video .wp-block-embed__wrapper iframe {
+width: 100%;
+height: 100%;
 }

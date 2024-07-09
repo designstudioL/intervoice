@@ -94,7 +94,7 @@
   <div class="l-container--primary">
     <div class="l-cta--2column">
       <div class="l-cta--2column--L">
-        <h2 class="c-title-ex-large -cta -en">contact<span>お問い合わせ</span></h2>
+        <h2 class="c-title-ex-large -cta -en">contact<span class="--wide">お問い合わせ</span></h2>
       </div>
       <div class="l-cta--2column--R">
         <p class="c-title-medium">こんなお悩みありましたら、<br>ぜひお気軽にお問い合わせください。</p>
@@ -150,5 +150,17 @@
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?ver=6.5.2"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/common.js?ver=6.5.2"></script>
+
+<script>
+$(window).on('load',function(){
+    /*---------------------------------------------------------
+    完了画面の出力（footer.phpに書くこと）
+    ----------------------------------------------------------*/
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+        location = "<?php echo home_url(); ?>/contact/thanks/";
+    }, false );
+});
+</script>
+
 </body>
 </html>

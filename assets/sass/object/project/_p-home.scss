@@ -13,7 +13,7 @@ home
         @include inc.mq(tab) {
             width: 94%;
             max-width: 1660px;
-            aspect-ratio: 1656 / 935;
+            aspect-ratio: 1348 / 786;
             margin: -80px auto 0;
             height: auto;
             //max-height: 86vh;
@@ -32,7 +32,7 @@ home
             height: auto;
             aspect-ratio: 336 / 591;
             @include inc.mq(tab) {
-                aspect-ratio: 1656 / 935;
+                aspect-ratio: 1348 / 786;
                 img {
                     height: auto;
                     max-height: 86vh;
@@ -48,7 +48,7 @@ home
             width: 100%;
             height: auto;
             @include inc.mq(tab) {
-                aspect-ratio: 1656 / 935;
+                aspect-ratio: 1348 / 786;
                 img {
                     height: auto;
                     max-height: 86vh;
@@ -65,7 +65,7 @@ home
             height: auto;
             aspect-ratio: 336 / 591;
             @include inc.mq(tab) {
-                aspect-ratio: 1656 / 934;
+                aspect-ratio: 1348 / 786;
                 img {
                     height: auto;
                     max-height: 86vh;
@@ -116,16 +116,21 @@ home
         &::before {
             content: "";
             display: block;
-            aspect-ratio: 2658 / 1196;
+            aspect-ratio: 144 / 144;
             position: absolute;
             right: 0;
-            top: 0;
+            top: -50vw;
             bottom: unset;
             max-width: 1336px;
-            width: 90.58%;
-            background: url(../img/top/bg_001.png) no-repeat 100% 100%;
+            width: 90%;
+            background: url(../img/top/bg_001_sp.png) no-repeat 100% 100%;
             background-size: contain;
             @include inc.mq(tab) {
+                max-width: 1336px;
+                width: 90.58%;
+                aspect-ratio: 2658 / 1196;
+                background: url(../img/top/bg_001.png) no-repeat 100% 100%;
+                background-size: contain;
                 top: unset;
                 bottom: 0;
             }

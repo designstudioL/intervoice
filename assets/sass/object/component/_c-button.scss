@@ -21,6 +21,10 @@ button
             margin-top: -1px;
         }
     }
+    &.l-header-btn {
+        padding-left: unset!important;
+        text-align: center!important;
+    }
     &.-bk {
         background: inc.$theme-color-black;
         transition: .4s;
@@ -93,8 +97,8 @@ button
         text-align: left;
         padding-left: 2rem;
         @include inc.mq(wsp) {
-            text-align: center;
-            padding-left: unset;
+            //text-align: center;
+            padding-left: 2rem;
         }
     }
     &.-sizeM {
@@ -107,8 +111,8 @@ button
         @include inc.mq(wsp) {
             width: 260px;
             max-width: 90%;
-            text-align: center;
-            padding-left: unset;
+            //text-align: center;
+            padding-left: 2rem;
         }
     }
     &.-sizeL {
@@ -120,8 +124,8 @@ button
         padding-left: 2rem;
         @include inc.mq(wsp) {
             max-width: 90%;
-            text-align: center;
-            padding-left: unset;
+            //text-align: center;
+            padding-left: 2rem;
         }
     }
     &.-sizeLL {
@@ -129,18 +133,30 @@ button
         max-width: 90%;
         //height: 80px;
         @include inc.sizing(height, lap, 80px, sp, 50px);
-        text-align: center;
         span {
-            text-align: center!important;
+            text-align: left;
+            padding-left: 2rem;
+            @include inc.mq(wsp) {
+                text-align: center;
+                padding-left: unset;
+            }
+            &.-center {
+                text-align: center;
+                padding-left: unset;
+                @include inc.mq(wsp) {
+                    text-align: center;
+                    padding-left: unset;
+                }
+            }
         }
         @include inc.mq(wsp) {
             max-width: 90%;
         }
     }
-    &.-center {
-        display:flex; flex-direction:column; justify-content:center; align-items:center;
-        padding-left: 0px;
-    }
+    // &.-center {
+    //     display:flex; flex-direction:column; justify-content:center; align-items:center;
+    //     padding-left: 0px;
+    // }
     &.-auto {
         margin-left: auto;
         margin-right: auto;
@@ -276,11 +292,13 @@ button
 
 .c-tag {
     width: auto;
-    display: inline-block;
-    line-height: 1;
+    // display: inline-block;
+    line-height: 1px;
     font-size: 11px;
     margin: 0;
-    padding: 5px 8px 5px;
     background: inc.$theme-color-gray4;
     border-radius: 9999px;
+    padding-bottom: .1rem;
+    padding: 10px 13px;
+    display: inline-block;
 }

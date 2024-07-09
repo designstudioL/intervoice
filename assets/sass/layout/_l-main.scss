@@ -21,9 +21,10 @@ body {
 
 .p-home .l-main {
     padding-bottom: 0;
+    padding-top: 44vw;
     @include inc.mq(tab) {
-        padding-top: 200px;
-        @include inc.sizing(padding-bottom, tab, 111px, sp, 110px);
+        padding-top: 120px;
+        @include inc.sizing(padding-bottom, tab, 111px, sp, 800px);
     }
 }
 

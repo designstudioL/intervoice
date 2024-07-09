@@ -8,8 +8,8 @@
         <div class="p-home--lead">
             <h2 class="c-title-ex-large">マーケティング思考と<br class="sp_none">アイデアで、<br>〇〇を変える。</h2>
             <p>intervoiceは、マーケティング思考とアイデアを源泉に、<br class="pc_none">事業やブランドの問題を特定し、課題を立て、解決のためのビジョンと道筋を提供する、<br class="pc_none">ブランディングと戦略リサーチの会社です。</p>
-            <p>クライアントとともに、慣習を疑い、着眼を変え、社会と人を捉えなおすことで、<br>今を変えるアイデア、人に響くプロダクトやサービス、長く愛されるブランドをつくっていく。<br>そしてそのプロセスと経験を、人を成長させる糧に変えていく。<br>そこから、新しい変化を生み出していく。</p>
-            <p>私たちは、「戦略思考」「対話のデザイン」「仮説発想」の３つを軸に、<br>思考を変え、対話を変え、発想を変え、<br>人と社会に新しい変化をもたらす企業でありたいと思っています。</p>
+            <p>クライアントとともに、慣習を疑い、着眼を変え、社会と人を捉えなおすことで、<br class="pc_none">今を変えるアイデア、人に響くプロダクトやサービス、長く愛されるブランドをつくっていく。<br>そしてそのプロセスと経験を、人を成長させる糧に変えていく。<br class="pc_none">そこから、新しい変化を生み出していく。</p>
+            <p>私たちは、「戦略思考」「対話のデザイン」「仮説発想」の３つを軸に、<br class="pc_none">思考を変え、対話を変え、発想を変え、<br class="pc_none">人と社会に新しい変化をもたらす企業でありたいと思っています。</p>
             <p><a href="<?php echo home_url('/about'); ?>" class="-btn -bk -fontsM -sizeM -arw"><span>私たちについて</span><i class="c-arrow-link--icon"></i></a></p>
         </div>
     </section>
@@ -81,7 +81,7 @@
             <?php endforeach; wp_reset_postdata(); ?>
             <?php endif; ?>
         </div>
-        <p><a href="<?php echo home_url('/column_blog'); ?>" class="-btn -bk -fontsM -sizeLL -arw -auto"><span class="-center">コラム&ブログ一覧</span><i class="c-arrow-link--icon"></i></a></p>
+        <p><a href="<?php echo home_url('/column_blog'); ?>" class="-btn -bk -fontsM -sizeLL -arw -auto"><span>コラム&ブログ一覧</span><i class="c-arrow-link--icon"></i></a></p>
     </section>
 </section>
 

@@ -5,6 +5,7 @@ p-pagenav
 -----------------------------------------------------*/
 .wp-pagenavi {
     font-family: inc.$font-set-en, serif;
+    letter-spacing: .25rem;
     font-display: swap;
     font-weight: 600;
     font-style: 14px;
@@ -72,6 +73,7 @@ p-pagenav
                 display: block;
                 font-size: 16px;
                 font-family: inc.$font-set-en, serif;
+                letter-spacing: .25rem;
                 font-weight: 600;
                 position: absolute;
                 left: 45px;
@@ -89,6 +91,7 @@ p-pagenav
                 left: auto;
                 font-size: 16px;
                 font-family: inc.$font-set-en, serif;
+                letter-spacing: .25rem;
                 font-weight: 600;
                 right: 45px;
                 top: 50%;

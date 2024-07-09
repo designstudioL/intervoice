@@ -11,25 +11,10 @@ column
         padding-top: 50vw;
         @include inc.mq(min) {
             @include inc.sizing(padding-top, tab, 132px, sp, 68px);
-            //background: none;
-            // &:before {
-            //     content: "";
-            //     display: block;
-            //     background: url(../img/column_blog/main.png) no-repeat 90% -1vw;
-            //     @include inc.sizing(background-size, lap, 580px, min, 330px);
-            //     @include inc.sizing(width, lap, 580px, min, 330px);
-            //     aspect-ratio: 1458 / 644;
-            //     position: absolute;
-            //     right: 10%;
-            //     @include inc.sizing(top, lap, -70px, min, -50px);
-            // }
             background: url(../img/column_blog/main.png) no-repeat 90% -1vw;
             @include inc.sizing(background-size, lap, 580px, min, 330px);
         }
         @include inc.mq(lap) {
-            // &:before {
-            //     @include inc.sizing(background-size, full, 720px, lap, 500px);
-            // }
             background: url(../img/column_blog/main.png) no-repeat 90% 0;
             @include inc.sizing(background-size, full, 720px, lap, 500px);
         }
@@ -62,6 +47,7 @@ column
         }
     }
     &-card {
+        transition: all .3s;
         width: 100%;
         position: relative;
         background: inc.$base-color;
@@ -120,7 +106,11 @@ column
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            @include inc.sizing(padding-top, tab, 10px, sp, 8px);
+            margin-top: -5px;
+            @include inc.mq(tab) {
+                margin-top: 0px;
+                @include inc.sizing(padding-top, tab, 10px, sp, 8px);
+            }
         }
         &__title {
             @include inc.sizing(padding-top, tab, 12px, sp, 10px);
@@ -164,22 +154,9 @@ column
             }
         }
         .-arw-s {
-            // @include inc.sizing(bottom, tab, 24px, sp, 16px);
-            // // margin-bottom: -3px;
-            // // right: 4%;
-            // @include inc.mq(tab) {
-            //     margin-bottom: 0;
-            //     bottom: 2.2rem;
-            //     right: 10.5%;
-            // }
-        }
-        .-arw-s {
             position: absolute;
-            // bottom: 2.2rem;
-            // right: 10.5%;
             bottom: -3px;
             right: 6px;
-            //@include inc.sizing(bottom, tab, 24px, sp, 16px);
             @include inc.mq(tab) {
                 margin-bottom: 0;
                 bottom: 2.2rem;
@@ -219,11 +196,12 @@ column
         }
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                .p-carousel-card__img {
-                    img {
-                        transform: scale(1.03);
-                    }
-                }
+                transform: scale(.98);
+                // .p-carousel-card__img {
+                //     img {
+                //         transform: scale(1.03);
+                //     }
+                // }
                 .-arw-s {
                     background: inc.$theme-color-gray3;
                 }
@@ -247,18 +225,6 @@ column
             }
         }
     }
-    // .p-carousel-card + .p-carousel-card {
-    //     border-top: 1px solid inc.$border-color-gray2;
-    //     border-radius: 0;
-    //     @include inc.mq(tab) {
-    //         border: none;
-    //         border-radius: inc.$border-radius-m;
-    //     }
-    // }
-    // &__title {
-    //     text-align: center;
-    //     width: 100%;
-    // }
     &-nav {
         ul {
             display: flex;
@@ -275,8 +241,11 @@ column
                     background: inc.$base-color;
                     border-radius: 9999px;
                     margin: 0;
-                    padding: 8px 12px 8px;
-                    line-height: 1;
+                    //padding: 8px 12px 8px;
+                    padding: 0 17px;
+                    height: 40px;
+                    display:flex; flex-direction:column; justify-content:center; align-items:center;
+                    line-height: 1px;
                     @include inc.sizingRem(font-size, tab, 14px, sp, 14px);
                     transition: .4s;
                     @media (hover: hover) and (pointer: fine) {
@@ -302,6 +271,7 @@ column
         gap: .8rem;
         li {
             font-family: inc.$font-set-en;
+            letter-spacing: .25rem;
             font-size: 14px;
             line-height: 2;
             a {

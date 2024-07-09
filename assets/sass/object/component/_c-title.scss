@@ -75,6 +75,7 @@ title
             font-weight: 600;
             position: relative;
             padding-left: 18px;
+            letter-spacing: 0.1rem;
             &::before {
                 content: "";
                 width: 10px;
@@ -86,6 +87,12 @@ title
                 top: 50%;
                 left: 0;
                 transform: translate(0%, -50%);
+            }
+            &.--wide {
+                margin-top: 0.15rem;
+                @include inc.mq(tab) {
+                    margin-top: 0;
+                }
             }
         }
     }
@@ -120,11 +127,12 @@ br.pc_none {
     @include inc.sizingRem(font-size, lap, 26px, sp, 18px);
     font-weight: 600;
     margin-bottom: 26px;
-    line-height: 1.2;
+    line-height: 2;
     &.--projects {
         line-height: 1.6;
     }
     span {
+        letter-spacing: 0.1rem;
         display: block;
         line-height: 0;
         &.-en {
@@ -170,6 +178,7 @@ br.pc_none {
     span {
         display: block;
         line-height: 0;
+        letter-spacing: 0.1rem;
     }
     .title_sub {
         display: inline-block;
@@ -203,6 +212,7 @@ br.pc_none {
     line-height: 2;
     //margin-top: -1.35rem;
     span {
+        letter-spacing: 0.1rem;
         display: block;
         line-height: 0;
     }

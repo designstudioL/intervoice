@@ -35,19 +35,10 @@ function globalMenuOpen() {
     $('.l-header-hamburger-bg05').addClass('-open');
     $('.l-header-hamburger-bg06').addClass('-open');
     $('.l-header-hamburger-bg07').addClass('-open');
-    // $('.l-header-hamburger-logo').css({'z-index':'4'});
-    // $('.l-header-hamburger-nav').css({'z-index':'5'});
-    // $('.l-header-hamburger-copyright').css({'z-index':'6'});
     $('.l-header-hamburger-logo').addClass('-open');
     $('.l-header-hamburger-nav').addClass('-open');
     $('.l-header-hamburger-copyright').addClass('-open');
   }, 500);
-
-  // setTimeout(function(){
-  //   $('.l-header-hamburger-logo').addClass('-open');
-  //   $('.l-header-hamburger-nav').addClass('-open');
-  //   $('.l-header-hamburger-copyright').addClass('-open');
-  // }, 1000);
 }
 
 function globalMenuClose() {
@@ -57,8 +48,6 @@ function globalMenuClose() {
   $('.l-header-hamburger-bg05').removeClass('-open');
   $('.l-header-hamburger-bg06').removeClass('-open');
   $('.l-header-hamburger-bg07').removeClass('-open');
-  // $('.l-header-hamburger-logo').css({'z-index':'-999'});
-  // $('.l-header-hamburger-nav').css({'z-index':'-999'});
   $('.l-header-hamburger-logo').removeClass('-open');
   $('.l-header-hamburger-nav').removeClass('-open');
   $('.l-header-hamburger-copyright').removeClass('-open');
@@ -75,9 +64,7 @@ $(window).on('load resize', function(){
   var winW = $(window).width();
   var devW = 960;
   if (winW <= devW) {
-    //960px以下の時の処理
   } else {
-    //960pxより大きい時の処理
     $('.l-header-hamburger').removeClass('-open');
     $('.l-header-hamburger-bg').removeClass('-open');
     $('.l-header-hamburger-bg01').removeClass('-open');
@@ -87,9 +74,6 @@ $(window).on('load resize', function(){
     $('.l-header-hamburger-bg05').removeClass('-open');
     $('.l-header-hamburger-bg06').removeClass('-open');
     $('.l-header-hamburger-bg07').removeClass('-open');
-    // $('.l-header-hamburger-logo').css({'z-index':'-999'});
-    // $('.l-header-hamburger-nav').css({'z-index':'-999'});
-    // $('.l-header-hamburger-copyright').css({'z-index':'-999'});
     $('.l-header-hamburger-logo').removeClass('-open');
     $('.l-header-hamburger-nav').removeClass('-open');
     $('.l-header-hamburger-copyright').removeClass('-open');
@@ -239,13 +223,9 @@ $(function() {
     autoHeight: true,
     loop: true,
 		speed: 1000, //切り替えのアニメーションスピード
-    slidesPerView: 1,
+    slidesPerView: 1.1,
     centeredSlides: true,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    // },
-    // ページネーションが必要なら追加
+    spaceBetween: 12,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

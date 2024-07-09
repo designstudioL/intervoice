@@ -6,6 +6,7 @@ carousel
 .p-carousel{
 	.c-swiper-container {
 		margin: 0 4%;
+		margin: 0;
 		@include inc.mq(wsp) {
 			margin: 0 0 0 4%;
 		}
@@ -15,6 +16,10 @@ carousel
 		@include inc.mq(lap) {
 			margin: 0 0 0 4.8%;
 		}
+		@include inc.mq(full) {
+            margin-left: calc(((100% - 1660px) / 2) + 4%);
+            padding: 0;
+        }
 	}
 	.p-carousel__carousel{
 		.c-swipe-nav{
@@ -43,22 +48,21 @@ carousel
 
 
 
-// .swiper-slide{ height: 100%!important; }
 .swiper-slide{ height: auto; }
 .p-carousel-card { height: 100%;}
 
 .p-carousel-card {
+	transition: all .3s;
 	position: relative;
-	//display: block;
 	background: inc.$base-color;
-	border-radius: inc.$border-radius-m;
-	//height: 100%!important;
+	border-radius: .8rem;
+	@include inc.mq(tab) {
+		border-radius: inc.$border-radius-m;
+	}
 	display: flex;
 	&.-projects {
-		// height: 100%!important;
 		height: 100%;
 		width: 100%;
-		//max-width: 420px;
 		gap: 1rem;
 		flex-direction: column;
 		@include inc.mq(tab) {
@@ -86,15 +90,6 @@ carousel
 			flex-grow: 1;
 		}
 	}
-	// &.-projects {
-	// 	gap: 1rem;
-	// 	//flex-direction: column;
-	// 	flex-direction: unset;
-	// 	@include inc.mq(tab) {
-	// 		gap: 0;
-	// 		flex-direction: column;
-	// 	}
-	// }
 	&.-column {
 		@include inc.mq(tab) {
 			flex-direction: column;
@@ -106,6 +101,7 @@ carousel
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		display: flex;
 	}
 	&__title {
 		@include inc.sizing(padding-top, tab, 16px, sp, 16px);
@@ -133,7 +129,6 @@ carousel
 	}
 	&__title2 {
 		@include inc.sizing(padding-top, tab, 4px, sp, 4px);
-		//@include inc.sizing(padding-bottom, tab, 16px, sp, 16px);
 		@include inc.sizingRem(font-size, tab, 18px, sp, 16px);
 		font-weight: 500;
 		line-height: 2;
@@ -147,7 +142,6 @@ carousel
 		display: flex;
 		flex-wrap: wrap;
 		gap: .3rem;
-
 	}
 	&__date {
 		font-size: 14px;
@@ -210,11 +204,12 @@ carousel
 
 	@media (hover: hover) and (pointer: fine) {
 		&:hover {
-			.p-carousel-card__img {
-				img {
-					transform: scale(1.03);
-				}
-			}
+			transform: scale(.98);
+			// .p-carousel-card__img {
+			// 	img {
+			// 		transform: scale(1.03);
+			// 	}
+			// }
 			.-arw-s {
 				//@media (hover: hover) and (pointer: fine) {
 					//&:hover {

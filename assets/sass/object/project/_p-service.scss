@@ -4,20 +4,36 @@
 service
 -----------------------------------------------------*/
 .p-service {
+    // main {
+    //     background: url(../img/service/main.png) no-repeat 50% 8vw;
+    //     background-size: 80%;
+    //     padding-top: 50vw;
+    //     @include inc.mq(min) {
+    //         @include inc.sizing(padding-top, tab, 132px, sp, 68px);
+    //         background: url(../img/service/main.png) no-repeat 90% 5vw;
+    //         @include inc.sizing(background-size, lap, 540px, min, 330px);
+    //     }
+    //     @include inc.mq(lap) {
+    //         background: url(../img/service/main.png) no-repeat 90% 0;
+    //         @include inc.sizing(background-size, desk, 980px, lap, 540px);
+    //     }
+    // }
     main {
-        background: url(../img/service/main.png) no-repeat 50% 8vw;
-        background-size: 80%;
+        background: url(../img/service/main.png) no-repeat 50% 6vw;
+        background-size: 90%;
         padding-top: 50vw;
         @include inc.mq(min) {
+            background-size: 80%;
             @include inc.sizing(padding-top, tab, 132px, sp, 68px);
             background: url(../img/service/main.png) no-repeat 90% 5vw;
-            @include inc.sizing(background-size, lap, 540px, min, 330px);
+            @include inc.sizing(background-size, lap, 580px, min, 330px);
         }
         @include inc.mq(lap) {
             background: url(../img/service/main.png) no-repeat 90% 0;
-            @include inc.sizing(background-size, desk, 980px, lap, 540px);
+            @include inc.sizing(background-size, desk, 880px, lap, 560px);
         }
     }
+
     &-home {
         display: flex;
         flex-wrap: wrap;
@@ -156,24 +172,24 @@ service
             max-width: 102%;
         }
     }
-    .contents div + div {
-        @include inc.sizing(margin-top, tab, 108px, sp, 96px);
-    }
+    // .contents div + div {
+    //     @include inc.sizing(margin-top, tab, 108px, sp, 96px);
+    // }
     .supplement {
         padding-top: 2rem;
         border-top: 1px solid inc.$theme-color-gray5;
     }
 }
-@include inc.mq(tab) {
+@include inc.mq(lap) {
     .--scrollfix {
         display: flex;
         justify-content: space-between;
         position: relative;
         .contents{ width: calc(50% - 2rem); }
         // .contents div{ padding-top: 50vh; }
-        .contents div{
-            @include inc.sizing(padding-top, full, 120px, tab, 320px);
-        }
+        // .contents div{
+        //     @include inc.sizing(padding-top, full, 120px, tab, 320px);
+        // }
         .contents div:last-child{ padding-bottom: 50vh; }
         .contents figure { display: none;}
         // .contents div + .contents div {
@@ -221,3 +237,50 @@ service
     }
 }
 
+#scroll-box01 {
+    @include inc.mq(lap) {
+        padding-top: calc(30vh + 13.0vw);
+    }
+    @include inc.mq(lap-l) {
+        padding-top: calc(30vh + 8.0vw);
+    }
+    @include inc.mq(lap-ll) {
+        padding-top: calc(30vh + 3.0vw);
+    }
+    @include inc.mq(desk) {
+        padding-top: calc(30vh + 3.0vw);
+    }
+    @include inc.mq(vr) {
+        padding-top: calc(30vh + 2.4vw);
+    }
+    @include inc.mq(wide) {
+        padding-top: calc(30vh + 1.5vw);
+    }
+    @include inc.mq(full) {
+        padding-top: 30vh;
+    }
+}
+#scroll-box02,
+#scroll-box03,
+#scroll-box04 {
+    @include inc.sizing(margin-top, lap, 160px, sps, 100px);
+    @include inc.mq(lap) {
+        margin: 0;
+        padding-top: 35vh;
+    }
+}
+
+
+// sps: 320px,
+// sp: 375px,
+// sp2: 376px,
+// wsp: 520px,
+// min: 620px,
+// tab: 768px,
+// lap: 960px,
+// lap-l: 1080px,
+// lap-ll: 1160px,
+// desk: 1280px,
+// vr: 1366px,
+// wide: 1440px,
+// full: 1630px,

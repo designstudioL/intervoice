@@ -5,7 +5,7 @@
 <?php get_header(); ?>
 
 <section class="l-container--primary">
-	<h1 class="c-title-pageTitle -en">contact<span class="--wide">お問い合わせ完了</span></h1>
+	<h1 class="c-title-pageTitle -en">contact<span>お問い合わせ完了</span></h1>
 	<section class="l-container--2column">
 		<section class="--L">
 		</section>

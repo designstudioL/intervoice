@@ -26,11 +26,11 @@
         width: 100%;
         max-width: calc(1080px + 8%);
         padding: 0 7.5%;
+        margin: 0 auto;
         @include inc.mq(lap) {
             max-width: calc(1080px + 9.6%);
             padding: 0 4.8%;
         }
-        margin: 0 auto;
         &.--sp1 {
             max-width: 100%;
             padding: 0;
@@ -97,7 +97,8 @@
                 }
                 .--R {
                     width: 65.45%;
-                    padding-right: 7.76%;
+                    //padding-right: 7.76%;
+                    padding-right: 0;
                 }
             }
         }
