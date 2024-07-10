@@ -59,7 +59,7 @@ jQuery(function(){
 <body class="p-projects post -hidden" id="projects">
 
 <?php else: ?>
-<body class="p-home" id="home">
+<body class="" id="">
 <?php endif; ?>
 
 <div id="loading" class="js-loading"></div>

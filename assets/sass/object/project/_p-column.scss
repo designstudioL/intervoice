@@ -125,6 +125,7 @@ column
         }
         &__date {
             padding-top: 16px;
+            letter-spacing: 0.12rem;
         }
         &__img{
             width: 100%;
@@ -282,10 +283,16 @@ column
                 display:flex; flex-direction:column; justify-content:center; align-items:center;
                 padding: 0 .8rem;
             }
+            &.-date {
+                letter-spacing: 0.12rem;
+            }
         }
         .column .column {
             background: inc.$theme-color-black;
             color: inc.$base-color;
+        }
+        & + .c-title-ex-large {
+            margin-top: .3rem;
         }
     }
     &--post {
@@ -370,6 +377,8 @@ column
         @include inc.mq(lap) {
             transform: translate(28vw, 0);
         }
+        opacity: 0;
+        transition: all 0.5s;
     }
     &:after {
         content: "";
@@ -386,6 +395,16 @@ column
         @include inc.mq(lap) {
             top: -18vw;
             @include inc.sizing(left, full, -120px, tab, -400px);
+        }
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    &.-fade {
+        &::before {
+            opacity: 1;
+        }
+        &::after {
+            opacity: 1;
         }
     }
 }
@@ -416,6 +435,13 @@ column
         right: 5vw;
         transform: translate(10vw, 0);
         z-index: -1;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    &.-fade {
+        &::before {
+            opacity: 1;
+        }
     }
 }
 
@@ -439,6 +465,13 @@ column
         @include inc.mq(lap) {
             top: -13vw;
             left: -8vw;
+        }
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    &.-fade {
+        &::before {
+            opacity: 1;
         }
     }
 }
@@ -464,6 +497,13 @@ column
         @include inc.mq(lap) {
             top: 13vw;
             left: -15vw;
+        }
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    &.-fade {
+        &::before {
+            opacity: 1;
         }
     }
 }
@@ -494,3 +534,16 @@ column
     }
 }
 
+.p-home {
+    .p-column--bg05 {
+        &:before {
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        &.-fade {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}

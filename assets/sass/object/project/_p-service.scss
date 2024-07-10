@@ -266,7 +266,14 @@ service
     @include inc.sizing(margin-top, lap, 160px, sps, 100px);
     @include inc.mq(lap) {
         margin: 0;
-        padding-top: 35vh;
+        padding-top: 20vh;
+    }
+}
+#scroll-box01,
+#scroll-box02,
+#scroll-box03 {
+    @include inc.mq(lap) {
+        padding-bottom: 10vh;
     }
 }
 

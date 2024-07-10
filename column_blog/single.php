@@ -11,7 +11,7 @@ get_header(); ?>
 			foreach ($terms as $term) {
 				echo '<li><a href="'.get_term_link($term->slug, 'column_blog_cat').'">' . $term->name . '</a></li>';
 			} ?>
-			<li><?php the_time('Y.m.d') ?></li>
+			<li class="-date"><?php the_time('Y.m.d') ?></li>
 		</ul>
 		<h1 class="c-title-ex-large"><?php the_title(); ?></h1>
 	</section>

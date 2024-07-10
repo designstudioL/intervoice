@@ -11,14 +11,20 @@ title
     line-height: 1.6;
     margin-top: -2rem;
     font-weight: 600;
-    letter-spacing: .1rem;
+    //letter-spacing: .1rem;
     span {
-        letter-spacing: .16rem;
+        //letter-spacing: .16rem;
         display: block;
         @include inc.sizingRem(font-size, lap, 16px, sp, 16px);
+        font-family: inc.$font-set-primary, sans-serif;
         font-weight: 600;
         position: relative;
         padding-left: 18px;
+        margin-top: -.5rem;
+        letter-spacing: 0.12rem;
+        &.-project {
+            margin-top: 0.4rem;
+        }
         &::before {
             content: "";
             width: 10px;
@@ -29,7 +35,7 @@ title
             position: absolute;
             top: 50%;
             left: 0;
-            transform: translate(0%, -50%);
+            transform: translate(0%, -40%);
         }
         &.--wide {
             margin-top: 0.15rem;
@@ -65,6 +71,7 @@ title
     font-weight: 600;
     //line-height: 2;
     line-height: 1.8;
+    letter-spacing: 0.25rem;
     &.-cta {
         @include inc.sizingRem(font-size, lap, 80px, sp, 50px);
         color: inc.$base-color;
@@ -75,7 +82,8 @@ title
             font-weight: 600;
             position: relative;
             padding-left: 18px;
-            letter-spacing: 0.1rem;
+            //letter-spacing: 0.1rem;
+            letter-spacing: 0.12rem;
             &::before {
                 content: "";
                 width: 10px;
@@ -132,7 +140,8 @@ br.pc_none {
         line-height: 1.6;
     }
     span {
-        letter-spacing: 0.1rem;
+        //letter-spacing: 0.1rem;
+        letter-spacing: 0.12rem;
         display: block;
         line-height: 0;
         &.-en {
@@ -166,7 +175,18 @@ br.pc_none {
     @include inc.mq(tab) {
         margin-bottom: 36px;
     }
-    line-height: 1.8;
+    //line-height: 1.8;
+    line-height: 2;
+    //letter-spacing: 0.18rem;
+}
+.c-title-small2 {
+    @include inc.sizingRem(font-size, lap, 22px, sp, 18px);
+    @include inc.sizing(margin-bottom, lap, 54px, sp, 40px);
+    font-weight: 600;
+    @include inc.mq(tab) {
+        margin-bottom: 36px;
+    }
+    line-height: 2;
 }
 
 .c-title-en-medium {
@@ -178,7 +198,15 @@ br.pc_none {
     span {
         display: block;
         line-height: 0;
-        letter-spacing: 0.1rem;
+        //letter-spacing: 0.1rem;
+        letter-spacing: 0.12rem;
+        font-family: inc.$font-set-primary, sans-serif;
+        @include inc.mq(tab) {
+            margin-top: -1.5rem;
+        }
+        &.-project {
+            margin-top: 0rem;
+        }
     }
     .title_sub {
         display: inline-block;
@@ -196,7 +224,7 @@ br.pc_none {
             position: absolute;
             top: 50%;
             left: 0;
-            transform: translate(0%, -50%);
+            transform: translate(0%, -40%);
         }
     }
     &.-home {
@@ -212,7 +240,8 @@ br.pc_none {
     line-height: 2;
     //margin-top: -1.35rem;
     span {
-        letter-spacing: 0.1rem;
+        //letter-spacing: 0.1rem;
+        letter-spacing: 0.12rem;
         display: block;
         line-height: 0;
     }

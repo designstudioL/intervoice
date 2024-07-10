@@ -88,10 +88,10 @@ $(window).on('load resize', function(){
 
 $(function () {
   $(window).scroll(function () {
-    if ($(window).scrollTop() > 1) {
-      $('.pageTop').fadeIn(300).css('display', 'flex')
+    if ($(window).scrollTop() > 50) {
+      $('.pageTop').fadeIn(800).css({'display':'flex'});
     } else {
-      $('.pageTop').fadeOut(300)
+      $('.pageTop').fadeOut(800);
     }
   });
 });
@@ -302,34 +302,6 @@ $(function () {
 
 
 
-
-
-
-// $(document).ready(function() {
-//   // ページ読み込み完了から1秒後に実行
-//   setTimeout(function() {
-//     // .ani_pcクラスを持つ要素を全て取得
-//     var elements = $('.ani_parts').toArray();
-    
-//     // 要素をシャッフル
-//     for (var i = elements.length - 1; i > 0; i--) {
-//       var j = Math.floor(Math.random() * (i + 1));
-//       [elements[i], elements[j]] = [elements[j], elements[i]];
-//     }
-    
-//     // 最初は全ての要素を非表示にする
-//     $('.ani_parts').hide();
-    
-//     // シャッフルされた順番で要素を表示
-//     $.each(elements.slice(0, 12), function(index, element) {
-//       setTimeout(function() {
-//         $(element).fadeIn(800);
-//       }, index * 100); // 100ミリ秒ごとに表示
-//     });
-//   }, 1000); // 1000ミリ秒（1秒）後に実行
-// });
-
-
 $(document).ready(function() {
   // ページ読み込み完了から1秒後に実行
   setTimeout(function() {
@@ -349,17 +321,172 @@ $(document).ready(function() {
     $.each(elements.slice(0, 12), function(index, element) {
       setTimeout(function() {
         $(element).fadeIn(800);
-        
-        // 最後の.ani_parts要素が表示された後に.ani_titleを表示
-        // if (index === 11) {
-        //   setTimeout(function() {
-        //     $('.ani_title').fadeIn(800);
-        //     setTimeout(function() {
-        //       $('.ani_sub').fadeIn(800);
-        //     }, 150); // .ani_titleの最後のフェードインが終わってから表示
-        //   }, 800); // .ani_partsの最後のフェードインが終わってから表示
-        // }
       }, index * 200); // 200ミリ秒ごとに表示
     });
   }, 1500); // 1000ミリ秒（1秒）後に実行
 });
+
+
+
+
+
+var $win = $(window);
+$win.on('load resize', function() {
+  if (window.matchMedia('(max-width:768px)').matches) {
+    // SPの処理
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        $('.p-home--block01').each(function() {
+          var bottom_of_element = $(this).offset().top + $(this).outerHeight() - ($(window).height() * 1.4);
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+          if (bottom_of_window > bottom_of_element) {
+            $(this).addClass('-fade');
+          }
+        });
+        $('.p-column--bg01').each(function() {
+          var bottom_of_element01 = $(this).offset().top + $(this).outerHeight() - ($(window).height() * 1.4);
+          var bottom_of_window01 = $(window).scrollTop() + $(window).height();
+          if (bottom_of_window01 > bottom_of_element01) {
+            $(this).addClass('-fade');
+          }
+        });
+        $('.p-column--bg02').each(function() {
+          var bottom_of_element02 = $(this).offset().top + $(this).outerHeight() + ($(window).height() / 2);
+          var bottom_of_window02 = $(window).scrollTop() + $(window).height();
+          if (bottom_of_window02 > bottom_of_element02) {
+            $(this).addClass('-fade');
+          }
+        });
+        $('.p-column--bg03').each(function() {
+          var bottom_of_element03 = $(this).offset().top + $(this).outerHeight() - ($(window).height() * .6);
+          var bottom_of_window03 = $(window).scrollTop() + $(window).height();
+          if (bottom_of_window03 > bottom_of_element03) {
+            $(this).addClass('-fade');
+          }
+        });
+        $('.p-column--bg04').each(function() {
+          var bottom_of_element04 = $(this).offset().top + $(this).outerHeight() - ($(window).height() * 1.4);
+          var bottom_of_window04 = $(window).scrollTop() + $(window).height();
+          if (bottom_of_window04 > bottom_of_element04) {
+            $(this).addClass('-fade');
+          }
+        });
+        $('.p-column--bg05').each(function() {
+          var bottom_of_element05 = $(this).offset().top + $(this).outerHeight() - ($(window).height() * .6);
+          var bottom_of_window05 = $(window).scrollTop() + $(window).height();
+          if (bottom_of_window05 > bottom_of_element05) {
+            $(this).addClass('-fade');
+          }
+        });
+      });
+    });
+  } else {
+    // PCの処理
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        $('.p-home--block01').each(function() {
+          var bottom_of_element = $(this).offset().top + $(this).outerHeight() - ($(window).height() / 5);
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+          if (bottom_of_window > bottom_of_element) {
+            $(this).addClass('-fade');
+          }
+        });
+        $('.p-column--bg01').each(function() {
+          var bottom_of_element01 = $(this).offset().top + $(this).outerHeight() - ($(window).height() / 2);
+          var bottom_of_window01 = $(window).scrollTop() + $(window).height();
+          if (bottom_of_window01 > bottom_of_element01) {
+            $(this).addClass('-fade');
+          }
+        });
+        $('.p-column--bg02').each(function() {
+          var bottom_of_element02 = $(this).offset().top + $(this).outerHeight() + ($(window).height() / 4);
+          var bottom_of_window02 = $(window).scrollTop() + $(window).height();
+          if (bottom_of_window02 > bottom_of_element02) {
+            $(this).addClass('-fade');
+          }
+        });
+        $('.p-column--bg03').each(function() {
+          var bottom_of_element03 = $(this).offset().top + $(this).outerHeight() - ($(window).height() / 3);
+          var bottom_of_window03 = $(window).scrollTop() + $(window).height();
+          if (bottom_of_window03 > bottom_of_element03) {
+            $(this).addClass('-fade');
+          }
+        });
+        $('.p-column--bg04').each(function() {
+          var bottom_of_element04 = $(this).offset().top + $(this).outerHeight() - ($(window).height() / 3);
+          var bottom_of_window04 = $(window).scrollTop() + $(window).height();
+          if (bottom_of_window04 > bottom_of_element04) {
+            $(this).addClass('-fade');
+          }
+        });
+        $('.p-column--bg05').each(function() {
+          var bottom_of_element05 = $(this).offset().top + $(this).outerHeight() - ($(window).height() / 4);
+          var bottom_of_window05 = $(window).scrollTop() + $(window).height();
+          if (bottom_of_window05 > bottom_of_element05) {
+            $(this).addClass('-fade');
+          }
+        });
+      });
+    });
+  }
+});
+
+
+// $(document).ready(function() {
+//   $(window).scroll(function() {
+
+//     $('.p-home--block01').each(function() {
+//       var bottom_of_element = $(this).offset().top + $(this).outerHeight() - ($(window).height() / 5);
+//       var bottom_of_window = $(window).scrollTop() + $(window).height();
+//       if (bottom_of_window > bottom_of_element) {
+//         $(this).addClass('-fade');
+//       }
+//     });
+
+//     $('.p-column--bg01').each(function() {
+//       var bottom_of_element01 = $(this).offset().top + $(this).outerHeight() - ($(window).height() / 2);
+//       var bottom_of_window01 = $(window).scrollTop() + $(window).height();
+//       if (bottom_of_window01 > bottom_of_element01) {
+//         $(this).addClass('-fade');
+//       }
+//     });
+
+//     $('.p-column--bg02').each(function() {
+//       var bottom_of_element02 = $(this).offset().top + $(this).outerHeight() + ($(window).height() / 4);
+//       var bottom_of_window02 = $(window).scrollTop() + $(window).height();
+//       if (bottom_of_window02 > bottom_of_element02) {
+//         $(this).addClass('-fade');
+//       }
+//     });
+
+//     $('.p-column--bg03').each(function() {
+//       var bottom_of_element03 = $(this).offset().top + $(this).outerHeight() - ($(window).height() / 3);
+//       var bottom_of_window03 = $(window).scrollTop() + $(window).height();
+//       if (bottom_of_window03 > bottom_of_element03) {
+//         $(this).addClass('-fade');
+//       }
+//     });
+
+//     $('.p-column--bg04').each(function() {
+//       var bottom_of_element04 = $(this).offset().top + $(this).outerHeight() - ($(window).height() / 3);
+//       var bottom_of_window04 = $(window).scrollTop() + $(window).height();
+//       if (bottom_of_window04 > bottom_of_element04) {
+//         $(this).addClass('-fade');
+//       }
+//     });
+
+//     $('.p-column--bg05').each(function() {
+//       var bottom_of_element05 = $(this).offset().top + $(this).outerHeight() - ($(window).height() / 4);
+//       var bottom_of_window05 = $(window).scrollTop() + $(window).height();
+//       if (bottom_of_window05 > bottom_of_element05) {
+//         $(this).addClass('-fade');
+//       }
+//     });
+
+//   });
+// });
+
+
+
+
+

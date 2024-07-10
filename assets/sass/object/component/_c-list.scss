@@ -17,12 +17,17 @@ list
             background: inc.$base-color;
             border-radius: 50%;
             position: absolute;
-            top: 50%;
+            top: .9rem;
             left: 0;
             transform: translate(0%, -50%);
         }
         & + & {
-            margin-top: .6em;
+            margin-top: .8rem;
+        }
+        &.-black {
+            &::before {
+                background: inc.$theme-color-black;
+            }
         }
     }
 }

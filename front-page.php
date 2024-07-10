@@ -7,10 +7,12 @@
     <section class="l-container--primary">
         <div class="p-home--lead">
             <h2 class="c-title-ex-large">マーケティング思考と<br class="sp_none">アイデアで、<br>〇〇を変える。</h2>
-            <p>intervoiceは、マーケティング思考とアイデアを源泉に、<br class="pc_none">事業やブランドの問題を特定し、課題を立て、解決のためのビジョンと道筋を提供する、<br class="pc_none">ブランディングと戦略リサーチの会社です。</p>
-            <p>クライアントとともに、慣習を疑い、着眼を変え、社会と人を捉えなおすことで、<br class="pc_none">今を変えるアイデア、人に響くプロダクトやサービス、長く愛されるブランドをつくっていく。<br>そしてそのプロセスと経験を、人を成長させる糧に変えていく。<br class="pc_none">そこから、新しい変化を生み出していく。</p>
-            <p>私たちは、「戦略思考」「対話のデザイン」「仮説発想」の３つを軸に、<br class="pc_none">思考を変え、対話を変え、発想を変え、<br class="pc_none">人と社会に新しい変化をもたらす企業でありたいと思っています。</p>
-            <p><a href="<?php echo home_url('/about'); ?>" class="-btn -bk -fontsM -sizeM -arw"><span>私たちについて</span><i class="c-arrow-link--icon"></i></a></p>
+            <div class="l-spacing18">
+                <p>intervoiceは、マーケティング思考とアイデアを源泉に、<br class="pc_none">事業やブランドの問題を特定し、課題を立て、解決のためのビジョンと道筋を提供する、<br class="pc_none">ブランディングと戦略リサーチの会社です。</p>
+                <p>クライアントとともに、慣習を疑い、着眼を変え、社会と人を捉えなおすことで、<br class="pc_none">今を変えるアイデア、人に響くプロダクトやサービス、長く愛されるブランドをつくっていく。<br>そしてそのプロセスと経験を、人を成長させる糧に変えていく。<br class="pc_none">そこから、新しい変化を生み出していく。</p>
+                <p>私たちは、「戦略思考」「対話のデザイン」「仮説発想」の３つを軸に、<br class="pc_none">思考を変え、対話を変え、発想を変え、<br class="pc_none">人と社会に新しい変化をもたらす企業でありたいと思っています。</p>
+                <p><a href="<?php echo home_url('/about'); ?>" class="-btn -bk -fontsM -sizeM -arw"><span>私たちについて</span><i class="c-arrow-link--icon"></i></a></p>
+            </div>
         </div>
     </section>
 </section>
@@ -24,8 +26,8 @@
                 <h2 class="c-title-en-medium -home -en">service<span><span class="title_sub">業務領域</span></span></h2>
             </section>
             <section class="--R --none">
-                    <div class="l-spacer -medium">
-                        <p>私たちが大切にしているのは、「戦略思考」「対話のデザイン」「仮説発想」。<br>すべての業務領域において、この３つの軸はベースにあります。<br>どの領域のどのお仕事においても、クライアントと私たちで、思考をめぐらせ、チームで対話し、規制にとらわれず自由に発想することで、企業とブランドに新しい変化を生み出していきます。</p>
+                    <div class="l-spacer -medium l-spacing18">
+                        <p>私たちが大切にしているのは、「戦略思考」「対話のデザイン」「仮説発想」。<br>すべての業務領域において、この３つの軸はベースにあります。<br>どの領域のどのお仕事においても、クライアントと私たちで、思考をめぐらせ、チームで対話し、既成にとらわれず自由に発想することで、企業とブランドに新しい変化を生み出していきます。</p>
                         <p><a href="<?php echo home_url('/service'); ?>" class="-btn -bk -fontsM -sizeM -arw"><span>サービス</span><i class="c-arrow-link--icon"></i></a></p>
                     </div>
                     <div class="l-spacer -medium">

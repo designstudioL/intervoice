@@ -36,7 +36,13 @@ button
             //padding: 0 65px 0 30px;
             &.-center {
                 text-align: left;
-                padding-left: 2rem;
+                //padding-left: 2rem;
+                @include inc.mq(wsp) {
+                    text-align: center;
+                }
+            }
+            &.-center.-sp {
+                text-align: center;
                 @include inc.mq(wsp) {
                     text-align: center;
                 }
@@ -95,10 +101,17 @@ button
         max-width: 90%;
         height: 44px;
         text-align: left;
+        //padding-left: 2rem;
         padding-left: 2rem;
+        padding-right: 2rem;
         @include inc.mq(wsp) {
             //text-align: center;
-            padding-left: 2rem;
+            //padding-left: 2rem;
+        }
+        &.-center {
+            text-align: center;
+            padding-left: unset;
+            padding-right: unset;
         }
     }
     &.-sizeM {
@@ -106,13 +119,15 @@ button
         max-width: 375px;
         //height: 60px;
         text-align: left;
+        //padding-left: 2rem;
         padding-left: 2rem;
+        padding-right: 2rem;
         @include inc.sizing(height, lap, 60px, sp, 50px);
         @include inc.mq(wsp) {
             width: 260px;
             max-width: 90%;
             //text-align: center;
-            padding-left: 2rem;
+            //padding-left: 2rem;
         }
     }
     &.-sizeL {
@@ -121,11 +136,13 @@ button
         //height: 60px;
         @include inc.sizing(height, lap, 60px, sp, 50px);
         text-align: left;
+        //padding-left: 2rem;
         padding-left: 2rem;
+        padding-right: 2rem;
         @include inc.mq(wsp) {
             max-width: 90%;
             //text-align: center;
-            padding-left: 2rem;
+            //padding-left: 2rem;
         }
     }
     &.-sizeLL {
@@ -136,6 +153,7 @@ button
         span {
             text-align: left;
             padding-left: 2rem;
+            padding-right: 2rem;
             @include inc.mq(wsp) {
                 text-align: center;
                 padding-left: unset;
@@ -160,6 +178,14 @@ button
     &.-auto {
         margin-left: auto;
         margin-right: auto;
+    }
+    &.-auto.-sp {
+        margin-left: auto;
+        margin-right: auto;
+        @include inc.mq(wsp) {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
     &.-arw {
         position: relative;
@@ -281,10 +307,11 @@ button
 .icon_link {
     width: 16px;
     height: 1rem;
-    background: url(../img/common/icon_link.svg) no-repeat 50% 50%;
+    background: url(../img/common/icon_link.svg) no-repeat 50% 100%;
     background-size: contain;
     display: inline-block;
     margin-left: .5rem;
+    background-size: auto .8rem;
     &.-wh {
         background: url(../img/common/icon_link_wh.svg) no-repeat 50% 50%;
     }

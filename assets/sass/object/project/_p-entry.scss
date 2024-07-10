@@ -6,6 +6,9 @@
 post
 -----------------------------------------------------*/
 .p-entry {
+    h2,h3,h4 {
+        letter-spacing: 0.18rem;
+    }
     ul {
         padding-left: 1.3em;
         @include inc.sizing(width, tab, 670px, sp, 330px);
@@ -220,6 +223,8 @@ post
 .p-projects-cname {
     @include inc.sizingRem(font-size, lap, 20px, sp, 16px);
     display: block;
+    letter-spacing: 0.18rem;
+    margin-bottom: .3rem
 }
 
 .p-projects--conts dl div + div {

@@ -7,6 +7,15 @@ CTA
     .c-title-ex-large {
         margin-bottom: 0;
     }
+    .c-title-medium {
+        font-size: 16px;
+        @include inc.sizingRem(font-size, lap, 20px, sp, 16px);
+        margin-bottom: 2rem;
+        .c-list-dot__item {
+            font-size: 14px;
+            @include inc.sizingRem(font-size, lap, 16px, sp, 14px);
+        }
+    }
     background: inc.$theme-color-black;
     color: inc.$base-color;
     @include inc.sizing(padding-top, tab, 127px, sp, 50px);

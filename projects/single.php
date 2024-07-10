@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section class="l-spacer -medium">
 	<section class="l-container--secondary --sp1">
-		<h1 class="c-title-ex-large -"><?php if(get_field('name')): ?><span class="p-projects-cname"><?php the_field('name'); ?></span><?php endif; ?><?php the_title(); ?></h1>
+		<h1 class="c-title-ex-large"><?php if(get_field('name')): ?><span class="p-projects-cname"><?php the_field('name'); ?></span><?php endif; ?><?php the_title(); ?></h1>
 		<ul class="p-projects-tag">
 			<?php $terms = get_the_terms($post->ID, 'projects_cat');
 			foreach ($terms as $term) {
