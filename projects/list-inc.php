@@ -36,7 +36,7 @@
                     <?php endif; ?>
             </div>
         </div>
-        <nav class="c-swipe-nav l-container--primary">
+        <nav class="c-swipe-nav l-container--primary -mgt-3">
             <div class="c-swipe-btn">
                 <span class="swipe-arr -left swiper-button-prev"><i class="c-arrow-link--icon"></i></span>
                 <span class="swipe-arr -right swiper-button-next"><i class="c-arrow-link--icon"></i></span>

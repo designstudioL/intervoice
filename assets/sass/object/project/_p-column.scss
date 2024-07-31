@@ -23,7 +23,8 @@ column
 .p-column {
     &-home {
         width: 100%;
-        max-width: 1660px;
+        //max-width: 1660px;
+        max-width: 1500px;
         padding: 0;
         @include inc.mq(tab) {
             padding: 0 4%;
@@ -377,8 +378,8 @@ column
         @include inc.mq(lap) {
             transform: translate(28vw, 0);
         }
-        opacity: 0;
-        transition: all 0.5s;
+        // opacity: 0;
+        // transition: all 0.5s;
     }
     &:after {
         content: "";
@@ -396,17 +397,17 @@ column
             top: -18vw;
             @include inc.sizing(left, full, -120px, tab, -400px);
         }
-        opacity: 0;
-        transition: all 0.5s;
+        // opacity: 0;
+        // transition: all 0.5s;
     }
-    &.-fade {
-        &::before {
-            opacity: 1;
-        }
-        &::after {
-            opacity: 1;
-        }
-    }
+    // &.-fade {
+    //     &::before {
+    //         opacity: 1;
+    //     }
+    //     &::after {
+    //         opacity: 1;
+    //     }
+    // }
 }
 
 .l-spacer.-large + .l-spacer.-large.p-column--bg01 {
@@ -435,14 +436,14 @@ column
         right: 5vw;
         transform: translate(10vw, 0);
         z-index: -1;
-        opacity: 0;
-        transition: all 0.5s;
+        // opacity: 0;
+        // transition: all 0.5s;
     }
-    &.-fade {
-        &::before {
-            opacity: 1;
-        }
-    }
+    // &.-fade {
+    //     &::before {
+    //         opacity: 1;
+    //     }
+    // }
 }
 
 .p-home .p-column--bg03 {
@@ -466,14 +467,14 @@ column
             top: -13vw;
             left: -8vw;
         }
-        opacity: 0;
-        transition: all 0.5s;
+        // opacity: 0;
+        // transition: all 0.5s;
     }
-    &.-fade {
-        &::before {
-            opacity: 1;
-        }
-    }
+    // &.-fade {
+    //     &::before {
+    //         opacity: 1;
+    //     }
+    // }
 }
 
 
@@ -498,14 +499,14 @@ column
             top: 13vw;
             left: -15vw;
         }
-        opacity: 0;
-        transition: all 0.5s;
+        // opacity: 0;
+        // transition: all 0.5s;
     }
-    &.-fade {
-        &::before {
-            opacity: 1;
-        }
-    }
+    // &.-fade {
+    //     &::before {
+    //         opacity: 1;
+    //     }
+    // }
 }
 
 
@@ -534,16 +535,16 @@ column
     }
 }
 
-.p-home {
-    .p-column--bg05 {
-        &:before {
-            opacity: 0;
-            transition: all 0.5s;
-        }
-        &.-fade {
-            &::before {
-                opacity: 1;
-            }
-        }
-    }
-}
+// .p-home {
+//     .p-column--bg05 {
+//         &:before {
+//             opacity: 0;
+//             transition: all 0.5s;
+//         }
+//         &.-fade {
+//             &::before {
+//                 opacity: 1;
+//             }
+//         }
+//     }
+// }

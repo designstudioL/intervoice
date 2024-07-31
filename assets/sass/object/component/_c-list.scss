@@ -6,7 +6,7 @@ list
 .c-list-dot {
     @include inc.sizingRem(font-size, lap, 16px, wsp, 14px);
     &__item {
-        line-height: 1.6;
+        line-height: 1.8;
         padding-left: 18px;
         position: relative;
         &::before {
@@ -17,7 +17,7 @@ list
             background: inc.$base-color;
             border-radius: 50%;
             position: absolute;
-            top: .9rem;
+            top: .95rem;
             left: 0;
             transform: translate(0%, -50%);
         }

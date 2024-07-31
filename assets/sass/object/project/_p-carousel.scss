@@ -17,7 +17,8 @@ carousel
 			margin: 0 0 0 4.8%;
 		}
 		@include inc.mq(full) {
-            margin-left: calc(((100% - 1660px) / 2) + 4%);
+            //margin-left: calc(((100% - 1660px) / 2) + 4%);
+			margin-left: calc(((100% - 1500px) / 2) + 4%);
             padding: 0;
         }
 	}

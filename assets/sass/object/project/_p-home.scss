@@ -12,7 +12,8 @@ home
         margin: 0 auto;
         @include inc.mq(tab) {
             width: 94%;
-            max-width: 1660px;
+            //max-width: 1660px;
+            max-width: 1500px;
             aspect-ratio: 1348 / 786;
             margin: -80px auto 0;
             height: auto;
@@ -133,14 +134,14 @@ home
                 top: unset;
                 bottom: 0;
             }
-            opacity: 0;
-            transition: all 0.5s;
+            // opacity: 0;
+            // transition: all 0.5s;
         }
-        &.-fade {
-            &::before {
-                opacity: 1;
-            }
-        }
+        // &.-fade {
+        //     &::before {
+        //         opacity: 1;
+        //     }
+        // }
     }
     &--lead {
         max-width: 875px;
@@ -159,6 +160,7 @@ home
             @include inc.sizing(margin-bottom, lap, 32px, sp, 24px);
             font-weight: 600;
             line-height: 1.7;
+            letter-spacing: .25rem;
         }
         .--card {
             display: flex;
@@ -176,6 +178,7 @@ home
                     font-weight: 600;
                     line-height: 2;
                     border-bottom: 1px solid inc.$theme-color-gray5;
+                    letter-spacing: .18rem;
                 }
                 ul {
                     li {

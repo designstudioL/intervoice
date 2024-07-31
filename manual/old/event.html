@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>星野エリア2024　【イベント】WordPress更新マニュアル</title>
+  <link rel="stylesheet" type="text/css" media="screen, print" href="./style.css" />
+</head>
+
+<body>
+  <div class="contents">
+    <h1><span>星野エリア</span><br>【イベント】WordPress更新マニュアル</h1>
+    <p>2024.4.4 更新</p>
+    <div align="right">
+      <form><input value="このページを印刷する" onclick="window.print()" type="button"></form>
+    </div>
+
+    <h2>メニュー</h2>
+    <ul>
+      <li><a href="index.html">共通操作</a></li>
+      <li><a href="news.html">ニュース</a></li>
+      <li><a href="business-hours.html">営業時間</a></li>
+      <li><a href="event.html">イベント</a></li>
+      <li><a href="shop.html">ショップ＆レストラン（ハルニレテラス）</a></li>
+    </ul>
+
+    <!-- h3 -->
+    <h3 id="event">イベントを追加する</h3>
+    <ol>
+      <li><strong>画面上部の「新規投稿を追加」をクリックします。</strong></li>
+
+      <li><strong>▼「イベント」新規登録画面</strong><br>
+        <img src="./img/event/edit.jpg"><br>
+        <img src="./img/event/post.jpg"><br>
+
+        <ol class="num">
+          <li><strong>タイトル<span class="attention">*</span>（必須）</strong><br>
+            記事のタイトルを入力します。
+          </li>
+          <li>
+            <strong>「メインイメージ」の設定方法</strong><br>
+            詳細ページトップに表示される画像を設定することができます。<br>
+            一覧ページ用およびOGP用に「アイキャッチ画像」が必要になるため、必ず設定いただけますようお願いいたします。<br>
+            「メイン画像」が未設定の場合、「アイキャッチ画像」が代用されます。<br>
+            「アイキャッチ画像」とは別の画像をメイン画像にしたい場合、画像をアップまたはライプラリから設定してください。<br>
+            「画像無し」にチェックを入れると、メイン画像無しにできます。<br>
+            <img src="./img/news/block_head1.jpg" class="imgM"><br>
+          </li>
+          <li><strong>本文を入力<span class="attention">*</span>（必須）</strong><br>
+            記事の本文になります。<br><br>
+            見出しを挿入する際は、見出しを挿入したいところで、「/」（半角スラッシュ）を入力してください。<br>
+            <br>
+
+            <strong>「見出し」の追加方法</strong><br>
+            <img src="./img/news/block_head.png" class="imgM"><br>
+            「/」（半角スラッシュ）を入力して表示されたリストの中から、「見出し」を選択します。<br>
+            <img src="./img/news/block-head2.jpg" class="imgM"><br>
+            上記画像のように「H2」と表示され、入力した文字が大きく表示されます。<br>
+            「H2」「H3」「H4」のサイズ比較<br>
+            <img src="./img/news/block-head2-2.png" class="imgM"><br>
+            <img src="./img/news/block-head3.jpg" class="imgM"><br>
+            すでに入力している文字を見出しに変更する場合は、文字に文字にカーソルを合わせます。表示された一番左のアイコンを選択し、さらにリストから「見出し」を選択します。<br>
+            <br>
+            <br>
+            文章を挿入する際は、文章を挿入したいところで、「段落ブロック」を追加してください。<br>
+            <strong>「画像ブロック」の追加方法</strong><br>
+            <img src="./img/news/block-txt1.jpg" class="imgM"><br>
+            「＋」ボタンを押して「段落」をクリックします。<br>
+            <br>
+            <br>
+            画像を挿入する際は、画像を挿入したいところで、「画像ブロック」を追加してください。<br>
+            <strong>「画像ブロック」の追加方法</strong><br>
+            <img src="./img/news/block-img1.png" class="imgM"><br>
+            「＋」ボタンを押して「画像」をクリックします。<br>
+            <img src="./img/news/block-img2.jpg" class="imgM"><br>
+            画像入力用のブロックが作成されるので、任意の画像を選択してください。<br>
+            ※画像の詳しいアップロード方法は<a href="index_operations.html#upload">こちら</a><br>
+            ※画像のリサイズ方法は<a href="index_operations.html#howto">こちら</a>
+          </li>
+
+          <li><strong>一覧エリア（イベント詳細一覧）</strong><br>
+            ブロック「一覧エリア」を選択します。<br>
+            <img src="./img/event/edit02.jpg" class="" width="320" height="auto"><br>
+            ブロック「一覧エリア」の入力例<br>
+            <img src="./img/event/edit03.jpg" class="imgM"><br>
+            ブロック「一覧エリア」の入力例の出力結果<br>
+            <img src="./img/event/post02.jpg" class="imgM"><br><br>
+            複数リスト<br>
+            <img src="./img/event/edit04.jpg" class="imgM"><br>
+            リストを連結する<br>
+            上のブロックと連結するにチェックを入れると、リストが連結できます。<br>
+            <img src="./img/event/edit06.jpg" class="" width="320" height="auto"><br>
+            <img src="./img/event/edit05.jpg" class="imgM"><br>
+
+          </li>
+          <li><strong>イベント開始日<span class="attention">*</span>（必須）</strong><br>
+            クリックするとカレンダーが表示されます。<br>
+            カレンダーから開始日を選択してください
+          </li>
+          <li><strong>イベント終了日<span class="attention">*</span>（必須）</strong><br>
+            クリックするとカレンダーが表示されます。<br>
+            カレンダーから終了日を選択してください
+          </li>
+          <li><strong>イベント期間<span class="attention">*</span>（必須）</strong><br>
+            「イベント期間」を記入してください。<br>
+            例）4月27日～29日、5月3～5日
+          </li>
+          <li><strong>イベントのカテゴリ</strong><br>
+            イベントが属する施設を選択してください。
+          </li>
+          <li><strong>表示ページ</strong><br>
+            表示させるページを指定できます。
+            イベントが開催中・近日開催のステータスになっていれば、選択したページに、このイベントが表示されます。
+          </li>
+          <li><strong>アイキャッチ画像<span class="attention">*</span>（必須）</strong><br>
+            「アイキャッチ画像を設定」を選択し、画像を設定します。<br>
+            一覧画面で表示されるサムネイル画像になります。<br>
+            OGP画像としても流用されます。<br>
+            初期状態では、詳細ページのメイン画像として使用されます。
+          </li>
+          <li><strong>公開<span class="attention">*</span>（必須）</strong><br>
+            青い「公開」ボタンを押してください。記事が公開されます。<br>
+            <span class="attention">公開日時が新しいものから順番にHP上に並びます。</span>
+          </li>
+        </ol>
+      </li>
+      <li><strong>公開した「イベント」を編集・削除する</strong><br>
+        ※編集方法は<a href="index.html#re_edit">こちら</a>
+      </li>
+    </ol>
+
+  </div>
+</body>
+</html>

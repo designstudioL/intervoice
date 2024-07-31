@@ -320,12 +320,45 @@ button
 .c-tag {
     width: auto;
     // display: inline-block;
-    line-height: 1px;
+    line-height: 0px;
     font-size: 11px;
     margin: 0;
     background: inc.$theme-color-gray4;
     border-radius: 9999px;
     padding-bottom: .1rem;
-    padding: 10px 13px;
+    padding: 10px 13px 13px;
     display: inline-block;
 }
+
+
+
+.cta_on {
+    .l-header-hamburger {
+        background: inc.$base-color;
+        span {
+            color: inc.$theme-color-black;
+        }
+        .icon::before {
+            background: inc.$theme-color-black;
+        }
+        .icon::after {
+            background: inc.$theme-color-black;
+        }
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .cta_on .l-header-hamburger.-btn.-bk:hover {
+        background: rgba(230, 230, 230, 0.8);
+        span {
+            color: inc.$theme-color-black;
+        }
+        .icon.-hamburger::before {
+            background: inc.$theme-color-black;
+        }
+        .icon.-hamburger::after {
+            background: inc.$theme-color-black;
+        }
+    }
+}
+

@@ -123,7 +123,7 @@
         </picture>
       </div>
       <div class="-R">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/bg_009.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/bg_009.png" alt="その意思を、実現へ導く">
       </div>
     </div>
     <?php endif; ?>

@@ -266,17 +266,46 @@ service
     @include inc.sizing(margin-top, lap, 160px, sps, 100px);
     @include inc.mq(lap) {
         margin: 0;
-        padding-top: 20vh;
+        // padding-top: 20vh;
+        padding-top: 50vh;
     }
 }
 #scroll-box01,
 #scroll-box02,
 #scroll-box03 {
     @include inc.mq(lap) {
-        padding-bottom: 10vh;
+        //padding-bottom: 10vh;
     }
 }
 
+#scroll-box02:target,
+#scroll-box03:target,
+#scroll-box04:target {
+    @include inc.mq(lap) {
+        scroll-margin-top: -26vh;
+    }
+    @include inc.mq(lap-l) {
+        scroll-margin-top: -28vh;
+    }
+    @include inc.mq(lap-ll) {
+        scroll-margin-top: -29vh;
+    }
+    @include inc.mq(desk) {
+        scroll-margin-top: -29vh;
+    }
+    @include inc.mq(vr) {
+        scroll-margin-top: -30vh;
+    }
+    @include inc.mq(wide) {
+        scroll-margin-top: -31vh;
+    }
+    @include inc.mq(full) {
+        scroll-margin-top: -34vh;
+    }
+
+    //scroll-margin-top: -5vh;
+    //scroll-margin-top: -30vh;
+}
 
 // sps: 320px,
 // sp: 375px,

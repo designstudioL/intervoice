@@ -1,0 +1,269 @@
+@charset "utf-8";
+/* 共通 */
+.contents {
+  width: 960px;
+  border-right: 1px solid #ccc;
+  padding-right: 15px;
+}
+h2,
+h3,
+h4,
+h5 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+p {
+  font-size: 0.9rem;
+  line-height: 180%;
+  margin: 15px 0px;
+  padding: 0 0 0 20px;
+}
+ol {
+  font-size: 0.9rem;
+  padding-left: 20px;
+  margin-left: 0px;
+  margin-left: 10px;
+}
+li {
+  padding: 4px 0px 10px 0px;
+  line-height: 180%;
+}
+li img {
+  margin: 10px 0px;
+  border: 1px solid #666;
+  max-width: 80%;
+}
+a img,
+a:link img,
+a:visited img {
+  border: 1px solid #ff6600;
+}
+a:hover img,
+a:active img {
+  border: 1px solid #333;
+}
+blockquote {
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  background: #f2f2f2;
+  padding: 10px;
+  margin: 10px 10px;
+}
+h1 span {
+  font-size: 0.8rem;
+}
+h3 {
+  line-height: 130%;
+  font-size: 1.3rem;
+  font-weight: normal;
+  padding: 16px;
+  margin: 45px 0px 5px 0px;
+  /* background-color: #348602; */
+  background-color: #F8F8F0;
+  /* color: #fff; */
+  border-left-width: 3px;
+  border-left-style: solid;
+  /* border-left-color: #d6e7cc; */
+}
+h4 {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.5em;
+  background-color: #f0f0f0;
+}
+h5 {
+  margin-left: 10px;
+}
+.attention {
+  color: #ff0000;
+}
+.attention2 {
+  color: #009900;
+}
+.print_break {
+  page-break-before: always;
+}
+.w900 {
+  width: 900px;
+}
+.fit {
+  width: 100%;
+  height: auto;
+}
+img {
+  max-width: 100%;
+}
+.imgS {
+  width: 60%;
+  max-width: 160px;
+  height: auto;
+}
+.imgM {
+  width: 60%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* もくじ*/
+.btn_push {
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 100%;
+  padding: 0.9em 1em;
+  display: inline-block;
+  border-radius: 1.6em;
+  box-shadow: 0px 3px 0 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.btn_push:active {
+  -ms-transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0px 1px 0 0px rgba(0, 0, 0, 0.2);
+}
+.btn_green {
+  color: #fff !important;
+  background: #348602;
+}
+
+/* 基本操作*/
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-bottom: 1rem;
+}
+table th {
+  padding: 0.5em 1em;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+}
+table td {
+  padding: 0.5em 1em;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+table td:first-of-type span {
+  font-size: 0.8rem;
+}
+table td:last-of-type {
+  text-align: left;
+}
+table img {
+  border: none;
+  height: auto;
+}
+table img.h80p {
+  width: auto;
+  height: 80%;
+}
+table span.plus {
+  position: relative;
+  top: -20px;
+}
+table tr td h3 {
+  font-size: 1.3rem;
+  margin: 0 auto;
+  padding: 0.5em;
+  color: #fff;
+  background-color: #338501;
+  border: none;
+  font-weight: normal;
+}
+table tr td h4 {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0.5em;
+  background-color: #f0f0f0;
+}
+table tr td h5 {
+  margin: 0;
+}
+table tr td .txt_emph {
+  color: #d93d0d;
+  font-size: 100%;
+}
+table tr td .color_link,
+table tr td .ex_link,
+table tr td a {
+  color: #338501;
+  font-size: 100%;
+  text-decoration: none;
+}
+table tr td span.ex_link:after {
+  content: '';
+  width: 0.5em;
+  height: 0.4em;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.3em;
+  background: #338501;
+  box-shadow: 1px -1px #fff, 2px -2px #338501;
+}
+a[href$='pdf']:after {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  background: url(img/icon-pdf.gif) no-repeat center center;
+  background-size: 100% 100%;
+}
+a[href$='doc']:after,
+a[href$='docx']:after {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  background: url(img/icon-word.gif) no-repeat center center;
+  background-size: 100% 100%;
+}
+a[href$='xls']:after,
+a[href$='xlsx']:after {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  background: url(img/icon-excel.gif) no-repeat center center;
+  background-size: 100% 100%;
+}
+ol.num {
+  counter-reset: my-counter;
+  list-style: none;
+  padding: 0;
+}
+ol.num li {
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+}
+ol.num li:before {
+  content: counter(my-counter);
+  counter-increment: my-counter;
+  background-color: #ff0000;
+  color: #fff;
+  display: block;
+  float: left;
+  line-height: 22px;
+  margin-left: -30px;
+  text-align: center;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+}
+
+.tips {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  background: #efefef;
+  box-sizing: border-box;
+}

@@ -42,6 +42,27 @@
                     </ul>
                     <div class="-arw-s"><i class="c-arrow-link--icon"></i></div>
                 </a>
+<!-- 
+                <a href="<?php the_permalink(); ?>" class="p-carousel-card -projects">
+                    <div class="p-carousel-card__img">
+                        <img src="<?php if (has_post_thumbnail()) : ?><?php echo wp_get_attachment_url(get_post_thumbnail_id($post_id)); ?><?php else : ?><?php bloginfo('template_url') ?>/common/img/noimage.jpg<?php endif; ?>" alt="<?php the_title(); ?>" />
+                    </div>
+                    <div class="p-carousel-card__text -projects">
+                        <?php if(get_field('name')): ?>
+                        <p class="p-carousel-card__cname">
+                            <?php the_field('name'); ?>
+                        </p>
+                        <?php endif; ?>
+                        <h3 class="p-carousel-card__title --projects"><?php the_title(); ?></h3>
+                    </div>
+                    <ul class="p-carousel-card__tag">
+                        <?php $terms = get_the_terms($post->ID, 'projects_cat');
+                            foreach ($terms as $term) {
+                                echo '<li class="p-carousel-card__cat c-tag">' . $term->name . '</li>';
+                            } ?>
+                    </ul>
+                    <div class="-arw-s"><i class="c-arrow-link--icon"></i></div>
+                </a> -->
             <?php endwhile; endif; ?>
         </div>
         <section class="l-container--primary">

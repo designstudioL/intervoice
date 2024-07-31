@@ -413,8 +413,33 @@ body {
 #column_blog .l-header-nav .nav04 a {
     text-decoration: underline;
     text-decoration-thickness: 0.5em;
-    text-decoration-color: #fff;
+    text-decoration-color: inc.$base-color;
     text-underline-offset: -0.2em;
     text-decoration-skip-ink: none;
 }
+
+
+
+.cta_on {
+    .l-header-nav {
+        color: inc.$base-color;
+        .-btn.-bk {
+            background: inc.$base-color;
+            span {
+                color: inc.$theme-color-black;
+            }
+            &:hover {
+                background: rgba(230, 230, 230, 0.8);
+            }
+        }
+    }
+}
+
+.cta_on#about .l-header-nav .nav01 a,
+.cta_on#projects .l-header-nav .nav02 a,
+.cta_on#service .l-header-nav .nav03 a,
+.cta_on#column_blog .l-header-nav .nav04 a {
+    text-decoration: none;
+}
+
 

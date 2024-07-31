@@ -7,7 +7,8 @@
 .l-container {
     &--primary {
         width: 100%;
-        max-width: 1660px;
+        // max-width: 1660px;
+        max-width: 1500px;
         padding: 0 7.5%;
         @include inc.mq(lap) {
             padding: 0 4.8%;
@@ -71,11 +72,13 @@
         @include inc.mq(lap) {
             justify-content: space-between;
             .--L {
-                width: 20.6%;
+                // width: 20.6%;
+                width: 25%;
                 margin-bottom: 0px;
             }
             .--R {
-                width: 74.78%;
+                //width: 74.78%;
+                width: 65%;
                 //padding-right: 7.76%;
             }
         }
@@ -122,7 +125,8 @@
         }
         &.--contact {
             width: 100%;
-            max-width: 1660px;
+            //max-width: 1660px;
+            max-width: 1500px;
             padding: 0;
             gap: 3rem 0;
             //padding: 0 4%;

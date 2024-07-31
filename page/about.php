@@ -19,7 +19,8 @@
 		<section class="--R">
 			<section class="l-spacer -large">
 				<div class="l-spacer -large">
-					<p class="c-title-small l-spacing18">都市と地域、人と人とが有機的につながり、心躍る変化が生まれる<br>全国各地に“マーケティング・プレイヤー”が増えていく</p>
+					<div class="c-title-small3">都市と地域、人と人とが有機的につながり、心躍る変化が生まれる</div>
+					<div class="c-title-small3">全国各地に“マーケティング・プレイヤー”が増えていく</div>
 				</div>
 			</section>
 		</section>
@@ -39,7 +40,7 @@
 					その名の通り、人の思いやアイデアを大切に、その力を最大化することで事業やブランドに新しい力を与える、そんな企業でありたいと思っています。</p>
 					<div class="p-about--profile">
 						<div class="profile01">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/yanagida.jpg" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/about/yanagida.jpg" alt="代表 柳田 有一">
 						</div>
 						<div class="profile02">
 							<h2><span>代表｜マーケティング·ディレクター</span>柳田 有一</h2>

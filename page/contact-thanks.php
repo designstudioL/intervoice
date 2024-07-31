@@ -16,8 +16,8 @@
 				ご入力頂いたメールアドレス宛へ、ご確認メールをお送りしておりますのでご確認ください。内容を確認次第、担当者より折返しご連絡させていただきます。今しばらくお待ちくださいませ。</p>
 			</div>
 			<div class="l-spacer -medium">
-				<a href="<?php echo home_url(); ?>" class="-btn -bk -fontsM -sizeL -arw -auto -sp --back"><i class="c-arrow-link--icon"></i><span class="-center -sp">ホームへ戻る</span></a>
-			</div>
+					<a href="<?php echo home_url(); ?>" class="-btn -bk -fontsM -sizeL -arw -auto -sp --back"><i class="c-arrow-link--icon"></i><span class="-center -sp">ホームへ戻る</span></a>
+				</div>
 		</section>
 	</section>
 </section>
